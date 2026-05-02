@@ -52,15 +52,20 @@
     desktopFrame.parentNode.insertBefore(banner, desktopFrame);
   }
 
-  // Auto-inject Member sidebar on phone-frame screens (visible ≥1024px via CSS)
+  // Auto-inject Member sidebar on AUTHED phone-frame screens (S-07 → S-21)
+  // Auth screens (S-01..S-06) and standalone flows show clean form without sidebar
   const demoStage = document.querySelector('.demo-stage');
-  if (demoStage && !document.querySelector('.member-sidebar')) {
-    // Determine active nav based on current screen ID
-    const screenId = (id || '').toUpperCase();
+  const screenId = (id || '').toUpperCase();
+  const screenNum = parseInt(screenId.replace('S-', ''), 10);
+  const isAuthedMemberScreen = screenNum >= 7 && screenNum <= 21
+                                && screenId !== 'S-19'  // event detail public
+                                && screenId !== 'S-20'  // checkin landing public
+                                && screenId !== 'S-21'; // guest survey public
+  if (demoStage && isAuthedMemberScreen && !document.querySelector('.member-sidebar')) {
     const links = [
       { href: 's-08-home.html',         icon: 'home',           label: 'Trang chủ',     match: ['S-08'] },
       { href: 's-13-leaderboard.html',  icon: 'trophy',         label: 'Bảng xếp hạng', match: ['S-13'] },
-      { href: 's-14-events.html',       icon: 'calendar',       label: 'Sự kiện',       match: ['S-14','S-15','S-18','S-19','S-20'] },
+      { href: 's-14-events.html',       icon: 'calendar',       label: 'Sự kiện',       match: ['S-14','S-15','S-18'] },
       { href: 's-16-notifications.html',icon: 'bell',           label: 'Thông báo',     match: ['S-16'] },
       { href: 's-09-profile.html',      icon: 'user',           label: 'Hồ sơ',         match: ['S-09','S-10','S-11','S-17'] },
     ];
@@ -88,6 +93,7 @@
       ${utilLinks.map(renderLink).join('')}
     `;
     demoStage.insertBefore(sidebar, demoStage.firstChild);
+    document.body.classList.add('has-sidebar');
   }
 
   // Keyboard navigation: ←/→

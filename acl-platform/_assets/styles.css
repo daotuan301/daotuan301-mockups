@@ -285,9 +285,13 @@ html, body {
     padding: 0;
   }
 
-  /* Hide bottom-nav on desktop (sidebar replaces it) */
-  .desktop-hide-bottom-nav .phone-content > div > [class*="bottom-0"] {
+  /* Hide bottom-nav on desktop when sidebar is injected (replaces it) */
+  body.has-sidebar .phone-content [class~="absolute"][class~="bottom-0"] {
     display: none !important;
+  }
+  /* Add bottom padding compensation since pb-24 was for bottom-nav */
+  body.has-sidebar .phone-content .pb-24 {
+    padding-bottom: 32px !important;
   }
 
   /* Auto-injected member sidebar (see nav.js) */
