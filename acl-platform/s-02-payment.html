@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>S-02 · Thanh toán Sepay · ACL Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&family=Barlow+Condensed:wght@500;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="_assets/styles.css" />
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-acl-base">
+
+<div id="demo-topbar"
+     data-prev="s-01-register.html"
+     data-next="s-03-pending.html"
+     data-id="S-02"
+     data-name="Thanh toán Sepay"
+     data-us="US-001"
+     data-role="Guest"></div>
+
+<div class="demo-stage">
+  <div class="phone-frame">
+    <div class="phone-notch"></div>
+    <div class="phone-content">
+      <div class="min-h-full bg-acl-base flex flex-col px-6 py-10 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-72 h-72 rounded-full pointer-events-none" style="background: rgba(0,229,201,0.05); filter: blur(100px);"></div>
+
+        <div class="w-full max-w-sm mx-auto relative z-10">
+          <!-- Back -->
+          <button class="flex items-center gap-2 text-acl-t2 hover:text-white transition-colors mb-8">
+            <i data-lucide="arrow-left" width="18" height="18"></i> Quay lại
+          </button>
+
+          <div class="mb-8">
+            <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-cyan-dim border border-cyan mb-3">
+              <i data-lucide="credit-card" width="20" height="20" class="text-cyan"></i>
+            </div>
+            <h1 class="font-heading font-black text-2xl text-white">Thanh toán</h1>
+            <p class="text-acl-t2 text-sm mt-1">
+              Bước 2 / 2 — Xác nhận phí thành viên cho <span class="text-white font-medium">Nguyễn Minh Tuấn</span>
+            </p>
+          </div>
+
+          <!-- Order summary -->
+          <div class="bg-acl-card border border-acl rounded-2xl p-5 mb-4">
+            <div class="text-xs font-heading font-bold tracking-widest text-acl-t2 uppercase mb-4">Chi tiết đơn hàng</div>
+            <div class="space-y-3">
+              <div class="flex justify-between text-sm">
+                <span class="text-acl-t2">Phí thành viên ACL</span>
+                <span class="text-white font-semibold">3.000.000 ₫</span>
+              </div>
+              <div class="flex justify-between text-sm">
+                <span class="text-acl-t2">Thời hạn</span>
+                <span class="text-white">12 tháng</span>
+              </div>
+              <div class="h-px bg-acl-card-alt"></div>
+              <div class="flex justify-between">
+                <span class="text-sm text-acl-t2">Tổng thanh toán</span>
+                <span class="font-num text-2xl font-bold text-gold">3.000.000 ₫</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sepay QR -->
+          <div class="bg-acl-card border border-acl rounded-2xl p-5 mb-4 text-center">
+            <div class="text-xs font-heading font-bold tracking-widest text-acl-t2 uppercase mb-3">
+              Thanh toán qua SePay / VietQR
+            </div>
+
+            <!-- QR placeholder -->
+            <div class="w-44 h-44 mx-auto bg-white rounded-2xl p-2 mb-3 relative">
+              <!-- Faux QR pattern -->
+              <svg viewBox="0 0 100 100" class="w-full h-full">
+                <rect width="100" height="100" fill="white"/>
+                <!-- corner squares -->
+                <rect x="6" y="6" width="22" height="22" fill="black" rx="2"/>
+                <rect x="10" y="10" width="14" height="14" fill="white" rx="1"/>
+                <rect x="13" y="13" width="8" height="8" fill="black"/>
+                <rect x="72" y="6" width="22" height="22" fill="black" rx="2"/>
+                <rect x="76" y="10" width="14" height="14" fill="white" rx="1"/>
+                <rect x="79" y="13" width="8" height="8" fill="black"/>
+                <rect x="6" y="72" width="22" height="22" fill="black" rx="2"/>
+                <rect x="10" y="76" width="14" height="14" fill="white" rx="1"/>
+                <rect x="13" y="79" width="8" height="8" fill="black"/>
+                <!-- random dots -->
+                <g fill="black">
+                  <rect x="36" y="10" width="4" height="4"/><rect x="44" y="10" width="4" height="4"/>
+                  <rect x="52" y="14" width="4" height="4"/><rect x="60" y="10" width="4" height="4"/>
+                  <rect x="36" y="20" width="4" height="4"/><rect x="48" y="22" width="4" height="4"/>
+                  <rect x="56" y="20" width="4" height="4"/><rect x="64" y="22" width="4" height="4"/>
+                  <rect x="10" y="36" width="4" height="4"/><rect x="20" y="36" width="4" height="4"/>
+                  <rect x="34" y="34" width="4" height="4"/><rect x="42" y="38" width="4" height="4"/>
+                  <rect x="50" y="36" width="4" height="4"/><rect x="58" y="34" width="4" height="4"/>
+                  <rect x="66" y="38" width="4" height="4"/><rect x="74" y="34" width="4" height="4"/>
+                  <rect x="84" y="36" width="4" height="4"/><rect x="14" y="44" width="4" height="4"/>
+                  <rect x="22" y="46" width="4" height="4"/><rect x="36" y="48" width="4" height="4"/>
+                  <rect x="46" y="44" width="4" height="4"/><rect x="56" y="48" width="4" height="4"/>
+                  <rect x="68" y="46" width="4" height="4"/><rect x="80" y="44" width="4" height="4"/>
+                  <rect x="88" y="48" width="4" height="4"/><rect x="10" y="56" width="4" height="4"/>
+                  <rect x="24" y="58" width="4" height="4"/><rect x="38" y="56" width="4" height="4"/>
+                  <rect x="52" y="60" width="4" height="4"/><rect x="64" y="56" width="4" height="4"/>
+                  <rect x="76" y="58" width="4" height="4"/><rect x="86" y="56" width="4" height="4"/>
+                  <rect x="36" y="68" width="4" height="4"/><rect x="46" y="72" width="4" height="4"/>
+                  <rect x="56" y="68" width="4" height="4"/><rect x="64" y="72" width="4" height="4"/>
+                  <rect x="74" y="68" width="4" height="4"/><rect x="84" y="74" width="4" height="4"/>
+                  <rect x="36" y="80" width="4" height="4"/><rect x="46" y="82" width="4" height="4"/>
+                  <rect x="58" y="84" width="4" height="4"/><rect x="68" y="80" width="4" height="4"/>
+                  <rect x="78" y="82" width="4" height="4"/><rect x="88" y="84" width="4" height="4"/>
+                  <rect x="36" y="90" width="4" height="4"/><rect x="48" y="90" width="4" height="4"/>
+                  <rect x="60" y="88" width="4" height="4"/><rect x="72" y="90" width="4" height="4"/>
+                </g>
+              </svg>
+            </div>
+
+            <p class="text-xs text-acl-t2 mb-1">Quét QR bằng ứng dụng ngân hàng</p>
+
+            <!-- Transfer content -->
+            <div class="flex items-center justify-center gap-2 mt-3">
+              <div class="bg-acl-base rounded-lg px-3 py-2 flex-1 min-w-0 text-left">
+                <p class="text-xs text-acl-t2 mb-0.5">Nội dung chuyển khoản</p>
+                <p class="text-sm font-mono font-bold text-orange truncate">ACL MEMBER 8KX9P2</p>
+              </div>
+              <button class="flex-shrink-0 w-9 h-9 flex items-center justify-center rounded-lg bg-orange-dim border border-orange text-orange hover:bg-orange-500/20">
+                <i data-lucide="copy" width="14" height="14"></i>
+              </button>
+            </div>
+
+            <p class="text-xs text-acl-t3 mt-2">Mã GD: PAY-2026050200042</p>
+          </div>
+
+          <!-- Security note -->
+          <div class="flex items-start gap-2 text-xs text-acl-t2 mb-5">
+            <i data-lucide="shield" width="14" height="14" class="text-green-400 flex-shrink-0 mt-0.5"></i>
+            <span>Thanh toán được bảo mật bởi SePay. Tài khoản sẽ được Admin kích hoạt trong vòng 24h sau khi xác nhận thanh toán.</span>
+          </div>
+
+          <a href="s-03-pending.html"
+             class="btn-primary w-full h-13 rounded-xl font-heading font-bold text-base text-white flex items-center justify-center gap-2">
+            Tôi đã thanh toán xong
+          </a>
+
+          <p class="text-center text-xs text-acl-t3 mt-4">Hệ thống sẽ tự động xác nhận sau khi nhận được thanh toán.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="_assets/nav.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

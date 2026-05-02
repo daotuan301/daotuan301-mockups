@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>S-01 · Đăng ký Membership · ACL Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&family=Barlow+Condensed:wght@500;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="_assets/styles.css" />
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-acl-base">
+
+<!-- Top nav (outside frame) -->
+<div id="demo-topbar"
+     data-prev=""
+     data-next="s-02-payment.html"
+     data-id="S-01"
+     data-name="Đăng ký Membership"
+     data-us="US-001"
+     data-role="Guest"></div>
+
+<div class="demo-stage">
+  <div class="phone-frame">
+    <div class="phone-notch"></div>
+    <div class="phone-content">
+      <!-- ===== Screen content begins ===== -->
+      <div class="min-h-full bg-acl-base flex flex-col px-6 py-10 relative overflow-hidden">
+        <div class="glow-orange-top"></div>
+
+        <div class="w-full max-w-sm mx-auto relative z-10">
+          <!-- Back -->
+          <button class="flex items-center gap-2 text-acl-t2 hover:text-white transition-colors mb-8">
+            <i data-lucide="arrow-left" width="18" height="18"></i>
+            Quay lại
+          </button>
+
+          <!-- Heading -->
+          <div class="mb-8">
+            <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-orange-dim border border-orange mb-3">
+              <i data-lucide="user-plus" width="20" height="20" class="text-orange"></i>
+            </div>
+            <h1 class="font-heading font-black text-2xl text-white">Đăng ký thành viên</h1>
+            <p class="text-acl-t2 text-sm mt-1">Bước 1 / 2 — Thông tin cá nhân</p>
+          </div>
+
+          <form class="space-y-4" onsubmit="event.preventDefault(); window.location.href='s-02-payment.html';">
+            <!-- Họ và tên -->
+            <div>
+              <label class="acl-label">Họ và tên <span class="text-red-400">*</span></label>
+              <input type="text" placeholder="Nguyễn Văn A" value="Nguyễn Minh Tuấn" class="acl-input" />
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label class="acl-label">Email <span class="text-red-400">*</span></label>
+              <input type="email" placeholder="email@congty.vn" value="tuan.nguyen@acmecorp.vn" class="acl-input" />
+            </div>
+
+            <!-- Số điện thoại -->
+            <div>
+              <label class="acl-label">Số điện thoại</label>
+              <input type="tel" placeholder="0901 234 567" value="0903 456 789" class="acl-input" />
+            </div>
+
+            <!-- Ngành nghề -->
+            <div>
+              <label class="acl-label">Ngành nghề / Lĩnh vực <span class="text-red-400">*</span></label>
+              <input type="text" placeholder="Thương mại điện tử, F&amp;B, ..." value="Bán lẻ / Thương mại" class="acl-input" />
+            </div>
+
+            <!-- Mục tiêu -->
+            <div>
+              <label class="acl-label">Mục tiêu tham gia ACL <span class="text-red-400">*</span></label>
+              <textarea rows="3" placeholder="Tôi muốn..." class="acl-textarea">Tôi muốn nâng cao năng lực lãnh đạo, mở rộng hệ thống và kết nối với cộng đồng chủ doanh nghiệp SME để tăng doanh thu 30% trong năm.</textarea>
+            </div>
+
+            <!-- Mã mời -->
+            <div>
+              <label class="acl-label">Mã mời (nếu có)</label>
+              <input type="text" placeholder="Nhập mã từ thành viên giới thiệu" value="ACL-7K2H9" class="acl-input" />
+            </div>
+
+            <!-- Submit -->
+            <button type="submit"
+                    class="btn-primary w-full h-13 rounded-xl font-heading font-bold text-base text-white flex items-center justify-center gap-2 mt-2">
+              Tiếp theo — Thanh toán
+              <i data-lucide="arrow-right" width="18" height="18"></i>
+            </button>
+          </form>
+
+          <p class="text-center text-sm text-acl-t2 mt-6">
+            Đã có tài khoản?
+            <a href="s-04-login.html" class="text-cyan font-semibold hover:underline">Đăng nhập</a>
+          </p>
+        </div>
+      </div>
+      <!-- ===== Screen content ends ===== -->
+    </div>
+  </div>
+</div>
+
+<script src="_assets/nav.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

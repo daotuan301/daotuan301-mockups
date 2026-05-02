@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>S-35 · BCH Dashboard · ACL Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&family=Barlow+Condensed:wght@500;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="_assets/styles.css" />
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-acl-base">
+
+<div id="demo-topbar"
+     data-prev="s-34-exports.html"
+     data-id="S-35"
+     data-name="BCH Dashboard"
+     data-us="US-022"
+     data-role="BCH"></div>
+
+<div class="demo-desk-stage"><div class="desktop-frame">
+  <div class="min-h-[800px] bg-acl-base">
+
+    <!-- BCH Header (no sidebar) -->
+    <div class="bg-acl-card border-b border-acl">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div>
+          <div class="font-heading font-black text-lg tracking-tight">
+            <span class="text-orange">ACL</span><span class="text-white"> · BCH</span>
+          </div>
+          <div class="text-[10px] text-acl-t2 mt-0.5 tracking-widest uppercase font-heading font-bold">Ban lãnh đạo</div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="text-right">
+            <div class="text-sm text-white font-semibold">Lê Hoàng Đức</div>
+            <div class="text-xs text-acl-t2">bch@acl.vn</div>
+          </div>
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-orange-500 to-red-700 flex items-center justify-center text-sm font-bold text-white">HD</div>
+          <button class="flex items-center gap-1.5 text-sm text-acl-t2 hover:text-white transition-colors"><i data-lucide="log-out" width="14" height="14"></i> Đăng xuất</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="max-w-7xl mx-auto px-6 py-8">
+      <div class="mb-6">
+        <h1 class="font-heading font-black text-2xl text-white">Dashboard BCH</h1>
+        <p class="text-acl-t2 text-sm mt-1">Tổng quan cộng đồng ACL · Tháng 5/2026</p>
+      </div>
+
+      <!-- 4 stat cards -->
+      <div class="grid grid-cols-4 gap-4 mb-6">
+        <div class="bg-acl-card border border-acl rounded-2xl p-5">
+          <div class="flex justify-between items-start mb-4">
+            <div class="w-10 h-10 rounded-xl bg-cyan/10 flex items-center justify-center"><i data-lucide="users" width="18" height="18" class="text-cyan"></i></div>
+            <i data-lucide="arrow-up-right" width="14" height="14" class="text-acl-t3"></i>
+          </div>
+          <div class="font-num text-3xl font-extrabold text-cyan mb-1">247</div>
+          <div class="text-sm font-medium text-white">Tổng thành viên active</div>
+          <div class="text-xs text-acl-t2 mt-0.5">+12 tháng này</div>
+        </div>
+        <div class="bg-acl-card border border-acl rounded-2xl p-5">
+          <div class="flex justify-between items-start mb-4">
+            <div class="w-10 h-10 rounded-xl bg-orange-dim flex items-center justify-center"><i data-lucide="award" width="18" height="18" class="text-orange"></i></div>
+            <i data-lucide="arrow-up-right" width="14" height="14" class="text-acl-t3"></i>
+          </div>
+          <div class="font-num text-3xl font-extrabold text-orange mb-1">209</div>
+          <div class="text-sm font-medium text-white">Có điểm tháng này</div>
+          <div class="text-xs text-acl-t2 mt-0.5">85% tham gia</div>
+        </div>
+        <div class="bg-acl-card border border-acl rounded-2xl p-5">
+          <div class="flex justify-between items-start mb-4">
+            <div class="w-10 h-10 rounded-xl bg-green-500/10 flex items-center justify-center"><i data-lucide="trending-up" width="18" height="18" class="text-green-400"></i></div>
+            <i data-lucide="arrow-up-right" width="14" height="14" class="text-acl-t3"></i>
+          </div>
+          <div class="font-num text-3xl font-extrabold text-green-400 mb-1">68</div>
+          <div class="text-sm font-medium text-white">Điểm HHL trung bình</div>
+          <div class="text-xs text-acl-t2 mt-0.5">trên 100</div>
+        </div>
+        <div class="bg-acl-card border border-acl rounded-2xl p-5">
+          <div class="flex justify-between items-start mb-4">
+            <div class="w-10 h-10 rounded-xl bg-red-500/10 flex items-center justify-center"><i data-lucide="alert-triangle" width="18" height="18" class="text-red-400"></i></div>
+            <i data-lucide="arrow-up-right" width="14" height="14" class="text-acl-t3"></i>
+          </div>
+          <div class="font-num text-3xl font-extrabold text-red-400 mb-1">52</div>
+          <div class="text-sm font-medium text-white">Cần outreach</div>
+          <div class="text-xs text-acl-t2 mt-0.5">38 đỏ · 14 xám</div>
+        </div>
+      </div>
+
+      <!-- Donut + Stacked bar -->
+      <div class="grid grid-cols-3 gap-5 mb-5">
+        <!-- Donut chart -->
+        <div class="bg-acl-card border border-acl rounded-2xl p-5">
+          <div class="text-xs font-heading font-bold tracking-widest text-acl-t2 uppercase mb-4">Phân bổ đèn HHL</div>
+          <div class="flex justify-center mb-4">
+            <svg width="180" height="180" viewBox="0 0 160 160">
+              <circle cx="80" cy="80" r="70" fill="none" stroke="#1A1B2E" stroke-width="22"/>
+              <circle cx="80" cy="80" r="70" fill="none" stroke="#22c55e" stroke-width="22" stroke-dasharray="153.94 439.82" stroke-dashoffset="0" transform="rotate(-90 80 80)"/>
+              <circle cx="80" cy="80" r="70" fill="none" stroke="#FFD700" stroke-width="22" stroke-dasharray="175.93 439.82" stroke-dashoffset="-153.94" transform="rotate(-90 80 80)"/>
+              <circle cx="80" cy="80" r="70" fill="none" stroke="#ef4444" stroke-width="22" stroke-dasharray="79.17 439.82" stroke-dashoffset="-329.87" transform="rotate(-90 80 80)"/>
+              <circle cx="80" cy="80" r="70" fill="none" stroke="#6b7280" stroke-width="22" stroke-dasharray="30.79 439.82" stroke-dashoffset="-409.04" transform="rotate(-90 80 80)"/>
+              <text x="80" y="76" text-anchor="middle" class="font-num" font-size="28" font-weight="800" fill="#fff">209</text>
+              <text x="80" y="94" text-anchor="middle" font-size="10" fill="#A0A8C0">đã chấm</text>
+            </svg>
+          </div>
+          <div class="space-y-2.5">
+            <div class="flex justify-between items-center text-sm"><div class="flex items-center gap-2"><div class="w-2.5 h-2.5 rounded-full bg-green-500"></div><span class="text-white">Xanh</span></div><span class="text-acl-t2"><span class="font-num font-bold text-white">73</span> <span class="text-acl-t3 text-xs ml-1">(35%)</span></span></div>
+            <div class="flex justify-between items-center text-sm"><div class="flex items-center gap-2"><div class="w-2.5 h-2.5 rounded-full bg-yellow-400"></div><span class="text-white">Vàng</span></div><span class="text-acl-t2"><span class="font-num font-bold text-white">84</span> <span class="text-acl-t3 text-xs ml-1">(40%)</span></span></div>
+            <div class="flex justify-between items-center text-sm"><div class="flex items-center gap-2"><div class="w-2.5 h-2.5 rounded-full bg-red-500"></div><span class="text-white">Đỏ</span></div><span class="text-acl-t2"><span class="font-num font-bold text-white">38</span> <span class="text-acl-t3 text-xs ml-1">(18%)</span></span></div>
+            <div class="flex justify-between items-center text-sm"><div class="flex items-center gap-2"><div class="w-2.5 h-2.5 rounded-full bg-gray-500"></div><span class="text-white">Xám</span></div><span class="text-acl-t2"><span class="font-num font-bold text-white">14</span> <span class="text-acl-t3 text-xs ml-1">(7%)</span></span></div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-acl text-xs text-acl-t2 flex justify-between">
+            <span>Đã chấm</span><span class="text-white font-semibold">209/247</span>
+          </div>
+        </div>
+
+        <!-- Stacked bar 6 months -->
+        <div class="col-span-2 bg-acl-card border border-acl rounded-2xl p-5">
+          <div class="flex justify-between items-center mb-4">
+            <div class="text-xs font-heading font-bold tracking-widest text-acl-t2 uppercase">Xu hướng phân bổ đèn</div>
+            <span class="text-xs text-acl-t2">6 tháng gần nhất</span>
+          </div>
+          <div class="flex items-end gap-3 h-56 px-1">
+            <!-- T12: total 165, height 75% -->
+            <div class="flex-1 flex flex-col items-center gap-2">
+              <div class="w-full flex flex-col-reverse rounded-md overflow-hidden border border-acl" style="height:75%">
+                <div class="bg-green-500" style="height:31%"></div>
+                <div class="bg-yellow-400" style="height:42%"></div>
+                <div class="bg-red-500" style="height:20%"></div>
+                <div class="bg-gray-500" style="height:7%"></div>
+              </div>
+              <div class="flex flex-col items-center text-[10px] text-acl-t3"><span class="font-bold">T12</span><span class="font-num">165</span></div>
+            </div>
+            <!-- T1: 182 -->
+            <div class="flex-1 flex flex-col items-center gap-2">
+              <div class="w-full flex flex-col-reverse rounded-md overflow-hidden border border-acl" style="height:82%">
+                <div class="bg-green-500" style="height:32%"></div>
+                <div class="bg-yellow-400" style="height:42%"></div>
+                <div class="bg-red-500" style="height:18%"></div>
+                <div class="bg-gray-500" style="height:8%"></div>
+              </div>
+              <div class="flex flex-col items-center text-[10px] text-acl-t3"><span class="font-bold">T1</span><span class="font-num">182</span></div>
+            </div>
+            <!-- T2: 198 -->
+            <div class="flex-1 flex flex-col items-center gap-2">
+              <div class="w-full flex flex-col-reverse rounded-md overflow-hidden border border-acl" style="height:88%">
+                <div class="bg-green-500" style="height:31%"></div>
+                <div class="bg-yellow-400" style="height:42%"></div>
+                <div class="bg-red-500" style="height:19%"></div>
+                <div class="bg-gray-500" style="height:8%"></div>
+              </div>
+              <div class="flex flex-col items-center text-[10px] text-acl-t3"><span class="font-bold">T2</span><span class="font-num">198</span></div>
+            </div>
+            <!-- T3: 218 -->
+            <div class="flex-1 flex flex-col items-center gap-2">
+              <div class="w-full flex flex-col-reverse rounded-md overflow-hidden border border-acl" style="height:92%">
+                <div class="bg-green-500" style="height:35%"></div>
+                <div class="bg-yellow-400" style="height:40%"></div>
+                <div class="bg-red-500" style="height:18%"></div>
+                <div class="bg-gray-500" style="height:7%"></div>
+              </div>
+              <div class="flex flex-col items-center text-[10px] text-acl-t3"><span class="font-bold">T3</span><span class="font-num">218</span></div>
+            </div>
+            <!-- T4: 232 -->
+            <div class="flex-1 flex flex-col items-center gap-2">
+              <div class="w-full flex flex-col-reverse rounded-md overflow-hidden border border-acl" style="height:96%">
+                <div class="bg-green-500" style="height:35%"></div>
+                <div class="bg-yellow-400" style="height:39%"></div>
+                <div class="bg-red-500" style="height:18%"></div>
+                <div class="bg-gray-500" style="height:8%"></div>
+              </div>
+              <div class="flex flex-col items-center text-[10px] text-acl-t3"><span class="font-bold">T4</span><span class="font-num">232</span></div>
+            </div>
+            <!-- T5 current: 209 highlighted orange border -->
+            <div class="flex-1 flex flex-col items-center gap-2">
+              <div class="w-full flex flex-col-reverse rounded-md overflow-hidden border-2 border-orange" style="height:88%">
+                <div class="bg-green-500" style="height:35%"></div>
+                <div class="bg-yellow-400" style="height:40%"></div>
+                <div class="bg-red-500" style="height:18%"></div>
+                <div class="bg-gray-500" style="height:7%"></div>
+              </div>
+              <div class="flex flex-col items-center text-[10px] text-orange"><span class="font-bold">T5</span><span class="font-num">209</span></div>
+            </div>
+          </div>
+          <div class="flex gap-4 mt-3 flex-wrap">
+            <div class="flex items-center gap-1.5 text-xs text-acl-t2"><div class="w-3 h-2 rounded-sm bg-green-500"></div> Xanh</div>
+            <div class="flex items-center gap-1.5 text-xs text-acl-t2"><div class="w-3 h-2 rounded-sm bg-yellow-400"></div> Vàng</div>
+            <div class="flex items-center gap-1.5 text-xs text-acl-t2"><div class="w-3 h-2 rounded-sm bg-red-500"></div> Đỏ</div>
+            <div class="flex items-center gap-1.5 text-xs text-acl-t2"><div class="w-3 h-2 rounded-sm bg-gray-500"></div> Xám</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 panels: outreach + new guests -->
+      <div class="grid grid-cols-2 gap-5">
+        <!-- Outreach -->
+        <div class="bg-acl-card border border-acl rounded-2xl p-5">
+          <div class="flex justify-between items-center mb-4">
+            <div class="text-xs font-heading font-bold tracking-widest text-acl-t2 uppercase flex items-center gap-1.5">
+              <i data-lucide="alert-triangle" width="12" height="12" class="text-red-400"></i> Cần outreach
+            </div>
+            <span class="text-xs bg-red-500/15 border border-red-500/30 text-red-400 px-2 py-0.5 rounded-full font-bold">52</span>
+          </div>
+          <div class="space-y-2.5">
+            <div class="flex items-center gap-3"><div class="w-2.5 h-2.5 rounded-full flex-shrink-0" style="background:#ef4444"></div><div class="flex-1 min-w-0"><div class="text-sm text-white truncate">Bùi Thanh Sơn</div><div class="text-xs text-acl-t2 truncate">Đỏ · Sản xuất</div></div></div>
+            <div class="flex items-center gap-3"><div class="w-2.5 h-2.5 rounded-full flex-shrink-0" style="background:#ef4444"></div><div class="flex-1 min-w-0"><div class="text-sm text-white truncate">Hoàng Văn Đức</div><div class="text-xs text-acl-t2 truncate">Đỏ · Vận tải</div></div></div>
+            <div class="flex items-center gap-3"><div class="w-2.5 h-2.5 rounded-full flex-shrink-0" style="background:#ef4444"></div><div class="flex-1 min-w-0"><div class="text-sm text-white truncate">Mai Thị Lan</div><div class="text-xs text-acl-t2 truncate">Đỏ · Y tế</div></div></div>
+            <div class="flex items-center gap-3"><div class="w-2.5 h-2.5 rounded-full flex-shrink-0" style="background:#ef4444"></div><div class="flex-1 min-w-0"><div class="text-sm text-white truncate">Trương Văn Long</div><div class="text-xs text-acl-t2 truncate">Đỏ · Xây dựng</div></div></div>
+            <div class="flex items-center gap-3"><div class="w-2.5 h-2.5 rounded-full flex-shrink-0" style="background:#ef4444"></div><div class="flex-1 min-w-0"><div class="text-sm text-white truncate">Vũ Thị Hồng</div><div class="text-xs text-acl-t2 truncate">Đỏ · Spa</div></div></div>
+            <div class="flex items-center gap-3"><div class="w-2.5 h-2.5 rounded-full flex-shrink-0" style="background:#6b7280"></div><div class="flex-1 min-w-0"><div class="text-sm text-white truncate">Nguyễn Quốc An</div><div class="text-xs text-acl-t2 truncate">Xám · Tư vấn</div></div></div>
+            <div class="flex items-center gap-3"><div class="w-2.5 h-2.5 rounded-full flex-shrink-0" style="background:#6b7280"></div><div class="flex-1 min-w-0"><div class="text-sm text-white truncate">Phan Hữu Bình</div><div class="text-xs text-acl-t2 truncate">Xám · Du lịch</div></div></div>
+            <div class="flex items-center gap-3"><div class="w-2.5 h-2.5 rounded-full flex-shrink-0" style="background:#6b7280"></div><div class="flex-1 min-w-0"><div class="text-sm text-white truncate">Đặng Thị Hoa</div><div class="text-xs text-acl-t2 truncate">Xám · Giáo dục</div></div></div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-acl text-center">
+            <a href="#" class="text-xs text-cyan hover:underline">Xem tất cả 52 members →</a>
+          </div>
+        </div>
+
+        <!-- New guests by event -->
+        <div class="bg-acl-card border border-acl rounded-2xl p-5">
+          <div class="flex justify-between items-center mb-4">
+            <div class="text-xs font-heading font-bold tracking-widest text-acl-t2 uppercase flex items-center gap-1.5">
+              <i data-lucide="calendar" width="12" height="12" class="text-cyan"></i> Guest mới theo event
+            </div>
+            <a href="s-29-events-list.html" class="text-xs text-cyan hover:underline">Xem all</a>
+          </div>
+          <div class="space-y-3">
+            <a href="s-32-event-survey-results.html" class="flex items-center gap-3 hover:bg-white/3 -mx-2 px-2 py-1.5 rounded-lg">
+              <div class="w-10 h-10 rounded-xl bg-orange-dim flex items-center justify-center flex-shrink-0"><i data-lucide="calendar" width="16" height="16" class="text-orange"></i></div>
+              <div class="flex-1 min-w-0"><div class="text-sm text-white font-medium truncate">ACL Monthly Meetup #27</div><div class="text-xs text-acl-t2">17/04</div></div>
+              <div class="text-right flex-shrink-0"><div class="font-num font-bold text-cyan">14</div><div class="text-[10px] text-acl-t3">guests</div></div>
+            </a>
+            <a href="#" class="flex items-center gap-3 hover:bg-white/3 -mx-2 px-2 py-1.5 rounded-lg">
+              <div class="w-10 h-10 rounded-xl bg-orange-dim flex items-center justify-center flex-shrink-0"><i data-lucide="calendar" width="16" height="16" class="text-orange"></i></div>
+              <div class="flex-1 min-w-0"><div class="text-sm text-white font-medium truncate">Workshop Sales Funnel cho B2B</div><div class="text-xs text-acl-t2">24/04</div></div>
+              <div class="text-right flex-shrink-0"><div class="font-num font-bold text-cyan">8</div><div class="text-[10px] text-acl-t3">guests</div></div>
+            </a>
+            <a href="#" class="flex items-center gap-3 hover:bg-white/3 -mx-2 px-2 py-1.5 rounded-lg">
+              <div class="w-10 h-10 rounded-xl bg-orange-dim flex items-center justify-center flex-shrink-0"><i data-lucide="calendar" width="16" height="16" class="text-orange"></i></div>
+              <div class="flex-1 min-w-0"><div class="text-sm text-white font-medium truncate">Networking Night — Tech & Startup</div><div class="text-xs text-acl-t2">02/04</div></div>
+              <div class="text-right flex-shrink-0"><div class="font-num font-bold text-cyan">22</div><div class="text-[10px] text-acl-t3">guests</div></div>
+            </a>
+            <a href="#" class="flex items-center gap-3 hover:bg-white/3 -mx-2 px-2 py-1.5 rounded-lg">
+              <div class="w-10 h-10 rounded-xl bg-orange-dim flex items-center justify-center flex-shrink-0"><i data-lucide="calendar" width="16" height="16" class="text-orange"></i></div>
+              <div class="flex-1 min-w-0"><div class="text-sm text-white font-medium truncate">ACL Monthly Meetup #26</div><div class="text-xs text-acl-t2">20/03</div></div>
+              <div class="text-right flex-shrink-0"><div class="font-num font-bold text-cyan">11</div><div class="text-[10px] text-acl-t3">guests</div></div>
+            </a>
+            <a href="#" class="flex items-center gap-3 hover:bg-white/3 -mx-2 px-2 py-1.5 rounded-lg">
+              <div class="w-10 h-10 rounded-xl bg-orange-dim flex items-center justify-center flex-shrink-0"><i data-lucide="calendar" width="16" height="16" class="text-orange"></i></div>
+              <div class="flex-1 min-w-0"><div class="text-sm text-white font-medium truncate">Workshop OKR cho SME</div><div class="text-xs text-acl-t2">15/03</div></div>
+              <div class="text-right flex-shrink-0"><div class="font-num font-bold text-cyan">6</div><div class="text-[10px] text-acl-t3">guests</div></div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer note -->
+      <p class="text-xs text-acl-t3 mt-6 text-center">
+        Dashboard chỉ hiển thị · BCH không có quyền chỉnh sửa data. Để duyệt member hoặc nhập điểm, liên hệ Ops team.
+      </p>
+    </div>
+  </div>
+</div></div>
+
+<script src="_assets/nav.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

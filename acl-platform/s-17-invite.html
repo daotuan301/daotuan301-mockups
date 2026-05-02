@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>S-17 · Invitation Code · ACL Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&family=Barlow+Condensed:wght@500;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="_assets/styles.css" />
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-acl-base">
+
+<div id="demo-topbar"
+     data-prev="s-16-notifications.html"
+     data-next="s-18-qa-submit.html"
+     data-id="S-17"
+     data-name="Invitation Code"
+     data-us="US-023"
+     data-role="Member"></div>
+
+<div class="demo-stage">
+  <div class="phone-frame">
+    <div class="phone-notch"></div>
+    <div class="phone-content">
+      <div class="min-h-full bg-acl-base px-4 pt-4 pb-8">
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-5">
+          <a href="s-09-profile.html" class="flex items-center gap-1.5 text-sm font-semibold text-acl-t2 hover:text-white">
+            <i data-lucide="arrow-left" width="16" height="16"></i> Hồ sơ
+          </a>
+          <span class="font-heading font-bold text-white">Mã mời</span>
+          <div class="w-16"></div>
+        </div>
+
+        <!-- Invite code card -->
+        <div class="relative rounded-2xl p-6 mb-5 text-center overflow-hidden"
+             style="background: linear-gradient(135deg,#1E0840,#0F1140); border:1px solid rgba(255,107,26,0.3);">
+          <div class="absolute inset-0 pointer-events-none"
+               style="background: radial-gradient(ellipse at 50% 0%, rgba(255,107,26,0.12) 0%, transparent 60%);"></div>
+          <div class="relative z-10">
+            <div class="text-xs font-heading font-bold tracking-widest text-acl-t2 uppercase mb-3">Mã mời của bạn</div>
+            <div class="font-heading font-black text-3xl text-white tracking-wider mb-2">ACL-7K2H9</div>
+            <div class="text-xs text-acl-t2 mb-5">Dùng mãi mãi · Không giới hạn lượt</div>
+            <div class="flex gap-3">
+              <button class="flex-1 h-11 rounded-xl flex items-center justify-center gap-2 text-sm font-bold bg-orange-dim border border-orange text-orange">
+                <i data-lucide="copy" width="16" height="16"></i> Copy mã
+              </button>
+              <button class="flex-1 h-11 bg-white/5 border border-acl rounded-xl flex items-center justify-center gap-2 text-sm font-bold text-acl-t2">
+                <i data-lucide="share-2" width="16" height="16"></i> Chia sẻ
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- L3 preview -->
+        <div class="bg-acl-card border border-acl rounded-xl p-4 mb-5">
+          <div class="text-xs font-heading font-bold tracking-widest text-acl-t2 uppercase mb-3">Điểm L3 Tháng 5/2026</div>
+          <div class="flex justify-between items-center">
+            <div>
+              <div class="text-sm text-acl-t2">Guest đã check-in tháng này</div>
+              <div class="text-xs text-acl-t3 mt-0.5">≥2 guests = 10đ L3</div>
+            </div>
+            <div class="text-right">
+              <div class="font-num text-3xl font-bold text-cyan">3</div>
+              <div class="text-xs font-bold text-green-400">+10đ L3</div>
+            </div>
+          </div>
+          <div class="h-px bg-white/8 mt-3 mb-3"></div>
+          <div class="text-xs text-acl-t2">
+            Tổng guest đã mời: <span class="text-white font-semibold">12 người</span>
+          </div>
+        </div>
+
+        <!-- Guest list -->
+        <div class="text-[10px] font-heading font-extrabold tracking-[2.5px] text-acl-t2 uppercase mb-2.5">
+          Lịch sử guest (12)
+        </div>
+        <div class="space-y-2 mb-5">
+          <div class="flex items-center gap-3 bg-acl-card border border-acl rounded-xl px-4 py-3">
+            <div class="w-9 h-9 rounded-xl flex items-center justify-center text-sm font-bold text-white flex-shrink-0"
+                 style="background: linear-gradient(135deg, rgba(255,107,26,0.6), rgba(199,56,0,0.6));">L</div>
+            <div class="flex-1 min-w-0">
+              <div class="text-sm font-medium text-white truncate">Lê Hoàng Long</div>
+              <div class="text-xs text-acl-t2 truncate">Buổi học tháng 5 · 03/05/2026</div>
+            </div>
+            <span class="text-[10px] font-bold px-2 py-1 rounded-full whitespace-nowrap bg-cyan/15 border border-cyan/30 text-cyan">Đã check-in</span>
+          </div>
+          <div class="flex items-center gap-3 bg-acl-card border border-acl rounded-xl px-4 py-3">
+            <div class="w-9 h-9 rounded-xl flex items-center justify-center text-sm font-bold text-white flex-shrink-0"
+                 style="background: linear-gradient(135deg, rgba(255,107,26,0.6), rgba(199,56,0,0.6));">M</div>
+            <div class="flex-1 min-w-0">
+              <div class="text-sm font-medium text-white truncate">Mai Thị Phương</div>
+              <div class="text-xs text-acl-t2 truncate">Workshop Tài chính · 03/05/2026</div>
+            </div>
+            <span class="text-[10px] font-bold px-2 py-1 rounded-full whitespace-nowrap bg-cyan/15 border border-cyan/30 text-cyan">Đã check-in</span>
+          </div>
+          <div class="flex items-center gap-3 bg-acl-card border border-acl rounded-xl px-4 py-3">
+            <div class="w-9 h-9 rounded-xl flex items-center justify-center text-sm font-bold text-white flex-shrink-0"
+                 style="background: linear-gradient(135deg, rgba(255,107,26,0.6), rgba(199,56,0,0.6));">N</div>
+            <div class="flex-1 min-w-0">
+              <div class="text-sm font-medium text-white truncate">Nguyễn Văn Đức</div>
+              <div class="text-xs text-acl-t2 truncate">Buổi học tháng 5 · 17/05/2026</div>
+            </div>
+            <span class="text-[10px] font-bold px-2 py-1 rounded-full whitespace-nowrap bg-cyan/15 border border-cyan/30 text-cyan">Đã check-in</span>
+          </div>
+          <div class="flex items-center gap-3 bg-acl-card border border-acl rounded-xl px-4 py-3">
+            <div class="w-9 h-9 rounded-xl flex items-center justify-center text-sm font-bold text-white flex-shrink-0"
+                 style="background: linear-gradient(135deg, rgba(255,107,26,0.6), rgba(199,56,0,0.6));">P</div>
+            <div class="flex-1 min-w-0">
+              <div class="text-sm font-medium text-white truncate">Phạm Thuý Hằng</div>
+              <div class="text-xs text-acl-t2 truncate">Networking F&amp;B · 22/05/2026</div>
+            </div>
+            <span class="text-[10px] font-bold px-2 py-1 rounded-full whitespace-nowrap bg-orange-dim border border-orange/30 text-orange">Đã ĐK</span>
+          </div>
+          <div class="flex items-center gap-3 bg-acl-card border border-acl rounded-xl px-4 py-3">
+            <div class="w-9 h-9 rounded-xl flex items-center justify-center text-sm font-bold text-white flex-shrink-0"
+                 style="background: linear-gradient(135deg, rgba(255,107,26,0.6), rgba(199,56,0,0.6));">T</div>
+            <div class="flex-1 min-w-0">
+              <div class="text-sm font-medium text-white truncate">Trần Khánh An</div>
+              <div class="text-xs text-acl-t2 truncate">Đại hội ACL · 30/06/2026</div>
+            </div>
+            <span class="text-[10px] font-bold px-2 py-1 rounded-full whitespace-nowrap bg-orange-dim border border-orange/30 text-orange">Đã ĐK</span>
+          </div>
+        </div>
+
+        <!-- How it works -->
+        <div class="bg-acl-card border border-acl rounded-xl p-4">
+          <div class="flex items-center gap-2 mb-3">
+            <i data-lucide="users" width="16" height="16" class="text-acl-t2"></i>
+            <span class="text-xs font-heading font-bold tracking-wider text-acl-t2 uppercase">Cách tính điểm L3</span>
+          </div>
+          <div class="space-y-1.5 text-xs text-acl-t2">
+            <div>• 0 guest check-in = <span class="text-white">0 điểm</span></div>
+            <div>• 1 guest check-in = <span class="text-cyan">+5 điểm</span></div>
+            <div>• ≥2 guests check-in = <span class="text-orange">+10 điểm</span> (tối đa)</div>
+          </div>
+          <div class="mt-3 pt-3 border-t border-acl text-xs text-acl-t3 leading-relaxed">
+            Code không đổi theo tháng — dùng mãi mãi. Đầu mỗi tháng, lượt check-in được reset để tính lại L3. Chỉ guest thực sự check-in tại event mới được tính.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="_assets/nav.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

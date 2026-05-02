@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>S-14 · Event Calendar · ACL Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&family=Barlow+Condensed:wght@500;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="_assets/styles.css" />
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-acl-base">
+
+<div id="demo-topbar"
+     data-prev="s-13-leaderboard.html"
+     data-next="s-15-checkin-scanner.html"
+     data-id="S-14"
+     data-name="Event Calendar"
+     data-us="US-013"
+     data-role="Member"></div>
+
+<div class="demo-stage">
+  <div class="phone-frame">
+    <div class="phone-notch"></div>
+    <div class="phone-content">
+      <div class="min-h-full bg-acl-base px-4 pt-4 pb-32">
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-4">
+          <h1 class="font-heading font-black text-2xl text-white">Sự kiện</h1>
+        </div>
+
+        <!-- Filter tabs -->
+        <div class="flex gap-1 mb-5">
+          <button class="flex-1 py-2 rounded-xl text-xs font-heading font-bold bg-orange-dim border border-orange text-white">Sắp tới</button>
+          <button class="flex-1 py-2 rounded-xl text-xs font-heading font-bold text-acl-t2 bg-acl-card border border-acl">Đã qua</button>
+        </div>
+
+        <!-- Event list -->
+        <div class="space-y-3">
+          <!-- Event 1 — registered -->
+          <a href="#" class="block bg-acl-card border-l-[3px] border-l-orange-500 border border-acl rounded-xl p-4 hover:bg-white/5">
+            <div class="flex items-start justify-between gap-2 mb-3">
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-1.5 mb-1.5 flex-wrap">
+                  <span class="text-[10px] font-bold px-2 py-0.5 rounded-full border bg-orange-dim border-orange text-orange">Sắp diễn ra</span>
+                  <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-cyan/15 border border-cyan/30 text-cyan">Đã đăng ký</span>
+                </div>
+                <h3 class="font-heading font-bold text-sm text-white leading-tight">Buổi học tháng 5: Lãnh đạo trong khủng hoảng</h3>
+              </div>
+              <i data-lucide="chevron-right" width="16" height="16" class="text-acl-t3 flex-shrink-0 mt-1"></i>
+            </div>
+            <div class="space-y-1">
+              <div class="flex items-center gap-2 text-xs text-acl-t2">
+                <i data-lucide="calendar" width="12" height="12" class="text-acl-t3"></i>
+                17/05/2026 · 19:00 – 21:30
+              </div>
+              <div class="flex items-center gap-2 text-xs text-acl-t2">
+                <i data-lucide="map-pin" width="12" height="12" class="text-acl-t3"></i>
+                <span class="truncate">Hội trường ACL · 25 Lê Duẩn, Q.1, TP.HCM</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs text-acl-t2">
+                <i data-lucide="users" width="12" height="12" class="text-acl-t3"></i>
+                47 người đã đăng ký
+              </div>
+            </div>
+          </a>
+
+          <!-- Event 2 — open -->
+          <a href="#" class="block bg-acl-card border-l-[3px] border-l-orange-500 border border-acl rounded-xl p-4 hover:bg-white/5">
+            <div class="flex items-start justify-between gap-2 mb-3">
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-1.5 mb-1.5">
+                  <span class="text-[10px] font-bold px-2 py-0.5 rounded-full border bg-orange-dim border-orange text-orange">Sắp diễn ra</span>
+                </div>
+                <h3 class="font-heading font-bold text-sm text-white leading-tight">Networking chuyên ngành F&amp;B</h3>
+              </div>
+              <i data-lucide="chevron-right" width="16" height="16" class="text-acl-t3 flex-shrink-0 mt-1"></i>
+            </div>
+            <div class="space-y-1">
+              <div class="flex items-center gap-2 text-xs text-acl-t2">
+                <i data-lucide="calendar" width="12" height="12" class="text-acl-t3"></i>
+                22/05/2026 · 18:30 – 21:00
+              </div>
+              <div class="flex items-center gap-2 text-xs text-acl-t2">
+                <i data-lucide="map-pin" width="12" height="12" class="text-acl-t3"></i>
+                <span class="truncate">Quán Cà phê Sunlight · Q.3</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs text-acl-t2">
+                <i data-lucide="users" width="12" height="12" class="text-acl-t3"></i>
+                28 người đã đăng ký
+              </div>
+            </div>
+          </a>
+
+          <!-- Event 3 — registered + checked-in -->
+          <a href="#" class="block bg-acl-card border-l-[3px] border-l-orange-500 border border-acl rounded-xl p-4 hover:bg-white/5">
+            <div class="flex items-start justify-between gap-2 mb-3">
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-1.5 mb-1.5 flex-wrap">
+                  <span class="text-[10px] font-bold px-2 py-0.5 rounded-full border bg-orange-dim border-orange text-orange">Sắp diễn ra</span>
+                  <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-green-500/15 border border-green-500/30 text-green-400">✓ Đã check-in</span>
+                </div>
+                <h3 class="font-heading font-bold text-sm text-white leading-tight">Workshop: Tài chính cho SME</h3>
+              </div>
+              <i data-lucide="chevron-right" width="16" height="16" class="text-acl-t3 flex-shrink-0 mt-1"></i>
+            </div>
+            <div class="space-y-1">
+              <div class="flex items-center gap-2 text-xs text-acl-t2">
+                <i data-lucide="calendar" width="12" height="12" class="text-acl-t3"></i>
+                03/05/2026 · 14:00 – 17:00
+              </div>
+              <div class="flex items-center gap-2 text-xs text-acl-t2">
+                <i data-lucide="map-pin" width="12" height="12" class="text-acl-t3"></i>
+                <span class="truncate">Online (Zoom)</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs text-acl-t2">
+                <i data-lucide="users" width="12" height="12" class="text-acl-t3"></i>
+                65 người đã đăng ký
+              </div>
+            </div>
+          </a>
+
+          <!-- Event 4 — open, paid -->
+          <a href="#" class="block bg-acl-card border-l-[3px] border-l-orange-500 border border-acl rounded-xl p-4 hover:bg-white/5">
+            <div class="flex items-start justify-between gap-2 mb-3">
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-1.5 mb-1.5">
+                  <span class="text-[10px] font-bold px-2 py-0.5 rounded-full border bg-orange-dim border-orange text-orange">Sắp diễn ra</span>
+                </div>
+                <h3 class="font-heading font-bold text-sm text-white leading-tight">Đại hội ACL — Tổng kết Quý 2/2026</h3>
+              </div>
+              <i data-lucide="chevron-right" width="16" height="16" class="text-acl-t3 flex-shrink-0 mt-1"></i>
+            </div>
+            <div class="space-y-1">
+              <div class="flex items-center gap-2 text-xs text-acl-t2">
+                <i data-lucide="calendar" width="12" height="12" class="text-acl-t3"></i>
+                30/06/2026 · 09:00 – 17:00
+              </div>
+              <div class="flex items-center gap-2 text-xs text-acl-t2">
+                <i data-lucide="map-pin" width="12" height="12" class="text-acl-t3"></i>
+                <span class="truncate">Khách sạn Rex · Q.1</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs text-acl-t2">
+                <i data-lucide="users" width="12" height="12" class="text-acl-t3"></i>
+                132 người đã đăng ký
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Bottom Nav -->
+        <div class="absolute bottom-0 left-0 right-0 z-50 flex justify-around items-center pt-2.5 pb-7" style="background: #10122A; border-top: 1px solid rgba(255,255,255,0.08);">
+          <a href="s-08-home.html" class="flex flex-col items-center gap-1 px-3 py-1">
+            <i data-lucide="home" width="20" height="20" style="color:#A0A8C0;"></i>
+            <span class="text-[9px] font-heading font-bold tracking-widest uppercase text-acl-t2">Trang chủ</span>
+          </a>
+          <a href="s-13-leaderboard.html" class="flex flex-col items-center gap-1 px-3 py-1">
+            <i data-lucide="trophy" width="20" height="20" style="color:#A0A8C0;"></i>
+            <span class="text-[9px] font-heading font-bold tracking-widest uppercase text-acl-t2">Bảng XH</span>
+          </a>
+          <a href="s-14-events.html" class="flex flex-col items-center gap-1 px-3 py-1 relative">
+            <span class="absolute -top-0.5 w-1 h-1 rounded-full" style="background:#FF6B1A;"></span>
+            <i data-lucide="calendar-days" width="20" height="20" style="color:#FF6B1A;"></i>
+            <span class="text-[9px] font-heading font-bold tracking-widest uppercase text-orange">Sự kiện</span>
+          </a>
+          <a href="s-09-profile.html" class="flex flex-col items-center gap-1 px-3 py-1">
+            <i data-lucide="user" width="20" height="20" style="color:#A0A8C0;"></i>
+            <span class="text-[9px] font-heading font-bold tracking-widest uppercase text-acl-t2">Hồ sơ</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="_assets/nav.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>S-25 · Nhập điểm HỌC · ACL Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&family=Barlow+Condensed:wght@500;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="_assets/styles.css" />
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-acl-base">
+
+<div id="demo-topbar"
+     data-prev="s-24-member-detail.html"
+     data-next="s-26-import-scores.html"
+     data-id="S-25"
+     data-name="Nhập điểm HỌC"
+     data-us="US-005"
+     data-role="Ops"></div>
+
+<div class="demo-desk-stage"><div class="desktop-frame">
+  <div class="flex min-h-[800px]">
+
+    <!-- Sidebar -->
+    <aside class="w-60 bg-acl-nav border-r border-acl flex flex-col flex-shrink-0">
+      <div class="px-5 py-5 border-b border-acl">
+        <div class="font-heading font-black text-xl tracking-tight"><span class="text-orange">ACL</span><span class="text-white"> Platform</span></div>
+        <div class="text-[10px] text-acl-t2 mt-0.5 tracking-widest uppercase font-heading font-bold">CMS / Ops</div>
+      </div>
+      <nav class="flex-1 overflow-y-auto p-3 space-y-5">
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Tổng quan</div>
+          <a href="s-22-ops-dashboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="layout-dashboard" width="16" height="16"></i><span>Dashboard</span></a>
+        </div>
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Thành viên</div>
+          <a href="s-23-members-list.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="users" width="16" height="16"></i><span>DS Thành viên</span></a>
+          <a href="s-25-scores.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium bg-orange-dim border border-orange text-white"><i data-lucide="star" width="16" height="16" class="text-orange"></i><span>Nhập điểm HỌC</span><i data-lucide="chevron-right" width="12" height="12" class="ml-auto text-orange"></i></a>
+          <a href="s-27-review-list.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="check-square" width="16" height="16"></i><span>Duyệt HÀNH</span></a>
+        </div>
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Sự kiện</div>
+          <a href="s-29-events-list.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="calendar-days" width="16" height="16"></i><span>Quản lý Event</span></a>
+          <a href="s-33-qa-host.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="message-square" width="16" height="16"></i><span>Q&A Realtime</span></a>
+        </div>
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Báo cáo</div>
+          <a href="s-34-exports.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="download" width="16" height="16"></i><span>Export dữ liệu</span></a>
+        </div>
+      </nav>
+      <div class="p-3 border-t border-acl">
+        <button class="flex items-center gap-3 px-3 py-2.5 w-full rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="log-out" width="16" height="16"></i> Đăng xuất</button>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="flex-1 overflow-y-auto p-8">
+      <div class="flex justify-between items-center mb-6">
+        <div>
+          <h1 class="font-heading font-black text-2xl text-white">Nhập điểm HỌC</h1>
+          <p class="text-acl-t2 text-sm mt-1">
+            Tháng 5/2026 · 142/247 đã nhập
+            <span class="ml-2 text-xs font-bold text-orange bg-orange-dim border border-orange/30 px-2 py-0.5 rounded-full">105 chưa nhập</span>
+          </p>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="s-26-import-scores.html" class="flex items-center gap-1.5 h-10 px-3 bg-acl-card border border-acl rounded-xl text-sm text-acl-t2 hover:text-white"><i data-lucide="upload" width="14" height="14"></i> Bulk import</a>
+          <select class="h-10 px-4 bg-acl-card border border-acl rounded-xl text-sm text-white focus:outline-none cursor-pointer">
+            <option>Tháng 5/2026</option>
+            <option>Tháng 4/2026</option>
+            <option>Tháng 3/2026</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Legend -->
+      <div class="flex items-start gap-3 bg-acl-card border border-acl rounded-xl p-4 mb-5">
+        <i data-lucide="info" width="15" height="15" class="text-cyan flex-shrink-0 mt-0.5"></i>
+        <p class="text-xs text-acl-t2 leading-relaxed">
+          <span class="text-white font-semibold">L1 Presence:</span> 0 hoặc 20 (check-in ≥1 event) ·
+          <span class="text-white font-semibold">L2 Participation:</span> 0 / 10 / 20 (Ops chấm) ·
+          <span class="text-white font-semibold">L3 Contribution:</span> Tự động từ guests check-in — không nhập tay
+        </p>
+      </div>
+
+      <!-- Search -->
+      <div class="relative mb-5 max-w-sm">
+        <i data-lucide="search" width="15" height="15" class="absolute left-3 top-1/2 -translate-y-1/2 text-acl-t3"></i>
+        <input type="text" placeholder="Tìm thành viên..." class="w-full h-10 bg-acl-card border border-acl rounded-xl pl-9 pr-4 text-sm text-white placeholder-acl-t3 focus:outline-none" />
+      </div>
+
+      <!-- Table -->
+      <div class="bg-acl-card border border-acl rounded-2xl overflow-hidden mb-6">
+        <table class="w-full">
+          <thead>
+            <tr class="border-b border-acl">
+              <th class="text-left text-[10px] font-heading font-bold tracking-widest text-acl-t3 uppercase px-5 py-3">Thành viên</th>
+              <th class="text-center text-[10px] font-heading font-bold tracking-widest text-acl-t3 uppercase px-4 py-3">Check-in</th>
+              <th class="text-center text-[10px] font-heading font-bold tracking-widest text-acl-t3 uppercase px-4 py-3">L1 (0/20)</th>
+              <th class="text-center text-[10px] font-heading font-bold tracking-widest text-acl-t3 uppercase px-4 py-3">L2 (0/10/20)</th>
+              <th class="text-center text-[10px] font-heading font-bold tracking-widest text-acl-t3 uppercase px-4 py-3">Guests</th>
+              <th class="text-center text-[10px] font-heading font-bold tracking-widest text-acl-t3 uppercase px-4 py-3">L3 auto</th>
+              <th class="text-center text-[10px] font-heading font-bold tracking-widest text-acl-t3 uppercase px-4 py-3">Tổng HỌC</th>
+              <th class="px-5 py-3 w-20"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Row Tuấn (saved) -->
+            <tr class="border-b border-acl/50 hover:bg-white/[0.02]">
+              <td class="px-5 py-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500/60 to-red-700/60 flex items-center justify-center text-xs font-bold text-white">MT</div>
+                  <div><div class="text-sm font-medium text-white">Nguyễn Minh Tuấn</div><div class="text-xs text-acl-t2">tuan.nguyen@acmecorp.vn</div></div>
+                </div>
+              </td>
+              <td class="px-4 py-4 text-center"><span class="text-sm font-semibold text-green-400">2</span><span class="text-xs text-acl-t3 ml-1">event</span></td>
+              <td class="px-4 py-4 text-center"><select class="w-16 h-8 bg-acl-base border border-acl rounded-lg text-sm text-center text-white"><option value="0">0</option><option value="20" selected>20</option></select></td>
+              <td class="px-4 py-4 text-center"><select class="w-16 h-8 bg-acl-base border border-acl rounded-lg text-sm text-center text-white"><option>0</option><option selected>10</option><option>20</option></select></td>
+              <td class="px-4 py-4 text-center"><span class="text-sm font-semibold text-cyan">2</span><span class="text-xs text-acl-t3 ml-1">guests</span></td>
+              <td class="px-4 py-4 text-center"><span class="font-num text-lg font-bold text-cyan">10</span><span class="text-[10px] text-acl-t3 ml-1">(auto)</span></td>
+              <td class="px-4 py-4 text-center"><span class="font-num text-xl font-bold text-green-400">40</span><span class="text-xs text-acl-t3">/50</span></td>
+              <td class="px-5 py-4 text-right"><span class="text-[10px] text-green-400 font-bold">✓ Đã lưu</span></td>
+            </tr>
+            <!-- Row Linh (dirty - unsaved) -->
+            <tr class="border-b border-acl/50 bg-orange-500/5">
+              <td class="px-5 py-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500/60 to-red-700/60 flex items-center justify-center text-xs font-bold text-white">LP</div>
+                  <div><div class="text-sm font-medium text-white">Lê Phương Linh</div><div class="text-xs text-acl-t2">linh.le@vietravel.vn</div></div>
+                </div>
+              </td>
+              <td class="px-4 py-4 text-center"><span class="text-sm font-semibold text-green-400">1</span><span class="text-xs text-acl-t3 ml-1">event</span></td>
+              <td class="px-4 py-4 text-center"><select class="w-16 h-8 bg-acl-base border border-orange rounded-lg text-sm text-center text-white"><option>0</option><option selected>20</option></select></td>
+              <td class="px-4 py-4 text-center"><select class="w-16 h-8 bg-acl-base border border-orange rounded-lg text-sm text-center text-white"><option>0</option><option>10</option><option selected>20</option></select></td>
+              <td class="px-4 py-4 text-center"><span class="text-sm font-semibold text-cyan">1</span><span class="text-xs text-acl-t3 ml-1">guests</span></td>
+              <td class="px-4 py-4 text-center"><span class="font-num text-lg font-bold text-cyan">5</span><span class="text-[10px] text-acl-t3 ml-1">(auto)</span></td>
+              <td class="px-4 py-4 text-center"><span class="font-num text-xl font-bold text-green-400">45</span><span class="text-xs text-acl-t3">/50</span></td>
+              <td class="px-5 py-4 text-right"><button class="h-8 px-3 bg-orange-dim border border-orange rounded-lg text-xs font-bold text-orange hover:bg-orange-500/20">Lưu</button></td>
+            </tr>
+            <!-- Row Trang -->
+            <tr class="border-b border-acl/50 hover:bg-white/[0.02]">
+              <td class="px-5 py-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500/60 to-red-700/60 flex items-center justify-center text-xs font-bold text-white">HT</div>
+                  <div><div class="text-sm font-medium text-white">Hoàng Thị Trang</div><div class="text-xs text-acl-t2">trang.hoang@beautymax.vn</div></div>
+                </div>
+              </td>
+              <td class="px-4 py-4 text-center"><span class="text-sm font-semibold text-green-400">1</span><span class="text-xs text-acl-t3 ml-1">event</span></td>
+              <td class="px-4 py-4 text-center"><select class="w-16 h-8 bg-acl-base border border-acl rounded-lg text-sm text-center text-white"><option>0</option><option selected>20</option></select></td>
+              <td class="px-4 py-4 text-center"><select class="w-16 h-8 bg-acl-base border border-acl rounded-lg text-sm text-center text-white"><option>0</option><option selected>10</option><option>20</option></select></td>
+              <td class="px-4 py-4 text-center"><span class="text-sm font-semibold text-acl-t3">0</span><span class="text-xs text-acl-t3 ml-1">guests</span></td>
+              <td class="px-4 py-4 text-center"><span class="font-num text-lg font-bold text-acl-t3">0</span><span class="text-[10px] text-acl-t3 ml-1">(auto)</span></td>
+              <td class="px-4 py-4 text-center"><span class="font-num text-xl font-bold text-orange">30</span><span class="text-xs text-acl-t3">/50</span></td>
+              <td class="px-5 py-4 text-right"><span class="text-[10px] text-green-400 font-bold">✓ Đã lưu</span></td>
+            </tr>
+            <!-- Row Quang -->
+            <tr class="border-b border-acl/50 hover:bg-white/[0.02]">
+              <td class="px-5 py-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500/60 to-red-700/60 flex items-center justify-center text-xs font-bold text-white">TQ</div>
+                  <div><div class="text-sm font-medium text-white">Trần Quang Minh</div><div class="text-xs text-acl-t2">minh.tran@techviet.vn</div></div>
+                </div>
+              </td>
+              <td class="px-4 py-4 text-center"><span class="text-sm font-semibold text-green-400">1</span><span class="text-xs text-acl-t3 ml-1">event</span></td>
+              <td class="px-4 py-4 text-center"><select class="w-16 h-8 bg-acl-base border border-acl rounded-lg text-sm text-center text-white"><option>0</option><option selected>20</option></select></td>
+              <td class="px-4 py-4 text-center"><select class="w-16 h-8 bg-acl-base border border-acl rounded-lg text-sm text-center text-white"><option>0</option><option>10</option><option selected>20</option></select></td>
+              <td class="px-4 py-4 text-center"><span class="text-sm font-semibold text-cyan">3</span><span class="text-xs text-acl-t3 ml-1">guests</span></td>
+              <td class="px-4 py-4 text-center"><span class="font-num text-lg font-bold text-cyan">10</span><span class="text-[10px] text-acl-t3 ml-1">(auto)</span></td>
+              <td class="px-4 py-4 text-center"><span class="font-num text-xl font-bold text-green-400">50</span><span class="text-xs text-acl-t3">/50</span></td>
+              <td class="px-5 py-4 text-right"><span class="text-[10px] text-green-400 font-bold">✓ Đã lưu</span></td>
+            </tr>
+            <!-- Row Bùi (no checkin) -->
+            <tr class="border-b border-acl/50 hover:bg-white/[0.02]">
+              <td class="px-5 py-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500/60 to-red-700/60 flex items-center justify-center text-xs font-bold text-white">BS</div>
+                  <div><div class="text-sm font-medium text-white">Bùi Thanh Sơn</div><div class="text-xs text-acl-t2">son.bui@vinasx.vn</div></div>
+                </div>
+              </td>
+              <td class="px-4 py-4 text-center"><span class="text-sm font-semibold text-acl-t3">0</span><span class="text-xs text-acl-t3 ml-1">event</span></td>
+              <td class="px-4 py-4 text-center"><select class="w-16 h-8 bg-acl-base border border-acl rounded-lg text-sm text-center text-white"><option selected>0</option><option>20</option></select></td>
+              <td class="px-4 py-4 text-center"><select class="w-16 h-8 bg-acl-base border border-acl rounded-lg text-sm text-center text-white"><option selected>0</option><option>10</option><option>20</option></select></td>
+              <td class="px-4 py-4 text-center"><span class="text-sm font-semibold text-acl-t3">0</span><span class="text-xs text-acl-t3 ml-1">guests</span></td>
+              <td class="px-4 py-4 text-center"><span class="font-num text-lg font-bold text-acl-t3">0</span><span class="text-[10px] text-acl-t3 ml-1">(auto)</span></td>
+              <td class="px-4 py-4 text-center"><span class="font-num text-xl font-bold text-acl-t2">0</span><span class="text-xs text-acl-t3">/50</span></td>
+              <td class="px-5 py-4 text-right"><span class="text-[10px] text-acl-t3">Chưa nhập</span></td>
+            </tr>
+            <!-- Row Mai -->
+            <tr class="border-b border-acl/50 hover:bg-white/[0.02]">
+              <td class="px-5 py-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500/60 to-red-700/60 flex items-center justify-center text-xs font-bold text-white">ML</div>
+                  <div><div class="text-sm font-medium text-white">Mai Thị Lan</div><div class="text-xs text-acl-t2">lan.mai@dakhoa.vn</div></div>
+                </div>
+              </td>
+              <td class="px-4 py-4 text-center"><span class="text-sm font-semibold text-green-400">1</span><span class="text-xs text-acl-t3 ml-1">event</span></td>
+              <td class="px-4 py-4 text-center"><select class="w-16 h-8 bg-acl-base border border-acl rounded-lg text-sm text-center text-white"><option>0</option><option selected>20</option></select></td>
+              <td class="px-4 py-4 text-center"><select class="w-16 h-8 bg-acl-base border border-acl rounded-lg text-sm text-center text-white"><option selected>0</option><option>10</option><option>20</option></select></td>
+              <td class="px-4 py-4 text-center"><span class="text-sm font-semibold text-acl-t3">0</span><span class="text-xs text-acl-t3 ml-1">guests</span></td>
+              <td class="px-4 py-4 text-center"><span class="font-num text-lg font-bold text-acl-t3">0</span><span class="text-[10px] text-acl-t3 ml-1">(auto)</span></td>
+              <td class="px-4 py-4 text-center"><span class="font-num text-xl font-bold text-orange">20</span><span class="text-xs text-acl-t3">/50</span></td>
+              <td class="px-5 py-4 text-right"><span class="text-[10px] text-green-400 font-bold">✓ Đã lưu</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Audit log -->
+      <div class="bg-acl-card border border-acl rounded-2xl p-5">
+        <div class="text-xs font-heading font-bold tracking-widest text-acl-t2 uppercase mb-4">Audit log gần đây</div>
+        <div class="space-y-2.5 text-sm">
+          <div class="flex items-center gap-3 text-acl-t2">
+            <i data-lucide="clock" width="13" height="13" class="text-orange flex-shrink-0"></i>
+            <span class="text-white">Trần Lan Phương</span> đã sửa L2 của <span class="text-white">Nguyễn Minh Tuấn</span> từ <span class="text-acl-t3 line-through">20</span> → <span class="text-orange font-bold">10</span> · <span class="text-acl-t3 italic">"Em check lại Q&A log, Tuấn không phát biểu hôm 15/05"</span>
+            <span class="ml-auto text-xs text-acl-t3 whitespace-nowrap">10:24 hôm nay</span>
+          </div>
+          <div class="flex items-center gap-3 text-acl-t2">
+            <i data-lucide="clock" width="13" height="13" class="text-acl-t3 flex-shrink-0"></i>
+            <span class="text-white">Trần Lan Phương</span> đã nhập L1=20, L2=10 cho <span class="text-white">Hoàng Thị Trang</span>
+            <span class="ml-auto text-xs text-acl-t3 whitespace-nowrap">09:48 hôm nay</span>
+          </div>
+          <div class="flex items-center gap-3 text-acl-t2">
+            <i data-lucide="clock" width="13" height="13" class="text-acl-t3 flex-shrink-0"></i>
+            <span class="text-white">Trần Lan Phương</span> đã nhập L1=20, L2=20 cho <span class="text-white">Trần Quang Minh</span>
+            <span class="ml-auto text-xs text-acl-t3 whitespace-nowrap">09:42 hôm nay</span>
+          </div>
+          <div class="flex items-center gap-3 text-acl-t2">
+            <i data-lucide="clock" width="13" height="13" class="text-acl-t3 flex-shrink-0"></i>
+            Hệ thống đã update L3 cho <span class="text-white">Trần Quang Minh</span>: 0 → 10 (sau khi 3 guests check-in)
+            <span class="ml-auto text-xs text-acl-t3 whitespace-nowrap">22:15 hôm qua</span>
+          </div>
+          <div class="flex items-center gap-3 text-acl-t2">
+            <i data-lucide="clock" width="13" height="13" class="text-acl-t3 flex-shrink-0"></i>
+            <span class="text-white">Trần Lan Phương</span> đã import bulk Excel: 38 dòng L1/L2 · <a class="text-cyan hover:underline" href="s-26-import-scores.html">Xem import</a>
+            <span class="ml-auto text-xs text-acl-t3 whitespace-nowrap">28/04 14:10</span>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div></div>
+
+<script src="_assets/nav.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

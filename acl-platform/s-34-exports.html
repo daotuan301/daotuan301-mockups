@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>S-34 · Export Data · ACL Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&family=Barlow+Condensed:wght@500;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="_assets/styles.css" />
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-acl-base">
+
+<div id="demo-topbar"
+     data-prev="s-33-qa-host.html"
+     data-next="s-35-bch-dashboard.html"
+     data-id="S-34"
+     data-name="Export Data"
+     data-us="US-021"
+     data-role="Ops"></div>
+
+<div class="demo-desk-stage"><div class="desktop-frame">
+  <div class="flex min-h-[800px]">
+
+    <!-- Sidebar -->
+    <aside class="w-60 bg-acl-nav border-r border-acl flex flex-col flex-shrink-0">
+      <div class="px-5 py-5 border-b border-acl">
+        <div class="font-heading font-black text-xl tracking-tight"><span class="text-orange">ACL</span><span class="text-white"> Platform</span></div>
+        <div class="text-[10px] text-acl-t2 mt-0.5 tracking-widest uppercase font-heading font-bold">CMS / Ops</div>
+      </div>
+      <nav class="flex-1 overflow-y-auto p-3 space-y-5">
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Tổng quan</div>
+          <a href="s-22-ops-dashboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="layout-dashboard" width="16" height="16"></i><span>Dashboard</span></a>
+        </div>
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Thành viên</div>
+          <a href="s-23-members-list.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="users" width="16" height="16"></i><span>DS Thành viên</span></a>
+          <a href="s-25-scores.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="star" width="16" height="16"></i><span>Nhập điểm HỌC</span></a>
+          <a href="s-27-review-list.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="check-square" width="16" height="16"></i><span>Duyệt HÀNH</span></a>
+        </div>
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Sự kiện</div>
+          <a href="s-29-events-list.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="calendar-days" width="16" height="16"></i><span>Quản lý Event</span></a>
+          <a href="s-33-qa-host.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="message-square" width="16" height="16"></i><span>Q&A Realtime</span></a>
+        </div>
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Báo cáo</div>
+          <a href="s-34-exports.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium bg-orange-dim border border-orange text-white"><i data-lucide="download" width="16" height="16" class="text-orange"></i><span>Export dữ liệu</span><i data-lucide="chevron-right" width="12" height="12" class="ml-auto text-orange"></i></a>
+        </div>
+      </nav>
+      <div class="p-3 border-t border-acl">
+        <button class="flex items-center gap-3 px-3 py-2.5 w-full rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="log-out" width="16" height="16"></i> Đăng xuất</button>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="flex-1 overflow-y-auto p-8">
+      <div class="mb-6">
+        <h1 class="font-heading font-black text-2xl text-white">Export dữ liệu</h1>
+        <p class="text-acl-t2 text-sm mt-1">Xuất điểm HHL ra Excel hoặc tải HHL Cards dạng ZIP — phục vụ archive hoặc gửi BCH.</p>
+      </div>
+
+      <!-- Info banner -->
+      <div class="bg-cyan/5 border border-cyan/20 rounded-xl p-4 mb-5 text-sm text-acl-t2">
+        <p><strong class="text-white">Excel:</strong> Bao gồm L1/L2/L3 + A1/A2/A3 + Tổng + Đèn + trạng thái duyệt cho từng member active.</p>
+        <p class="mt-1.5"><strong class="text-white">ZIP cards:</strong> Mỗi member 1 file PNG (1080×1920). Có thể mất 1–2 phút cho 100+ members.</p>
+      </div>
+
+      <!-- Month list -->
+      <div class="bg-acl-card border border-acl rounded-2xl overflow-hidden">
+        <table class="w-full">
+          <thead>
+            <tr class="border-b border-acl">
+              <th class="text-left text-[10px] font-heading font-bold tracking-widest text-acl-t3 uppercase py-3 px-5">Tháng</th>
+              <th class="text-center text-[10px] font-heading font-bold tracking-widest text-acl-t3 uppercase py-3 px-5">Có điểm</th>
+              <th class="text-center text-[10px] font-heading font-bold tracking-widest text-acl-t3 uppercase py-3 px-5">Đã có Card</th>
+              <th class="text-center text-[10px] font-heading font-bold tracking-widest text-acl-t3 uppercase py-3 px-5">Đèn Xanh</th>
+              <th class="text-right text-[10px] font-heading font-bold tracking-widest text-acl-t3 uppercase py-3 px-5">Export</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-acl/50 hover:bg-white/3"><td class="px-5 py-4"><div class="flex items-center gap-2"><i data-lucide="calendar" width="14" height="14" class="text-orange"></i><span class="text-sm font-semibold text-white">Tháng 5/2026</span></div></td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-white">209</td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-acl-t3">0</td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-green-400">73</td>
+              <td class="px-5 py-4 text-right"><div class="flex items-center justify-end gap-2"><button class="flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 bg-green-500/10 border border-green-500/25 text-green-400 rounded-lg hover:bg-green-500/20"><i data-lucide="file-spreadsheet" width="12" height="12"></i> Excel</button><button class="flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 bg-orange-dim border border-orange/25 text-orange rounded-lg hover:bg-orange/20 disabled:opacity-40" disabled><i data-lucide="file-image" width="12" height="12"></i> ZIP cards</button></div></td>
+            </tr>
+            <tr class="border-b border-acl/50 hover:bg-white/3"><td class="px-5 py-4"><div class="flex items-center gap-2"><i data-lucide="calendar" width="14" height="14" class="text-orange"></i><span class="text-sm font-semibold text-white">Tháng 4/2026</span></div></td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-white">232</td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-cyan">232</td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-green-400">82</td>
+              <td class="px-5 py-4 text-right"><div class="flex items-center justify-end gap-2"><button class="flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 bg-green-500/10 border border-green-500/25 text-green-400 rounded-lg hover:bg-green-500/20"><i data-lucide="file-spreadsheet" width="12" height="12"></i> Excel</button><button class="flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 bg-orange-dim border border-orange/25 text-orange rounded-lg hover:bg-orange/20"><i data-lucide="file-image" width="12" height="12"></i> ZIP cards</button></div></td>
+            </tr>
+            <tr class="border-b border-acl/50 hover:bg-white/3"><td class="px-5 py-4"><div class="flex items-center gap-2"><i data-lucide="calendar" width="14" height="14" class="text-orange"></i><span class="text-sm font-semibold text-white">Tháng 3/2026</span></div></td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-white">218</td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-cyan">218</td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-green-400">76</td>
+              <td class="px-5 py-4 text-right"><div class="flex items-center justify-end gap-2"><button class="flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 bg-green-500/10 border border-green-500/25 text-green-400 rounded-lg hover:bg-green-500/20"><i data-lucide="file-spreadsheet" width="12" height="12"></i> Excel</button><button class="flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 bg-orange-dim border border-orange/25 text-orange rounded-lg hover:bg-orange/20"><i data-lucide="file-image" width="12" height="12"></i> ZIP cards</button></div></td>
+            </tr>
+            <tr class="border-b border-acl/50 hover:bg-white/3"><td class="px-5 py-4"><div class="flex items-center gap-2"><i data-lucide="calendar" width="14" height="14" class="text-orange"></i><span class="text-sm font-semibold text-white">Tháng 2/2026</span></div></td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-white">198</td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-cyan">198</td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-green-400">62</td>
+              <td class="px-5 py-4 text-right"><div class="flex items-center justify-end gap-2"><button class="flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 bg-green-500/10 border border-green-500/25 text-green-400 rounded-lg hover:bg-green-500/20"><i data-lucide="file-spreadsheet" width="12" height="12"></i> Excel</button><button class="flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 bg-orange-dim border border-orange/25 text-orange rounded-lg hover:bg-orange/20"><i data-lucide="file-image" width="12" height="12"></i> ZIP cards</button></div></td>
+            </tr>
+            <tr class="border-b border-acl/50 hover:bg-white/3"><td class="px-5 py-4"><div class="flex items-center gap-2"><i data-lucide="calendar" width="14" height="14" class="text-orange"></i><span class="text-sm font-semibold text-white">Tháng 1/2026</span></div></td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-white">182</td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-cyan">182</td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-green-400">58</td>
+              <td class="px-5 py-4 text-right"><div class="flex items-center justify-end gap-2"><button class="flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 bg-green-500/10 border border-green-500/25 text-green-400 rounded-lg hover:bg-green-500/20"><i data-lucide="file-spreadsheet" width="12" height="12"></i> Excel</button><button class="flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 bg-orange-dim border border-orange/25 text-orange rounded-lg hover:bg-orange/20"><i data-lucide="file-image" width="12" height="12"></i> ZIP cards</button></div></td>
+            </tr>
+            <tr class="border-b-0 hover:bg-white/3"><td class="px-5 py-4"><div class="flex items-center gap-2"><i data-lucide="calendar" width="14" height="14" class="text-orange"></i><span class="text-sm font-semibold text-white">Tháng 12/2025</span></div></td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-white">165</td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-cyan">165</td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-green-400">52</td>
+              <td class="px-5 py-4 text-right"><div class="flex items-center justify-end gap-2"><button class="flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 bg-green-500/10 border border-green-500/25 text-green-400 rounded-lg hover:bg-green-500/20"><i data-lucide="file-spreadsheet" width="12" height="12"></i> Excel</button><button class="flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 bg-orange-dim border border-orange/25 text-orange rounded-lg hover:bg-orange/20"><i data-lucide="file-image" width="12" height="12"></i> ZIP cards</button></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-xs text-acl-t3 mt-4 flex items-center gap-1.5"><i data-lucide="download" width="11" height="11"></i> File được tạo realtime — không cache. Nếu chậm có thể tải lại.</p>
+    </main>
+  </div>
+</div></div>
+
+<script src="_assets/nav.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

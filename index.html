@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mockups · daotuan301</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<style>
+  body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  *:focus-visible { outline: 2px solid #0a0a0a; outline-offset: 2px; border-radius: 6px; }
+</style>
+</head>
+<body class="bg-neutral-50 text-neutral-900 min-h-screen">
+
+<div class="max-w-4xl mx-auto py-12 px-6">
+
+  <header class="mb-10">
+    <div class="flex items-center gap-2 mb-3">
+      <div class="w-7 h-7 bg-neutral-900 rounded-md flex items-center justify-center">
+        <span class="text-white text-[10px] font-bold tracking-tighter">M</span>
+      </div>
+      <span class="text-xs font-medium text-neutral-500 uppercase tracking-wider">Mockups Hub · daotuan301</span>
+    </div>
+    <h1 class="text-3xl font-bold tracking-tight text-neutral-900">Mockups Repository</h1>
+    <p class="text-base text-neutral-600 mt-2 max-w-2xl">
+      Trung tâm các bộ mockup HTML để duyệt UI/UX với khách hàng trước khi code production. Mỗi dự án có thư mục riêng, tự đứng độc lập.
+    </p>
+  </header>
+
+  <section class="mb-8">
+    <div class="flex items-baseline justify-between mb-3 pb-2 border-b border-neutral-200">
+      <h2 class="text-sm font-semibold text-neutral-900 uppercase tracking-wider">Projects</h2>
+      <span class="text-xs text-neutral-500">Click để xem mockup từng dự án</span>
+    </div>
+    <div class="space-y-2">
+
+      <a href="acl-platform/" class="group flex items-center gap-3 bg-white border border-neutral-200 hover:border-neutral-900 p-5 rounded-lg transition-colors">
+        <span class="shrink-0 w-12 h-12 rounded-lg bg-orange-500 flex items-center justify-center">
+          <i data-lucide="users" class="h-6 w-6 text-white"></i>
+        </span>
+        <div class="flex-1 min-w-0">
+          <div class="text-base font-semibold text-neutral-900 group-hover:underline">ACL Platform — Action Leaders</div>
+          <div class="text-sm text-neutral-500 mt-0.5">Quản lý thành viên cộng đồng + hệ thống điểm Học–Hành Lights · 35 màn hình · 29 user stories</div>
+          <div class="flex items-center gap-3 mt-2 text-xs">
+            <span class="text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded font-medium">35/35 Done</span>
+            <span class="text-neutral-500">Member · Guest · Ops · BCH</span>
+          </div>
+        </div>
+        <i data-lucide="arrow-right" class="h-5 w-5 text-neutral-400 group-hover:text-neutral-900"></i>
+      </a>
+
+    </div>
+  </section>
+
+  <footer class="mt-12 pt-8 border-t border-neutral-200">
+    <h3 class="text-sm font-semibold text-neutral-900 mb-3">Cách dùng</h3>
+    <ol class="text-sm text-neutral-600 space-y-1 list-decimal list-inside">
+      <li>Click vào project → mở danh sách 35 màn hình</li>
+      <li>Click từng màn → xem mockup full screen</li>
+      <li>Dùng nút Prev/Next/Index trên topbar (hoặc phím ←/→/Esc) để chuyển</li>
+      <li>Gửi link cho khách hàng review trên trình duyệt — không cần cài đặt gì</li>
+    </ol>
+    <p class="text-xs text-neutral-500 mt-6">
+      Mockups là <strong>spec artifact</strong> để review UI/UX, KHÔNG phải production code.
+    </p>
+  </footer>
+
+</div>
+
+<script>lucide.createIcons();</script>
+</body>
+</html>

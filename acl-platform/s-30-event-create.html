@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>S-30 · Tạo Event · ACL Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&family=Barlow+Condensed:wght@500;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="_assets/styles.css" />
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-acl-base">
+
+<div id="demo-topbar"
+     data-prev="s-29-events-list.html"
+     data-next="s-31-event-cms.html"
+     data-id="S-30"
+     data-name="Tạo / Sửa Event"
+     data-us="US-009"
+     data-role="Ops"></div>
+
+<div class="demo-desk-stage"><div class="desktop-frame">
+  <div class="flex min-h-[800px]">
+
+    <!-- Sidebar -->
+    <aside class="w-60 bg-acl-nav border-r border-acl flex flex-col flex-shrink-0">
+      <div class="px-5 py-5 border-b border-acl">
+        <div class="font-heading font-black text-xl tracking-tight"><span class="text-orange">ACL</span><span class="text-white"> Platform</span></div>
+        <div class="text-[10px] text-acl-t2 mt-0.5 tracking-widest uppercase font-heading font-bold">CMS / Ops</div>
+      </div>
+      <nav class="flex-1 overflow-y-auto p-3 space-y-5">
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Tổng quan</div>
+          <a href="s-22-ops-dashboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="layout-dashboard" width="16" height="16"></i><span>Dashboard</span></a>
+        </div>
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Thành viên</div>
+          <a href="s-23-members-list.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="users" width="16" height="16"></i><span>DS Thành viên</span></a>
+          <a href="s-25-scores.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="star" width="16" height="16"></i><span>Nhập điểm HỌC</span></a>
+          <a href="s-27-review-list.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="check-square" width="16" height="16"></i><span>Duyệt HÀNH</span></a>
+        </div>
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Sự kiện</div>
+          <a href="s-29-events-list.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium bg-orange-dim border border-orange text-white"><i data-lucide="calendar-days" width="16" height="16" class="text-orange"></i><span>Quản lý Event</span><i data-lucide="chevron-right" width="12" height="12" class="ml-auto text-orange"></i></a>
+          <a href="s-33-qa-host.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="message-square" width="16" height="16"></i><span>Q&A Realtime</span></a>
+        </div>
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Báo cáo</div>
+          <a href="s-34-exports.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="download" width="16" height="16"></i><span>Export dữ liệu</span></a>
+        </div>
+      </nav>
+      <div class="p-3 border-t border-acl">
+        <button class="flex items-center gap-3 px-3 py-2.5 w-full rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="log-out" width="16" height="16"></i> Đăng xuất</button>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="flex-1 overflow-y-auto p-8">
+      <div class="max-w-2xl">
+        <a href="s-29-events-list.html" class="inline-flex items-center gap-1.5 text-sm text-acl-t2 hover:text-white mb-6"><i data-lucide="arrow-left" width="14" height="14"></i> Quay lại Events</a>
+
+        <h1 class="font-heading font-black text-2xl text-white mb-8">Tạo Event Mới</h1>
+
+        <form class="space-y-6">
+          <div>
+            <label class="block text-sm font-semibold text-white/70 mb-2">Tên event <span class="text-red-400">*</span></label>
+            <input type="text" required value="ACL Monthly Meetup #28" placeholder="VD: Buổi học ACL tháng 5/2026" class="w-full px-4 py-3 bg-acl-card border border-acl rounded-xl text-white placeholder-acl-t3 focus:outline-none focus:border-orange-500" />
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-semibold text-white/70 mb-2"><i data-lucide="calendar" width="13" height="13" class="inline mr-1"></i> Ngày <span class="text-red-400">*</span></label>
+              <input type="date" required value="2026-05-15" class="w-full px-4 py-3 bg-acl-card border border-acl rounded-xl text-white focus:outline-none focus:border-orange-500" style="color-scheme:dark" />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-white/70 mb-2"><i data-lucide="clock" width="13" height="13" class="inline mr-1"></i> Giờ bắt đầu <span class="text-red-400">*</span></label>
+              <input type="time" required value="18:30" class="w-full px-4 py-3 bg-acl-card border border-acl rounded-xl text-white focus:outline-none focus:border-orange-500" style="color-scheme:dark" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-semibold text-white/70 mb-2"><i data-lucide="clock" width="13" height="13" class="inline mr-1"></i> Giờ kết thúc <span class="ml-1 text-acl-t3 font-normal">(tùy chọn)</span></label>
+              <input type="time" value="21:00" class="w-full px-4 py-3 bg-acl-card border border-acl rounded-xl text-white focus:outline-none focus:border-orange-500" style="color-scheme:dark" />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-white/70 mb-2"><i data-lucide="dollar-sign" width="13" height="13" class="inline mr-1"></i> Phí tham dự (VNĐ)</label>
+              <input type="number" min="0" step="1000" value="0" placeholder="0 = Miễn phí" class="w-full px-4 py-3 bg-acl-card border border-acl rounded-xl text-white placeholder-acl-t3 focus:outline-none focus:border-orange-500" />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold text-white/70 mb-2"><i data-lucide="map-pin" width="13" height="13" class="inline mr-1"></i> Địa điểm <span class="text-red-400">*</span></label>
+            <input type="text" required value="Hội trường tầng 3, 123 Nguyễn Huệ, Q1, TP.HCM" class="w-full px-4 py-3 bg-acl-card border border-acl rounded-xl text-white placeholder-acl-t3 focus:outline-none focus:border-orange-500" />
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold text-white/70 mb-2"><i data-lucide="file-text" width="13" height="13" class="inline mr-1"></i> Mô tả <span class="ml-1 text-acl-t3 font-normal">(tùy chọn)</span></label>
+            <textarea rows="4" placeholder="Nội dung buổi học, speaker, lưu ý cho người tham dự..." class="w-full px-4 py-3 bg-acl-card border border-acl rounded-xl text-white placeholder-acl-t3 focus:outline-none focus:border-orange-500 resize-none">Buổi gặp mặt thường niên tháng 5 cộng đồng ACL.
+
+Speaker: Anh Nguyễn Văn Đức — CEO Saigon Logistics
+Topic: Áp dụng AI trong tối ưu chuỗi cung ứng SME
+
+Agenda:
+18:30 — Networking & welcome drink
+19:00 — Keynote
+20:30 — Q&A và breakout discussion</textarea>
+          </div>
+
+          <div class="bg-cyan/5 border border-cyan/15 rounded-xl px-4 py-3 text-sm text-acl-t2">
+            Sau khi tạo, hệ thống sẽ tự động generate QR code cho event và tạo URL đăng ký công khai.
+          </div>
+
+          <div class="flex gap-3 pt-2">
+            <a href="s-29-events-list.html" class="flex-1 py-3 text-center text-acl-t2 border border-acl rounded-xl font-semibold text-sm hover:bg-white/5">Hủy</a>
+            <button type="submit" class="btn-primary flex-1 py-3 rounded-xl font-semibold text-sm flex items-center justify-center gap-2">Tạo event</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+</div></div>
+
+<script src="_assets/nav.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

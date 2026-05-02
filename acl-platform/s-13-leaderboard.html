@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>S-13 · Leaderboard · ACL Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&family=Barlow+Condensed:wght@500;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="_assets/styles.css" />
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-acl-base">
+
+<div id="demo-topbar"
+     data-prev="s-12-monthly-review.html"
+     data-next="s-14-events.html"
+     data-id="S-13"
+     data-name="Leaderboard"
+     data-us="US-011"
+     data-role="Member"></div>
+
+<div class="demo-stage">
+  <div class="phone-frame">
+    <div class="phone-notch"></div>
+    <div class="phone-content">
+      <div class="min-h-full bg-acl-base px-4 pt-4 pb-32">
+        <!-- Header -->
+        <div class="mb-4">
+          <h1 class="font-heading font-black text-2xl text-white mb-1">Bảng xếp hạng</h1>
+          <p class="text-xs text-acl-t2">Cập nhật: Tháng 5/2026</p>
+        </div>
+
+        <!-- Range tabs -->
+        <div class="flex gap-1 mb-5">
+          <button class="flex-1 py-2 rounded-xl text-xs font-heading font-bold bg-orange-dim border border-orange text-white">Tháng</button>
+          <button class="flex-1 py-2 rounded-xl text-xs font-heading font-bold text-acl-t2 bg-acl-card border border-acl">Quý</button>
+          <button class="flex-1 py-2 rounded-xl text-xs font-heading font-bold text-acl-t2 bg-acl-card border border-acl">All-time</button>
+        </div>
+
+        <!-- Search -->
+        <div class="relative mb-5">
+          <i data-lucide="search" width="14" height="14" class="absolute left-3 top-1/2 -translate-y-1/2 text-acl-t3"></i>
+          <input type="text" placeholder="Tìm thành viên..."
+                 class="w-full h-10 bg-acl-card border border-acl rounded-xl pl-9 pr-4 text-sm text-white placeholder-acl-t3" />
+        </div>
+
+        <!-- Top 3 podium -->
+        <div class="grid grid-cols-3 gap-2 mb-5 items-end">
+          <!-- Hạng 2 (silver) -->
+          <div class="rounded-2xl p-3 text-center border"
+               style="background: linear-gradient(135deg,#1E2733,#131C24); border-color: rgba(255,255,255,0.2);">
+            <div class="text-2xl font-black font-num text-gray-300 mb-1 inline-block">2</div>
+            <div class="w-10 h-10 rounded-full mx-auto flex items-center justify-center text-xs font-black text-white mb-2"
+                 style="background: linear-gradient(135deg,#FF6B1A,#c83800);">LH</div>
+            <div class="text-[10px] font-heading font-bold text-white leading-tight truncate">Hằng</div>
+            <div class="font-num text-xl font-extrabold text-gray-300 mt-1">85</div>
+            <div class="text-[10px] mt-1 truncate">🏆 ⭐</div>
+          </div>
+          <!-- Hạng 1 (gold) — scaled up -->
+          <div class="rounded-2xl p-3 text-center border relative"
+               style="background: linear-gradient(135deg,#3D2E0A,#2A1F00); border-color: rgba(255,215,0,0.4); transform: scale(1.05); box-shadow: 0 0 24px rgba(255,215,0,0.2);">
+            <div class="text-2xl font-black font-num text-yellow-400 mb-1 relative inline-block">
+              1
+              <i data-lucide="crown" width="14" height="14" class="absolute -top-2.5 -right-3 text-yellow-400"></i>
+            </div>
+            <div class="w-10 h-10 rounded-full mx-auto flex items-center justify-center text-xs font-black text-white mb-2"
+                 style="background: linear-gradient(135deg,#FF6B1A,#c83800);">PA</div>
+            <div class="text-[10px] font-heading font-bold text-white leading-tight truncate">Anh</div>
+            <div class="font-num text-xl font-extrabold text-yellow-400 mt-1">92</div>
+            <div class="text-[10px] mt-1 truncate">🏆 ⭐ 💎</div>
+          </div>
+          <!-- Hạng 3 (bronze) -->
+          <div class="rounded-2xl p-3 text-center border"
+               style="background: linear-gradient(135deg,#2A1E12,#1C1208); border-color: rgba(180,80,30,0.3);">
+            <div class="text-2xl font-black font-num text-orange-400 mb-1 inline-block">3</div>
+            <div class="w-10 h-10 rounded-full mx-auto flex items-center justify-center text-xs font-black text-white mb-2"
+                 style="background: linear-gradient(135deg,#FF6B1A,#c83800);">TQ</div>
+            <div class="text-[10px] font-heading font-bold text-white leading-tight truncate">Quân</div>
+            <div class="font-num text-xl font-extrabold text-orange-400 mt-1">82</div>
+            <div class="text-[10px] mt-1 truncate">🏆 💡</div>
+          </div>
+        </div>
+
+        <!-- Rest of list -->
+        <div class="space-y-2">
+          <!-- Rank 4 -->
+          <div class="flex items-center gap-3 rounded-2xl px-4 py-3 border bg-acl-card border-acl">
+            <span class="font-num text-lg font-bold w-7 text-center text-acl-t2">4</span>
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center text-sm font-bold text-white flex-shrink-0"
+                 style="background: linear-gradient(135deg,#FF6B1A,#c83800);">VL</div>
+            <div class="flex-1 min-w-0">
+              <div class="text-sm font-semibold text-white truncate">Lê Văn Long</div>
+              <div class="text-xs text-acl-t2 truncate">F&amp;B · HỌC 40 · HÀNH 38 🏆</div>
+            </div>
+            <div class="flex items-center gap-2 flex-shrink-0">
+              <div class="w-2 h-2 rounded-full dot-green"></div>
+              <span class="font-num text-xl font-bold text-white">78</span>
+            </div>
+          </div>
+          <!-- Rank 5 -->
+          <div class="flex items-center gap-3 rounded-2xl px-4 py-3 border bg-acl-card border-acl">
+            <span class="font-num text-lg font-bold w-7 text-center text-acl-t2">5</span>
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center text-sm font-bold text-white flex-shrink-0"
+                 style="background: linear-gradient(135deg,#FF6B1A,#c83800);">NH</div>
+            <div class="flex-1 min-w-0">
+              <div class="text-sm font-semibold text-white truncate">Trần Thị Hương</div>
+              <div class="text-xs text-acl-t2 truncate">Giáo dục · HỌC 36 · HÀNH 38</div>
+            </div>
+            <div class="flex items-center gap-2 flex-shrink-0">
+              <div class="w-2 h-2 rounded-full dot-green"></div>
+              <span class="font-num text-xl font-bold text-white">74</span>
+            </div>
+          </div>
+          <!-- Rank 6 -->
+          <div class="flex items-center gap-3 rounded-2xl px-4 py-3 border bg-acl-card border-acl">
+            <span class="font-num text-lg font-bold w-7 text-center text-acl-t2">6</span>
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center text-sm font-bold text-white flex-shrink-0"
+                 style="background: linear-gradient(135deg,#FF6B1A,#c83800);">DK</div>
+            <div class="flex-1 min-w-0">
+              <div class="text-sm font-semibold text-white truncate">Đỗ Kiên</div>
+              <div class="text-xs text-acl-t2 truncate">Bất động sản · HỌC 36 · HÀNH 36</div>
+            </div>
+            <div class="flex items-center gap-2 flex-shrink-0">
+              <div class="w-2 h-2 rounded-full dot-yellow"></div>
+              <span class="font-num text-xl font-bold text-white">72</span>
+            </div>
+          </div>
+          <!-- Rank 7 — current user (highlighted) -->
+          <div class="flex items-center gap-3 rounded-2xl px-4 py-3 border bg-orange-dim border-orange"
+               style="box-shadow: 0 0 12px rgba(255,107,26,0.15);">
+            <span class="font-num text-lg font-bold w-7 text-center text-orange">7</span>
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center text-sm font-bold text-white flex-shrink-0"
+                 style="background: linear-gradient(135deg,#FF6B1A,#c83800);">MT</div>
+            <div class="flex-1 min-w-0">
+              <div class="text-sm font-semibold text-orange truncate">
+                Nguyễn Minh Tuấn <span class="text-[10px] text-orange/70 ml-1">(bạn)</span>
+              </div>
+              <div class="text-xs text-acl-t2 truncate">Bán lẻ / Thương mại · HỌC 38 · HÀNH 32 🏆 ⭐</div>
+            </div>
+            <div class="flex items-center gap-2 flex-shrink-0">
+              <div class="w-2 h-2 rounded-full dot-yellow"></div>
+              <span class="font-num text-xl font-bold text-orange">70</span>
+            </div>
+          </div>
+          <!-- Rank 8 -->
+          <div class="flex items-center gap-3 rounded-2xl px-4 py-3 border bg-acl-card border-acl">
+            <span class="font-num text-lg font-bold w-7 text-center text-acl-t2">8</span>
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center text-sm font-bold text-white flex-shrink-0"
+                 style="background: linear-gradient(135deg,#FF6B1A,#c83800);">PA</div>
+            <div class="flex-1 min-w-0">
+              <div class="text-sm font-semibold text-white truncate">Phan Anh</div>
+              <div class="text-xs text-acl-t2 truncate">Thiết kế · HỌC 32 · HÀNH 36</div>
+            </div>
+            <div class="flex items-center gap-2 flex-shrink-0">
+              <div class="w-2 h-2 rounded-full dot-yellow"></div>
+              <span class="font-num text-xl font-bold text-white">68</span>
+            </div>
+          </div>
+          <!-- Rank 9 -->
+          <div class="flex items-center gap-3 rounded-2xl px-4 py-3 border bg-acl-card border-acl">
+            <span class="font-num text-lg font-bold w-7 text-center text-acl-t2">9</span>
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center text-sm font-bold text-white flex-shrink-0"
+                 style="background: linear-gradient(135deg,#FF6B1A,#c83800);">TM</div>
+            <div class="flex-1 min-w-0">
+              <div class="text-sm font-semibold text-white truncate">Tô Mai</div>
+              <div class="text-xs text-acl-t2 truncate">Logistics · HỌC 30 · HÀNH 32</div>
+            </div>
+            <div class="flex items-center gap-2 flex-shrink-0">
+              <div class="w-2 h-2 rounded-full dot-yellow"></div>
+              <span class="font-num text-xl font-bold text-white">62</span>
+            </div>
+          </div>
+          <!-- Rank 10 -->
+          <div class="flex items-center gap-3 rounded-2xl px-4 py-3 border bg-acl-card border-acl">
+            <span class="font-num text-lg font-bold w-7 text-center text-acl-t2">10</span>
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center text-sm font-bold text-white flex-shrink-0"
+                 style="background: linear-gradient(135deg,#FF6B1A,#c83800);">VK</div>
+            <div class="flex-1 min-w-0">
+              <div class="text-sm font-semibold text-white truncate">Vũ Kim</div>
+              <div class="text-xs text-acl-t2 truncate">Tài chính · HỌC 28 · HÀNH 28</div>
+            </div>
+            <div class="flex items-center gap-2 flex-shrink-0">
+              <div class="w-2 h-2 rounded-full dot-red"></div>
+              <span class="font-num text-xl font-bold text-white">56</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Nav -->
+        <div class="absolute bottom-0 left-0 right-0 z-50 flex justify-around items-center pt-2.5 pb-7" style="background: #10122A; border-top: 1px solid rgba(255,255,255,0.08);">
+          <a href="s-08-home.html" class="flex flex-col items-center gap-1 px-3 py-1">
+            <i data-lucide="home" width="20" height="20" style="color:#A0A8C0;"></i>
+            <span class="text-[9px] font-heading font-bold tracking-widest uppercase text-acl-t2">Trang chủ</span>
+          </a>
+          <a href="s-13-leaderboard.html" class="flex flex-col items-center gap-1 px-3 py-1 relative">
+            <span class="absolute -top-0.5 w-1 h-1 rounded-full" style="background:#FF6B1A;"></span>
+            <i data-lucide="trophy" width="20" height="20" style="color:#FF6B1A;"></i>
+            <span class="text-[9px] font-heading font-bold tracking-widest uppercase text-orange">Bảng XH</span>
+          </a>
+          <a href="s-14-events.html" class="flex flex-col items-center gap-1 px-3 py-1">
+            <i data-lucide="calendar-days" width="20" height="20" style="color:#A0A8C0;"></i>
+            <span class="text-[9px] font-heading font-bold tracking-widest uppercase text-acl-t2">Sự kiện</span>
+          </a>
+          <a href="s-09-profile.html" class="flex flex-col items-center gap-1 px-3 py-1">
+            <i data-lucide="user" width="20" height="20" style="color:#A0A8C0;"></i>
+            <span class="text-[9px] font-heading font-bold tracking-widest uppercase text-acl-t2">Hồ sơ</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="_assets/nav.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

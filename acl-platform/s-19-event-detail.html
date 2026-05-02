@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>S-19 · Event Detail (Member + Guest) · ACL Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&family=Barlow+Condensed:wght@500;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="_assets/styles.css" />
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-acl-base">
+
+<div id="demo-topbar"
+     data-prev="s-18-qa-submit.html"
+     data-next="s-20-checkin-landing.html"
+     data-id="S-19"
+     data-name="Event Detail (Member + Guest)"
+     data-us="US-013"
+     data-role="All"></div>
+
+<div class="demo-stage">
+  <div style="display: flex; gap: 32px; flex-wrap: wrap; justify-content: center; align-items: flex-start;">
+
+    <!-- ╔══════════════════════════════════════════════════════════════╗
+         ║ FRAME 1 — MEMBER VIEW (đã đăng ký 1-click free)              ║
+         ╚══════════════════════════════════════════════════════════════╝ -->
+    <div>
+      <div class="text-center mb-3">
+        <span class="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/30 rounded-full px-3 py-1 text-xs text-green-400">
+          <span class="w-1.5 h-1.5 rounded-full bg-green-400"></span>
+          Member view · Đã đăng ký
+        </span>
+      </div>
+
+      <div class="phone-frame">
+        <div class="phone-notch"></div>
+        <div class="phone-content">
+          <div class="min-h-full bg-acl-base">
+
+            <!-- Top bar -->
+            <div class="flex justify-between items-center px-5 py-3 border-b border-acl">
+              <button class="flex items-center gap-1.5 text-sm font-semibold text-acl-t2 hover:text-white">
+                <i data-lucide="arrow-left" width="16" height="16"></i> Sự kiện
+              </button>
+              <span class="text-[10px] font-bold uppercase tracking-widest text-cyan">Member</span>
+            </div>
+
+            <div class="px-5 pt-5 pb-32">
+
+              <!-- Hero card -->
+              <div class="relative rounded-2xl p-5 mb-5 overflow-hidden"
+                   style="background: linear-gradient(135deg, #1E0840 0%, #0F1140 100%);">
+                <div class="absolute inset-0 pointer-events-none"
+                     style="background: radial-gradient(ellipse at 80% 20%, rgba(255,107,26,0.18) 0%, transparent 60%);"></div>
+                <div class="relative z-10">
+                  <span class="inline-block text-[10px] font-bold px-2 py-0.5 rounded-full bg-orange-dim border border-orange text-orange mb-3">
+                    Sắp diễn ra
+                  </span>
+                  <h1 class="font-heading font-black text-xl text-white mb-3 leading-tight">ACL Monthly Meetup #28</h1>
+                  <div class="space-y-2">
+                    <div class="flex items-center gap-2 text-sm text-acl-t2">
+                      <i data-lucide="calendar" width="14" height="14" class="text-orange flex-shrink-0"></i>
+                      Thứ Sáu, 15/05/2026
+                    </div>
+                    <div class="flex items-center gap-2 text-sm text-acl-t2">
+                      <i data-lucide="clock" width="14" height="14" class="text-orange flex-shrink-0"></i>
+                      19:00 – 21:00
+                    </div>
+                    <div class="flex items-center gap-2 text-sm text-acl-t2">
+                      <i data-lucide="map-pin" width="14" height="14" class="text-orange flex-shrink-0"></i>
+                      TT Hội nghị Mỹ Đình, Hà Nội
+                    </div>
+                    <div class="flex items-center gap-2 text-sm text-acl-t2">
+                      <i data-lucide="users" width="14" height="14" class="text-orange flex-shrink-0"></i>
+                      87 người đã đăng ký
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Registered status banner -->
+              <div class="flex items-center gap-3 bg-cyan-dim border border-cyan rounded-xl px-4 py-3 mb-5">
+                <span class="w-2.5 h-2.5 rounded-full bg-cyan flex-shrink-0" style="box-shadow: 0 0 8px #00E5C9;"></span>
+                <div class="flex-1">
+                  <div class="text-sm font-semibold text-cyan">Đã đăng ký tham dự</div>
+                  <div class="text-xs text-acl-t2">Quét QR tại event để check-in</div>
+                </div>
+                <i data-lucide="check-circle" width="18" height="18" class="text-cyan flex-shrink-0"></i>
+              </div>
+
+              <!-- Reminder note (no need to register) -->
+              <div class="flex items-start gap-2 bg-orange-dim/50 border border-orange/30 rounded-xl px-4 py-3 mb-5">
+                <i data-lucide="info" width="14" height="14" class="text-orange flex-shrink-0 mt-0.5"></i>
+                <div class="text-xs text-acl-t2 leading-relaxed">
+                  <span class="text-white font-semibold">Bạn không cần đăng ký trước</span> — quét QR tại event sẽ tự động đăng ký + check-in trong 1 bước.
+                </div>
+              </div>
+
+              <!-- Description -->
+              <div class="text-[10px] font-heading font-extrabold tracking-[2.5px] text-acl-t2 uppercase mb-2.5">Nội dung</div>
+              <div class="bg-acl-card border border-acl rounded-xl p-4 mb-5">
+                <p class="text-sm text-acl-t2 leading-relaxed">
+                  Buổi học tháng 5 với chủ đề "<span class="text-white font-semibold">Hệ thống hóa doanh nghiệp SME — Từ chủ làm tất tới chủ điều phối</span>". Speaker: anh Trần Anh Tuấn — Founder ACL. Có phần Q&amp;A trực tiếp + networking sau buổi học.
+                </p>
+              </div>
+
+              <!-- Q&A button -->
+              <a href="s-18-qa-submit.html" class="w-full bg-acl-card border border-acl rounded-xl px-4 py-3 flex items-center gap-3 hover:border-cyan/40 transition-colors mb-3">
+                <div class="w-9 h-9 rounded-lg bg-cyan/15 flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="message-circle-question" width="16" height="16" class="text-cyan"></i>
+                </div>
+                <div class="flex-1 text-left">
+                  <div class="text-sm font-semibold text-white">Đặt câu hỏi cho speaker</div>
+                  <div class="text-xs text-acl-t2">Realtime trên màn hình host</div>
+                </div>
+                <i data-lucide="chevron-right" width="16" height="16" class="text-acl-t3"></i>
+              </a>
+
+              <!-- Speaker info -->
+              <div class="bg-acl-card border border-acl rounded-xl p-4">
+                <div class="text-[10px] font-heading font-extrabold tracking-[2.5px] text-acl-t2 uppercase mb-3">Speaker</div>
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-full flex items-center justify-center font-heading font-black text-base text-white flex-shrink-0"
+                       style="background: linear-gradient(135deg, #FF6B1A 0%, #c83800 100%);">TA</div>
+                  <div class="flex-1 min-w-0">
+                    <div class="text-sm font-bold text-white">Trần Anh Tuấn</div>
+                    <div class="text-xs text-acl-t2">Founder ACL · 12 năm scale SME</div>
+                  </div>
+                  <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-gold-dim border border-gold text-gold flex-shrink-0">
+                    Speaker
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom CTA bar -->
+            <div class="sticky bottom-0 left-0 right-0 px-5 pt-3 pb-5"
+                 style="background: linear-gradient(180deg, transparent 0%, rgba(10,11,30,0.95) 30%, #0A0B1E 100%);">
+              <div class="flex gap-2">
+                <button class="h-13 px-5 bg-acl-card border border-acl rounded-xl text-sm font-semibold text-acl-t2 hover:text-red-400 hover:border-red-500/40 flex items-center justify-center">
+                  <i data-lucide="x" width="16" height="16"></i>
+                </button>
+                <a href="s-20-checkin-landing.html" class="flex-1 h-13 btn-primary rounded-xl font-heading font-bold text-white flex items-center justify-center gap-2">
+                  <i data-lucide="qr-code" width="18" height="18"></i> Quét QR Check-in
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ╔══════════════════════════════════════════════════════════════╗
+         ║ FRAME 2 — GUEST VIEW (form đăng ký + thanh toán)             ║
+         ╚══════════════════════════════════════════════════════════════╝ -->
+    <div>
+      <div class="text-center mb-3">
+        <span class="inline-flex items-center gap-2 bg-cyan-dim border border-cyan/30 rounded-full px-3 py-1 text-xs text-cyan">
+          <i data-lucide="user-plus" width="12" height="12"></i>
+          Guest view · Form đăng ký + thanh toán
+        </span>
+      </div>
+
+      <div class="phone-frame">
+        <div class="phone-notch"></div>
+        <div class="phone-content">
+          <div class="min-h-full bg-acl-base">
+
+            <!-- Top bar -->
+            <div class="flex justify-between items-center px-5 py-3 border-b border-acl">
+              <button class="flex items-center gap-1.5 text-sm font-semibold text-acl-t2 hover:text-white">
+                <i data-lucide="arrow-left" width="16" height="16"></i> Quay lại
+              </button>
+              <span class="text-[10px] font-bold uppercase tracking-widest text-acl-t3">Public link</span>
+            </div>
+
+            <div class="px-5 pt-5 pb-32">
+
+              <!-- Hero card -->
+              <div class="relative rounded-2xl p-5 mb-5 overflow-hidden"
+                   style="background: linear-gradient(135deg, #1E0840 0%, #0F1140 100%);">
+                <div class="absolute inset-0 pointer-events-none"
+                     style="background: radial-gradient(ellipse at 80% 20%, rgba(255,107,26,0.18) 0%, transparent 60%);"></div>
+                <div class="relative z-10">
+                  <span class="inline-block text-[10px] font-bold px-2 py-0.5 rounded-full bg-orange-dim border border-orange text-orange mb-3">
+                    Sắp diễn ra
+                  </span>
+                  <h1 class="font-heading font-black text-xl text-white mb-3 leading-tight">ACL Monthly Meetup #28</h1>
+                  <div class="space-y-2">
+                    <div class="flex items-center gap-2 text-sm text-acl-t2">
+                      <i data-lucide="calendar" width="14" height="14" class="text-orange flex-shrink-0"></i>
+                      Thứ Sáu, 15/05/2026
+                    </div>
+                    <div class="flex items-center gap-2 text-sm text-acl-t2">
+                      <i data-lucide="clock" width="14" height="14" class="text-orange flex-shrink-0"></i>
+                      19:00 – 21:00
+                    </div>
+                    <div class="flex items-center gap-2 text-sm text-acl-t2">
+                      <i data-lucide="map-pin" width="14" height="14" class="text-orange flex-shrink-0"></i>
+                      TT Hội nghị Mỹ Đình, Hà Nội
+                    </div>
+                    <div class="flex items-center gap-2 text-sm text-acl-t2">
+                      <i data-lucide="users" width="14" height="14" class="text-orange flex-shrink-0"></i>
+                      87 người đã đăng ký
+                    </div>
+                    <div class="flex items-center gap-2 text-sm text-orange font-bold pt-1">
+                      <i data-lucide="ticket" width="14" height="14" class="flex-shrink-0"></i>
+                      Phí tham gia: 200.000đ
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Description -->
+              <div class="text-[10px] font-heading font-extrabold tracking-[2.5px] text-acl-t2 uppercase mb-2.5">Nội dung</div>
+              <div class="bg-acl-card border border-acl rounded-xl p-4 mb-5">
+                <p class="text-sm text-acl-t2 leading-relaxed">
+                  Buổi học tháng 5 với chủ đề "<span class="text-white font-semibold">Hệ thống hóa doanh nghiệp SME — Từ chủ làm tất tới chủ điều phối</span>". Speaker: anh Trần Anh Tuấn — Founder ACL. Có phần Q&amp;A trực tiếp + networking sau buổi học.
+                </p>
+              </div>
+
+              <!-- Q&A button -->
+              <a href="s-18-qa-submit.html" class="w-full bg-acl-card border border-acl rounded-xl px-4 py-3 flex items-center gap-3 hover:border-cyan/40 transition-colors mb-5">
+                <div class="w-9 h-9 rounded-lg bg-cyan/15 flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="message-circle-question" width="16" height="16" class="text-cyan"></i>
+                </div>
+                <div class="flex-1 text-left">
+                  <div class="text-sm font-semibold text-white">Đặt câu hỏi cho speaker</div>
+                  <div class="text-xs text-acl-t2">Khi đến event</div>
+                </div>
+                <i data-lucide="chevron-right" width="16" height="16" class="text-acl-t3"></i>
+              </a>
+
+              <!-- Form đăng ký -->
+              <div class="text-[10px] font-heading font-extrabold tracking-[2.5px] text-orange uppercase mb-2.5">Đăng ký tham dự</div>
+              <div class="bg-acl-card border border-acl rounded-2xl p-5 space-y-3.5">
+                <div>
+                  <label class="acl-label">Họ và tên <span class="text-red-400">*</span></label>
+                  <input type="text" value="Trần Thanh Hà" class="acl-input" />
+                </div>
+                <div>
+                  <label class="acl-label">Email <span class="text-red-400">*</span></label>
+                  <input type="email" value="ha.tran@gmail.com" class="acl-input" />
+                </div>
+                <div>
+                  <label class="acl-label">Số điện thoại</label>
+                  <input type="tel" value="0909 123 456" class="acl-input" />
+                </div>
+                <div>
+                  <label class="acl-label">Mã mời (nếu có)</label>
+                  <input type="text" value="ACL-7K2H9" class="acl-input" style="text-transform: uppercase;" />
+                  <p class="text-[10px] text-cyan mt-1.5 flex items-center gap-1">
+                    <i data-lucide="check" width="10" height="10"></i>
+                    Mã hợp lệ — được mời bởi <span class="font-semibold">Nguyễn Minh Tuấn</span>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Order summary -->
+              <div class="bg-acl-card-alt border border-acl rounded-xl p-4 mt-4">
+                <div class="flex justify-between text-sm mb-1.5">
+                  <span class="text-acl-t2">Phí tham dự</span>
+                  <span class="text-white font-semibold">200.000đ</span>
+                </div>
+                <div class="h-px bg-white/5 my-2"></div>
+                <div class="flex justify-between items-center">
+                  <span class="text-sm text-acl-t2">Tổng thanh toán</span>
+                  <span class="font-num text-2xl font-bold text-gold">200.000 ₫</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom CTA bar -->
+            <div class="sticky bottom-0 left-0 right-0 px-5 pt-3 pb-5"
+                 style="background: linear-gradient(180deg, transparent 0%, rgba(10,11,30,0.95) 30%, #0A0B1E 100%);">
+              <a href="s-02-payment.html" class="w-full h-13 btn-primary rounded-xl font-heading font-bold text-white flex items-center justify-center gap-2">
+                <i data-lucide="ticket" width="18" height="18"></i>
+                Đăng ký · 200.000đ
+                <i data-lucide="chevron-right" width="18" height="18"></i>
+              </a>
+              <p class="text-center text-xs text-acl-t2 mt-2">
+                Là Member ACL?
+                <a href="s-04-login.html" class="text-cyan font-semibold hover:underline">Đăng nhập</a>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="_assets/nav.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

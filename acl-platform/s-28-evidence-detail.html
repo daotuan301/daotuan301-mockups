@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>S-28 · Evidence Detail · ACL Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&family=Barlow+Condensed:wght@500;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="_assets/styles.css" />
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-acl-base">
+
+<div id="demo-topbar"
+     data-prev="s-27-review-list.html"
+     data-next="s-29-events-list.html"
+     data-id="S-28"
+     data-name="Evidence Detail & Duyệt"
+     data-us="US-007"
+     data-role="Ops"></div>
+
+<div class="demo-desk-stage"><div class="desktop-frame">
+  <div class="flex min-h-[800px]">
+
+    <!-- Sidebar -->
+    <aside class="w-60 bg-acl-nav border-r border-acl flex flex-col flex-shrink-0">
+      <div class="px-5 py-5 border-b border-acl">
+        <div class="font-heading font-black text-xl tracking-tight"><span class="text-orange">ACL</span><span class="text-white"> Platform</span></div>
+        <div class="text-[10px] text-acl-t2 mt-0.5 tracking-widest uppercase font-heading font-bold">CMS / Ops</div>
+      </div>
+      <nav class="flex-1 overflow-y-auto p-3 space-y-5">
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Tổng quan</div>
+          <a href="s-22-ops-dashboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="layout-dashboard" width="16" height="16"></i><span>Dashboard</span></a>
+        </div>
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Thành viên</div>
+          <a href="s-23-members-list.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="users" width="16" height="16"></i><span>DS Thành viên</span></a>
+          <a href="s-25-scores.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="star" width="16" height="16"></i><span>Nhập điểm HỌC</span></a>
+          <a href="s-27-review-list.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium bg-orange-dim border border-orange text-white"><i data-lucide="check-square" width="16" height="16" class="text-orange"></i><span>Duyệt HÀNH</span><i data-lucide="chevron-right" width="12" height="12" class="ml-auto text-orange"></i></a>
+        </div>
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Sự kiện</div>
+          <a href="s-29-events-list.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="calendar-days" width="16" height="16"></i><span>Quản lý Event</span></a>
+          <a href="s-33-qa-host.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="message-square" width="16" height="16"></i><span>Q&A Realtime</span></a>
+        </div>
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Báo cáo</div>
+          <a href="s-34-exports.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="download" width="16" height="16"></i><span>Export dữ liệu</span></a>
+        </div>
+      </nav>
+      <div class="p-3 border-t border-acl">
+        <button class="flex items-center gap-3 px-3 py-2.5 w-full rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="log-out" width="16" height="16"></i> Đăng xuất</button>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="flex-1 overflow-y-auto p-8">
+      <!-- Header -->
+      <div class="flex items-center gap-4 mb-6">
+        <a href="s-27-review-list.html" class="flex items-center gap-1.5 text-sm text-acl-t2 hover:text-white"><i data-lucide="arrow-left" width="16" height="16"></i> Danh sách duyệt</a>
+        <div class="flex-1">
+          <h1 class="font-heading font-black text-xl text-white">Duyệt HÀNH — Nguyễn Minh Tuấn</h1>
+          <p class="text-acl-t2 text-sm mt-0.5">Nộp ngày 22/05/2026 · Tháng 5 năm 2026</p>
+        </div>
+        <span class="text-xs font-bold px-3 py-1.5 rounded-full bg-orange-dim border border-orange/30 text-orange">Chờ duyệt</span>
+      </div>
+
+      <div class="grid grid-cols-3 gap-5">
+        <!-- Left col: review form -->
+        <div class="col-span-2 space-y-5">
+          <!-- Business results -->
+          <div class="bg-acl-card border border-acl rounded-2xl p-5">
+            <div class="text-xs font-heading font-bold tracking-widest text-acl-t2 uppercase mb-4">Kết quả kinh doanh tháng 5/2026</div>
+            <div class="grid grid-cols-2 gap-3">
+              <div class="bg-acl-card-alt border border-acl rounded-xl p-3">
+                <div class="flex justify-between items-start mb-1">
+                  <span class="text-xs font-bold text-white">Doanh thu</span>
+                  <span class="w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold bg-green-500/20 text-green-400">✓</span>
+                </div>
+                <div class="text-xs text-acl-t2 mb-0.5">Target: <span class="text-white">800 triệu</span></div>
+                <div class="text-xs text-acl-t2 mb-0.5">Kết quả: <span class="text-white">820 triệu (102%)</span></div>
+                <div class="h-1.5 bg-white/7 rounded-full mt-2 overflow-hidden"><div class="h-full rounded-full bg-green-500" style="width:100%"></div></div>
+              </div>
+              <div class="bg-acl-card-alt border border-acl rounded-xl p-3">
+                <div class="flex justify-between items-start mb-1">
+                  <span class="text-xs font-bold text-white">Lợi nhuận</span>
+                  <span class="w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold bg-orange-dim text-orange">○</span>
+                </div>
+                <div class="text-xs text-acl-t2 mb-0.5">Target: <span class="text-white">120 triệu</span></div>
+                <div class="text-xs text-acl-t2 mb-0.5">Kết quả: <span class="text-white">95 triệu (79%)</span></div>
+                <div class="text-xs text-acl-t3 italic mt-1">Chi phí marketing tăng đột biến</div>
+                <div class="h-1.5 bg-white/7 rounded-full mt-2 overflow-hidden"><div class="h-full rounded-full bg-orange-500" style="width:79%"></div></div>
+              </div>
+              <div class="bg-acl-card-alt border border-acl rounded-xl p-3">
+                <div class="flex justify-between items-start mb-1">
+                  <span class="text-xs font-bold text-white">Hệ thống</span>
+                  <span class="w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold bg-green-500/20 text-green-400">✓</span>
+                </div>
+                <div class="text-xs text-acl-t2 mb-0.5">Target: <span class="text-white">Hoàn thiện SOP cho team Sales</span></div>
+                <div class="text-xs text-acl-t3 italic mt-1">Đã ban hành 12 SOP, training xong cho 8 nhân viên</div>
+              </div>
+              <div class="bg-acl-card-alt border border-acl rounded-xl p-3">
+                <div class="flex justify-between items-start mb-1">
+                  <span class="text-xs font-bold text-white">Đội ngũ</span>
+                  <span class="w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold bg-orange-dim text-orange">○</span>
+                </div>
+                <div class="text-xs text-acl-t2 mb-0.5">Target: <span class="text-white">Tuyển 2 senior</span></div>
+                <div class="text-xs text-acl-t3 italic mt-1">Tuyển được 1, vẫn đang phỏng vấn 3 ứng viên cho slot 2</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Self-scoring + evidence -->
+          <div class="bg-acl-card border border-acl rounded-2xl p-5">
+            <div class="text-xs font-heading font-bold tracking-widest text-acl-t2 uppercase mb-4">Điểm tự chấm & Bằng chứng</div>
+
+            <div class="space-y-4">
+              <!-- A1 -->
+              <div class="border border-acl rounded-xl p-4">
+                <div class="flex justify-between items-center mb-3">
+                  <div>
+                    <span class="font-heading font-bold text-sm text-white">A1 — Business Result</span>
+                    <div class="text-xs text-acl-t2 mt-0.5">Tự chấm: <span class="font-num text-lg font-bold text-orange">10</span><span class="text-acl-t3">/20</span></div>
+                  </div>
+                  <div class="h-10 w-10 rounded-full bg-orange-dim border border-orange flex items-center justify-center">
+                    <span class="font-num text-xl font-bold text-orange">10</span>
+                  </div>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  <a href="#" class="flex items-center gap-1.5 px-3 py-1.5 bg-white/5 border border-acl rounded-lg text-xs text-acl-t2 hover:text-white"><i data-lucide="image" width="11" height="11"></i> bao-cao-DT-T5.png</a>
+                  <a href="#" class="flex items-center gap-1.5 px-3 py-1.5 bg-white/5 border border-acl rounded-lg text-xs text-acl-t2 hover:text-white"><i data-lucide="file-text" width="11" height="11"></i> P&L-T5-2026.pdf</a>
+                  <a href="#" class="flex items-center gap-1.5 px-3 py-1.5 bg-white/5 border border-acl rounded-lg text-xs text-acl-t2 hover:text-white"><i data-lucide="image" width="11" height="11"></i> dashboard-finance.png</a>
+                </div>
+              </div>
+
+              <!-- A2 -->
+              <div class="border border-acl rounded-xl p-4">
+                <div class="flex justify-between items-center mb-3">
+                  <div>
+                    <span class="font-heading font-bold text-sm text-white">A2 — Business Growth</span>
+                    <div class="text-xs text-acl-t2 mt-0.5">Tự chấm: <span class="font-num text-lg font-bold text-orange">10</span><span class="text-acl-t3">/20</span></div>
+                  </div>
+                  <div class="h-10 w-10 rounded-full bg-orange-dim border border-orange flex items-center justify-center">
+                    <span class="font-num text-xl font-bold text-orange">10</span>
+                  </div>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  <a href="#" class="flex items-center gap-1.5 px-3 py-1.5 bg-white/5 border border-acl rounded-lg text-xs text-acl-t2 hover:text-white"><i data-lucide="file-text" width="11" height="11"></i> SOP-Sales-v2.pdf</a>
+                  <a href="#" class="flex items-center gap-1.5 px-3 py-1.5 bg-white/5 border border-acl rounded-lg text-xs text-acl-t2 hover:text-white"><i data-lucide="image" width="11" height="11"></i> training-photo.jpg</a>
+                </div>
+              </div>
+
+              <!-- A3 -->
+              <div class="border border-acl rounded-xl p-4">
+                <div class="flex justify-between items-center mb-3">
+                  <div>
+                    <span class="font-heading font-bold text-sm text-white">A3 — ACL Application</span>
+                    <div class="text-xs text-acl-t2 mt-0.5">Tự chấm: <span class="font-num text-lg font-bold text-orange">10</span><span class="text-acl-t3">/10</span></div>
+                  </div>
+                  <div class="h-10 w-10 rounded-full bg-orange-dim border border-orange flex items-center justify-center">
+                    <span class="font-num text-xl font-bold text-orange">10</span>
+                  </div>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  <a href="#" class="flex items-center gap-1.5 px-3 py-1.5 bg-white/5 border border-acl rounded-lg text-xs text-acl-t2 hover:text-white"><i data-lucide="file-text" width="11" height="11"></i> case-study-OKR.pdf</a>
+                  <a href="#" class="flex items-center gap-1.5 px-3 py-1.5 bg-white/5 border border-acl rounded-lg text-xs text-acl-t2 hover:text-white"><i data-lucide="image" width="11" height="11"></i> meeting-OKR.jpg</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Part 2 (collapsed open) -->
+          <div class="bg-acl-card border border-acl rounded-2xl overflow-hidden">
+            <div class="px-5 py-4 text-xs font-heading font-bold tracking-widest text-acl-t2 uppercase border-b border-acl">Cảm xúc & Suy ngẫm (Phần 2)</div>
+            <div class="px-5 py-5 space-y-4">
+              <div class="grid grid-cols-4 gap-3">
+                <div class="bg-acl-card-alt border border-acl rounded-xl p-3 text-center"><div class="font-num text-2xl font-bold text-white">8</div><div class="text-[10px] text-acl-t2 mt-0.5">Tinh thần</div></div>
+                <div class="bg-acl-card-alt border border-acl rounded-xl p-3 text-center"><div class="font-num text-2xl font-bold text-white">6</div><div class="text-[10px] text-acl-t2 mt-0.5">Sức khỏe</div></div>
+                <div class="bg-acl-card-alt border border-acl rounded-xl p-3 text-center"><div class="font-num text-2xl font-bold text-white">9</div><div class="text-[10px] text-acl-t2 mt-0.5">Quan hệ</div></div>
+                <div class="bg-acl-card-alt border border-acl rounded-xl p-3 text-center"><div class="font-num text-2xl font-bold text-white">7</div><div class="text-[10px] text-acl-t2 mt-0.5">Tài chính</div></div>
+              </div>
+              <div>
+                <div class="text-xs text-acl-t3 mb-1">Thách thức đã vượt qua</div>
+                <p class="text-sm text-white bg-acl-card-alt rounded-xl px-4 py-3">Đã giải quyết xung đột giữa team Sales và Marketing về quy trình đánh giá lead. Tổ chức 2 buổi workshop để align mục tiêu chung.</p>
+              </div>
+              <div>
+                <div class="text-xs text-acl-t3 mb-1">Thách thức tháng tới</div>
+                <p class="text-sm text-white bg-acl-card-alt rounded-xl px-4 py-3">Mở rộng thị trường khu vực miền Bắc — cần xây dựng đội ngũ tại Hà Nội từ đầu.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Part 3 -->
+          <div class="bg-acl-card border border-acl rounded-2xl overflow-hidden">
+            <div class="px-5 py-4 text-xs font-heading font-bold tracking-widest text-acl-t2 uppercase border-b border-acl">Mục tiêu tháng tới (Phần 3)</div>
+            <div class="px-5 py-5 grid grid-cols-2 gap-3">
+              <div class="bg-acl-card-alt border border-acl rounded-xl p-3"><div class="text-xs text-acl-t3 mb-1">Doanh thu</div><div class="text-sm text-white">900 triệu</div></div>
+              <div class="bg-acl-card-alt border border-acl rounded-xl p-3"><div class="text-xs text-acl-t3 mb-1">Lợi nhuận</div><div class="text-sm text-white">130 triệu</div></div>
+              <div class="bg-acl-card-alt border border-acl rounded-xl p-3"><div class="text-xs text-acl-t3 mb-1">Hệ thống</div><div class="text-sm text-white">Triển khai CRM cho team Sales</div></div>
+              <div class="bg-acl-card-alt border border-acl rounded-xl p-3"><div class="text-xs text-acl-t3 mb-1">Đội ngũ</div><div class="text-sm text-white">Mở văn phòng Hà Nội · tuyển 3 người</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right col: action panel sticky -->
+        <div class="space-y-4">
+          <!-- Member card -->
+          <div class="bg-acl-card border border-acl rounded-2xl p-5">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500/60 to-red-700/60 flex items-center justify-center text-base font-bold text-white">MT</div>
+              <div><div class="text-sm font-semibold text-white">Nguyễn Minh Tuấn</div><div class="text-xs text-acl-t2">Bán lẻ</div></div>
+            </div>
+            <div class="mt-3 pt-3 border-t border-acl">
+              <div class="text-[10px] text-acl-t3 uppercase tracking-widest mb-2">HHL tháng này</div>
+              <div class="flex items-center gap-2">
+                <span class="text-lg">🟡</span>
+                <div class="flex gap-3 text-xs text-acl-t2">
+                  <span>HỌC <span class="font-num font-bold text-white">38</span></span>
+                  <span>HÀNH <span class="font-num font-bold text-white">30</span></span>
+                  <span>Tổng <span class="font-num font-bold text-orange">68</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Score summary -->
+          <div class="bg-acl-card border border-acl rounded-2xl p-5">
+            <div class="text-xs font-heading font-bold tracking-widest text-acl-t2 uppercase mb-3">Tổng điểm HÀNH (tự chấm)</div>
+            <div class="text-center py-2">
+              <span class="font-num text-5xl font-extrabold text-orange">30</span>
+              <span class="text-lg text-acl-t2">/50</span>
+            </div>
+            <div class="grid grid-cols-3 gap-2 mt-3 text-center">
+              <div class="bg-acl-card-alt border border-acl rounded-lg p-2"><div class="font-num text-xl font-bold text-orange">10</div><div class="text-[9px] text-acl-t3">A1/20</div></div>
+              <div class="bg-acl-card-alt border border-acl rounded-lg p-2"><div class="font-num text-xl font-bold text-orange">10</div><div class="text-[9px] text-acl-t3">A2/20</div></div>
+              <div class="bg-acl-card-alt border border-acl rounded-lg p-2"><div class="font-num text-xl font-bold text-orange">10</div><div class="text-[9px] text-acl-t3">A3/10</div></div>
+            </div>
+          </div>
+
+          <!-- Action: Adjust panel open -->
+          <div class="bg-acl-card border border-orange/30 rounded-2xl p-5 space-y-3 sticky top-4">
+            <div class="text-xs font-heading font-bold tracking-widest text-orange uppercase">Điều chỉnh điểm</div>
+            <div>
+              <label class="text-xs text-acl-t2 block mb-1.5">A1 — Business Result (0/10/20)</label>
+              <div class="flex gap-1">
+                <button class="flex-1 h-9 rounded-lg text-sm font-num font-bold bg-acl-card-alt border border-acl text-acl-t2">0</button>
+                <button class="flex-1 h-9 rounded-lg text-sm font-num font-bold bg-orange-500 text-white">10</button>
+                <button class="flex-1 h-9 rounded-lg text-sm font-num font-bold bg-acl-card-alt border border-acl text-acl-t2">20</button>
+              </div>
+            </div>
+            <div>
+              <label class="text-xs text-acl-t2 block mb-1.5">A2 — Business Growth (0/10/20)</label>
+              <div class="flex gap-1">
+                <button class="flex-1 h-9 rounded-lg text-sm font-num font-bold bg-acl-card-alt border border-acl text-acl-t2">0</button>
+                <button class="flex-1 h-9 rounded-lg text-sm font-num font-bold bg-orange-500 text-white">10</button>
+                <button class="flex-1 h-9 rounded-lg text-sm font-num font-bold bg-acl-card-alt border border-acl text-acl-t2">20</button>
+              </div>
+            </div>
+            <div>
+              <label class="text-xs text-acl-t2 block mb-1.5">A3 — ACL Application (0/5/10)</label>
+              <div class="flex gap-1">
+                <button class="flex-1 h-9 rounded-lg text-sm font-num font-bold bg-acl-card-alt border border-acl text-acl-t2">0</button>
+                <button class="flex-1 h-9 rounded-lg text-sm font-num font-bold bg-acl-card-alt border border-acl text-acl-t2">5</button>
+                <button class="flex-1 h-9 rounded-lg text-sm font-num font-bold bg-orange-500 text-white">10</button>
+              </div>
+            </div>
+            <div class="pt-1 flex gap-2 text-center border-t border-acl/50">
+              <div class="flex-1"><div class="text-[9px] text-acl-t3">Tự chấm</div><div class="font-num text-xl font-bold text-acl-t2 line-through">30</div></div>
+              <div class="flex-1"><div class="text-[9px] text-acl-t3">Sau điều chỉnh</div><div class="font-num text-xl font-bold text-orange">30</div></div>
+            </div>
+            <div>
+              <label class="text-xs text-acl-t2 block mb-1">Lý do điều chỉnh <span class="text-red-400">*</span></label>
+              <textarea rows="2" placeholder="Ghi lý do..." class="w-full bg-acl-card-alt border border-acl rounded-lg px-3 py-2 text-white text-sm placeholder-acl-t3 resize-none">Đã rà soát evidence, điểm tự chấm phù hợp với kết quả thực tế.</textarea>
+            </div>
+            <div class="flex gap-2">
+              <button class="flex-1 h-9 border border-acl rounded-lg text-acl-t2 hover:text-white text-sm">Hủy</button>
+              <button class="flex-1 h-9 bg-orange-500 hover:bg-orange-600 rounded-lg font-bold text-white text-sm">Xác nhận</button>
+            </div>
+
+            <!-- Action shortcuts -->
+            <div class="pt-2 border-t border-acl space-y-2">
+              <button class="w-full h-10 bg-green-500/15 border border-green-500/30 rounded-xl font-bold text-green-400 flex items-center justify-center gap-2 hover:bg-green-500/25 text-sm">
+                <i data-lucide="check" width="14" height="14"></i> Approve (giữ điểm tự chấm)
+              </button>
+              <button class="w-full h-10 bg-red-500/10 border border-red-500/20 rounded-xl font-bold text-red-400 flex items-center justify-center gap-2 hover:bg-red-500/20 text-sm">
+                <i data-lucide="x" width="14" height="14"></i> Reject (yêu cầu nộp lại)
+              </button>
+            </div>
+          </div>
+
+          <!-- History log -->
+          <div class="bg-acl-card border border-acl rounded-2xl p-5">
+            <div class="text-xs font-heading font-bold tracking-widest text-acl-t2 uppercase mb-3">Lịch sử hành động</div>
+            <div class="space-y-2.5 text-xs">
+              <div class="flex gap-2"><div class="w-1.5 h-1.5 rounded-full bg-acl-t3 mt-1.5 flex-shrink-0"></div><div><div class="text-acl-t2">Member submit lúc 22/05/2026 14:30</div></div></div>
+              <div class="flex gap-2"><div class="w-1.5 h-1.5 rounded-full bg-orange mt-1.5 flex-shrink-0"></div><div><div class="text-acl-t2">Đang chờ Trần Lan Phương duyệt</div><div class="text-acl-t3">23/05/2026 09:00</div></div></div>
+              <div class="flex gap-2 opacity-50"><div class="w-1.5 h-1.5 rounded-full bg-green-400 mt-1.5 flex-shrink-0"></div><div><div class="text-acl-t2">Tháng trước (T4): Approved bởi Trần Lan Phương</div><div class="text-acl-t3">28/04/2026</div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div></div>
+
+<script src="_assets/nav.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

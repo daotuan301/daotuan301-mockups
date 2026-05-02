@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>S-11 · HHL Card · ACL Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&family=Barlow+Condensed:wght@500;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="_assets/styles.css" />
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-acl-base">
+
+<div id="demo-topbar"
+     data-prev="s-10-profile-edit.html"
+     data-next="s-12-monthly-review.html"
+     data-id="S-11"
+     data-name="HHL Card chi tiết"
+     data-us="US-008"
+     data-role="Member"></div>
+
+<div class="demo-stage">
+  <div class="phone-frame">
+    <div class="phone-notch"></div>
+    <div class="phone-content">
+      <div class="min-h-full bg-acl-base px-4 pb-8 pt-4">
+        <!-- Back nav -->
+        <div class="flex justify-between items-center mb-4">
+          <a href="s-09-profile.html" class="flex items-center gap-1.5 text-sm font-semibold text-acl-t2 hover:text-white">
+            ← Hồ sơ
+          </a>
+          <button class="flex items-center gap-1.5 text-xs font-bold text-orange bg-orange-dim border border-orange px-3 py-2 rounded-lg">
+            <i data-lucide="download" width="14" height="14"></i> Tải PNG
+          </button>
+        </div>
+
+        <!-- HHL Card -->
+        <div class="rounded-3xl overflow-hidden border mb-5"
+             style="border-color: rgba(255,107,26,0.2); box-shadow: 0 24px 64px rgba(0,0,0,0.6), 0 0 40px rgba(255,107,26,0.06);">
+          <!-- Hero -->
+          <div class="relative px-5 pt-7 pb-6 text-center overflow-hidden"
+               style="background: linear-gradient(180deg,#1E0840,#0F1140 50%,#081228);">
+            <div class="absolute inset-0 pointer-events-none"
+                 style="background: radial-gradient(ellipse at 25% 0%, rgba(255,107,26,0.12) 0%, transparent 55%), radial-gradient(ellipse at 85% 100%, rgba(0,229,201,0.07) 0%, transparent 50%);"></div>
+            <div class="relative z-10">
+              <div class="text-[8px] font-heading font-bold tracking-[4px] uppercase mb-4" style="color: rgba(255,255,255,0.35);">
+                ACTION LEADERS COMMUNITY
+              </div>
+              <!-- Avatar -->
+              <div class="relative inline-block mb-3">
+                <div class="w-20 h-20 rounded-2xl flex items-center justify-center text-2xl font-black text-white"
+                     style="background: linear-gradient(135deg,#FF6B1A,#c83800); box-shadow: 0 0 30px rgba(255,107,26,0.4);">
+                  MT
+                </div>
+                <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 text-[8px] font-black px-2 py-0.5 rounded-full tracking-wide whitespace-nowrap"
+                     style="background:#FFD700; color:#000;">
+                  VÀNG
+                </div>
+              </div>
+              <h2 class="font-heading font-extrabold text-xl text-white mt-4">Nguyễn Minh Tuấn</h2>
+              <p class="text-xs mt-0.5" style="color: rgba(255,255,255,0.5);">Bán lẻ / Thương mại</p>
+              <!-- Month pill -->
+              <div class="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mt-3"
+                   style="background: rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12);">
+                <span class="text-[10px] font-heading font-bold tracking-widest uppercase" style="color: rgba(255,255,255,0.5);">Tháng</span>
+                <span class="text-sm font-heading font-extrabold text-white">05 / 2026</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Scores -->
+          <div class="px-5 py-5" style="background:#10122A;">
+            <!-- HỌC -->
+            <div class="mb-4">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-[11px] font-bold tracking-widest uppercase" style="color: rgba(255,255,255,0.5);">HỌC</span>
+                <span class="font-num text-xl font-bold text-orange">38<span class="text-xs font-sans font-normal" style="color: rgba(255,255,255,0.35);">/50</span></span>
+              </div>
+              <div class="h-2.5 rounded-full overflow-hidden" style="background: rgba(255,255,255,0.06);">
+                <div class="h-full rounded-full" style="width: 76%; background: linear-gradient(90deg,#FF6B1A,#fbbf24);"></div>
+              </div>
+            </div>
+            <!-- HÀNH -->
+            <div class="mb-4">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-[11px] font-bold tracking-widest uppercase" style="color: rgba(255,255,255,0.5);">HÀNH</span>
+                <span class="font-num text-xl font-bold text-cyan">32<span class="text-xs font-sans font-normal" style="color: rgba(255,255,255,0.35);">/50</span></span>
+              </div>
+              <div class="h-2.5 rounded-full overflow-hidden" style="background: rgba(255,255,255,0.06);">
+                <div class="h-full rounded-full" style="width: 64%; background: linear-gradient(90deg,#22d3ee,#3b82f6);"></div>
+              </div>
+            </div>
+
+            <div class="h-px bg-white/8 my-4"></div>
+
+            <!-- Total -->
+            <div class="flex justify-between items-center mb-4">
+              <div>
+                <div class="text-[10px] font-heading font-bold tracking-widest uppercase mb-0.5" style="color: rgba(255,255,255,0.4);">Tổng điểm HHL</div>
+                <div class="flex items-center gap-2">
+                  <div class="w-2.5 h-2.5 rounded-full dot-yellow"></div>
+                  <span class="font-heading font-extrabold text-sm text-yellow-400">ĐÈN VÀNG</span>
+                </div>
+              </div>
+              <span class="font-num text-5xl font-extrabold leading-none text-gold">70<span class="text-lg font-sans font-normal" style="color: rgba(255,255,255,0.35);">/100</span></span>
+            </div>
+
+            <!-- Provisional -->
+            <div class="mb-4 px-3 py-2 rounded-xl text-[11px] text-center"
+                 style="background: rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5);">
+              ⏳ Điểm tạm thời — đang chờ Ops xác nhận
+            </div>
+
+            <!-- Badges -->
+            <div class="flex gap-2 flex-wrap">
+              <span class="rounded-full px-3 py-1 text-[10px] font-semibold"
+                    style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.6);">🏆 Xanh 3 tháng</span>
+              <span class="rounded-full px-3 py-1 text-[10px] font-semibold"
+                    style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.6);">⭐ Top 10</span>
+              <span class="rounded-full px-3 py-1 text-[10px] font-semibold"
+                    style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.6);">💡 Mentor</span>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <div class="px-5 py-3 flex justify-between items-center border-t" style="background:#0A0B1E; border-color: rgba(255,255,255,0.05);">
+            <div class="text-[9px] font-heading font-bold tracking-[3px] uppercase" style="color: rgba(255,255,255,0.25);">app.actionleaders.vn</div>
+            <div class="text-[9px]" style="color: rgba(255,255,255,0.2);">05/2026</div>
+          </div>
+        </div>
+
+        <!-- Score breakdown -->
+        <div class="text-[10px] font-heading font-extrabold tracking-[2.5px] text-acl-t2 uppercase mb-3">Chi tiết điểm</div>
+        <div class="bg-acl-card border border-acl rounded-2xl divide-y divide-white/5 mb-5">
+          <div class="px-4 py-3">
+            <div class="text-[9px] font-heading font-bold tracking-widest text-acl-t3 uppercase mb-2">HỌC</div>
+            <div class="flex justify-between items-center py-1.5">
+              <div>
+                <div class="text-sm text-white">L1 Presence</div>
+                <div class="text-xs text-acl-t2">Check-in event</div>
+              </div>
+              <span class="font-num text-base font-bold text-white">20<span class="text-xs text-acl-t2 font-sans font-normal">/20</span></span>
+            </div>
+            <div class="flex justify-between items-center py-1.5">
+              <div>
+                <div class="text-sm text-white">L2 Participation</div>
+                <div class="text-xs text-acl-t2">Hỏi / thảo luận</div>
+              </div>
+              <span class="font-num text-base font-bold text-white">10<span class="text-xs text-acl-t2 font-sans font-normal">/20</span></span>
+            </div>
+            <div class="flex justify-between items-center py-1.5">
+              <div>
+                <div class="text-sm text-white">L3 Contribution</div>
+                <div class="text-xs text-acl-t2">Guests mời check-in</div>
+              </div>
+              <span class="font-num text-base font-bold text-white">8<span class="text-xs text-acl-t2 font-sans font-normal">/10</span></span>
+            </div>
+          </div>
+          <div class="px-4 py-3">
+            <div class="text-[9px] font-heading font-bold tracking-widest text-acl-t3 uppercase mb-2">HÀNH</div>
+            <div class="flex justify-between items-center py-1.5">
+              <div>
+                <div class="text-sm text-white">A1 Business Result</div>
+                <div class="text-xs text-acl-t2">DT + LN vs target</div>
+              </div>
+              <span class="font-num text-base font-bold text-white">10<span class="text-xs text-acl-t2 font-sans font-normal">/20</span></span>
+            </div>
+            <div class="flex justify-between items-center py-1.5">
+              <div>
+                <div class="text-sm text-white">A2 Business Growth</div>
+                <div class="text-xs text-acl-t2">Hệ thống + Đội ngũ</div>
+              </div>
+              <span class="font-num text-base font-bold text-white">12<span class="text-xs text-acl-t2 font-sans font-normal">/20</span></span>
+            </div>
+            <div class="flex justify-between items-center py-1.5">
+              <div>
+                <div class="text-sm text-white">A3 ACL Application</div>
+                <div class="text-xs text-acl-t2">Áp dụng kiến thức</div>
+              </div>
+              <span class="font-num text-base font-bold text-white">10<span class="text-xs text-acl-t2 font-sans font-normal">/10</span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- History -->
+        <div class="text-[10px] font-heading font-extrabold tracking-[2.5px] text-acl-t2 uppercase mb-3">Lịch sử HHL</div>
+        <div class="bg-acl-card border border-acl rounded-2xl divide-y divide-white/5">
+          <div class="flex items-center justify-between px-4 py-3">
+            <div class="text-sm text-white">Tháng 04/2026</div>
+            <div class="flex items-center gap-3">
+              <div class="flex items-center gap-1.5">
+                <div class="w-2 h-2 rounded-full" style="background:#22c55e;"></div>
+                <span class="text-xs font-medium text-green-400">Xanh</span>
+              </div>
+              <span class="font-num text-base font-bold text-white">80</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between px-4 py-3">
+            <div class="text-sm text-white">Tháng 03/2026</div>
+            <div class="flex items-center gap-3">
+              <div class="flex items-center gap-1.5">
+                <div class="w-2 h-2 rounded-full" style="background:#FFD700;"></div>
+                <span class="text-xs font-medium text-yellow-400">Vàng</span>
+              </div>
+              <span class="font-num text-base font-bold text-white">58</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between px-4 py-3">
+            <div class="text-sm text-white">Tháng 02/2026</div>
+            <div class="flex items-center gap-3">
+              <div class="flex items-center gap-1.5">
+                <div class="w-2 h-2 rounded-full" style="background:#ef4444;"></div>
+                <span class="text-xs font-medium text-red-400">Đỏ</span>
+              </div>
+              <span class="font-num text-base font-bold text-white">46</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="_assets/nav.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

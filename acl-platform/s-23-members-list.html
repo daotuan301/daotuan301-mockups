@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>S-23 · Members List · ACL Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&family=Barlow+Condensed:wght@500;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="_assets/styles.css" />
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-acl-base">
+
+<div id="demo-topbar"
+     data-prev="s-22-ops-dashboard.html"
+     data-next="s-24-member-detail.html"
+     data-id="S-23"
+     data-name="Members List"
+     data-us="US-004"
+     data-role="Ops"></div>
+
+<div class="demo-desk-stage"><div class="desktop-frame">
+  <div class="flex min-h-[800px]">
+
+    <!-- Sidebar -->
+    <aside class="w-60 bg-acl-nav border-r border-acl flex flex-col flex-shrink-0">
+      <div class="px-5 py-5 border-b border-acl">
+        <div class="font-heading font-black text-xl tracking-tight"><span class="text-orange">ACL</span><span class="text-white"> Platform</span></div>
+        <div class="text-[10px] text-acl-t2 mt-0.5 tracking-widest uppercase font-heading font-bold">CMS / Ops</div>
+      </div>
+      <nav class="flex-1 overflow-y-auto p-3 space-y-5">
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Tổng quan</div>
+          <a href="s-22-ops-dashboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="layout-dashboard" width="16" height="16"></i><span>Dashboard</span></a>
+        </div>
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Thành viên</div>
+          <a href="s-23-members-list.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium bg-orange-dim border border-orange text-white"><i data-lucide="users" width="16" height="16" class="text-orange"></i><span>DS Thành viên</span><i data-lucide="chevron-right" width="12" height="12" class="ml-auto text-orange"></i></a>
+          <a href="s-25-scores.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="star" width="16" height="16"></i><span>Nhập điểm HỌC</span></a>
+          <a href="s-27-review-list.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="check-square" width="16" height="16"></i><span>Duyệt HÀNH</span></a>
+        </div>
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Sự kiện</div>
+          <a href="s-29-events-list.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="calendar-days" width="16" height="16"></i><span>Quản lý Event</span></a>
+          <a href="s-33-qa-host.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="message-square" width="16" height="16"></i><span>Q&A Realtime</span></a>
+        </div>
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Báo cáo</div>
+          <a href="s-34-exports.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="download" width="16" height="16"></i><span>Export dữ liệu</span></a>
+        </div>
+      </nav>
+      <div class="p-3 border-t border-acl">
+        <button class="flex items-center gap-3 px-3 py-2.5 w-full rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="log-out" width="16" height="16"></i> Đăng xuất</button>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="flex-1 overflow-y-auto p-8">
+      <div class="flex justify-between items-center mb-6">
+        <div>
+          <h1 class="font-heading font-black text-2xl text-white">Thành viên</h1>
+          <p class="text-acl-t2 text-sm mt-1">
+            247 kết quả
+            <span class="ml-2 text-xs font-bold text-orange bg-orange-dim border border-orange/30 px-2 py-0.5 rounded-full">7 chờ duyệt</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Status tabs -->
+      <div class="flex gap-1 mb-5 bg-acl-card border border-acl rounded-xl p-1 w-fit">
+        <button class="px-4 py-2 rounded-lg text-sm font-semibold bg-orange-dim border border-orange text-white">Tất cả</button>
+        <button class="px-4 py-2 rounded-lg text-sm font-semibold text-acl-t2 hover:text-white">Chờ duyệt <span class="ml-1.5 text-xs font-bold text-orange">7</span></button>
+        <button class="px-4 py-2 rounded-lg text-sm font-semibold text-acl-t2 hover:text-white">Active</button>
+        <button class="px-4 py-2 rounded-lg text-sm font-semibold text-acl-t2 hover:text-white">Deactivated</button>
+      </div>
+
+      <!-- Search -->
+      <div class="mb-5 relative max-w-sm">
+        <i data-lucide="search" width="15" height="15" class="absolute left-3 top-1/2 -translate-y-1/2 text-acl-t3"></i>
+        <input type="text" placeholder="Tìm theo tên thành viên..." class="w-full h-10 bg-acl-card border border-acl rounded-xl pl-9 pr-4 text-sm text-white placeholder-acl-t3 focus:outline-none" />
+      </div>
+
+      <!-- Table -->
+      <div class="bg-acl-card border border-acl rounded-2xl overflow-hidden">
+        <table class="w-full">
+          <thead>
+            <tr class="border-b border-acl">
+              <th class="text-left text-[10px] font-heading font-bold tracking-widest text-acl-t3 uppercase px-5 py-3">Thành viên</th>
+              <th class="text-left text-[10px] font-heading font-bold tracking-widest text-acl-t3 uppercase px-4 py-3">Ngành nghề</th>
+              <th class="text-left text-[10px] font-heading font-bold tracking-widest text-acl-t3 uppercase px-4 py-3">Ngày đăng ký</th>
+              <th class="text-center text-[10px] font-heading font-bold tracking-widest text-acl-t3 uppercase px-4 py-3">Trạng thái</th>
+              <th class="px-4 py-3 w-10"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Row 1 — Pending -->
+            <tr class="border-b border-acl/50 hover:bg-white/[0.02] transition-colors">
+              <td class="px-5 py-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-orange-500/70 to-red-700/70 flex items-center justify-center text-xs font-bold text-white">PH</div>
+                  <div><a href="s-24-member-detail.html" class="text-sm font-semibold text-white hover:text-orange">Phạm Thị Hương</a><div class="text-xs text-acl-t2">huong.pham@bistro.vn</div></div>
+                </div>
+              </td>
+              <td class="px-4 py-4 text-sm text-acl-t2">F&B</td>
+              <td class="px-4 py-4 text-sm text-acl-t2">28/04/2026</td>
+              <td class="px-4 py-4 text-center"><span class="text-xs font-bold px-2.5 py-1 rounded-full bg-orange-dim text-orange border border-orange/30">Chờ duyệt</span></td>
+              <td class="px-4 py-4">
+                <div class="flex gap-1.5 justify-end">
+                  <button class="text-xs font-bold px-2.5 py-1.5 bg-green-500/15 text-green-400 rounded-lg hover:bg-green-500/25" title="Kích hoạt">✓</button>
+                  <button class="text-xs font-bold px-2.5 py-1.5 bg-red-500/10 text-red-400 rounded-lg hover:bg-red-500/20" title="Từ chối">✗</button>
+                </div>
+              </td>
+            </tr>
+            <!-- Row 2 — Active (highlighted as our sample) -->
+            <tr class="border-b border-acl/50 hover:bg-white/[0.02] transition-colors">
+              <td class="px-5 py-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-orange-500/70 to-red-700/70 flex items-center justify-center text-xs font-bold text-white">MT</div>
+                  <div><a href="s-24-member-detail.html" class="text-sm font-semibold text-white hover:text-orange">Nguyễn Minh Tuấn</a><div class="text-xs text-acl-t2">tuan.nguyen@acmecorp.vn</div></div>
+                </div>
+              </td>
+              <td class="px-4 py-4 text-sm text-acl-t2">Bán lẻ</td>
+              <td class="px-4 py-4 text-sm text-acl-t2">12/01/2026</td>
+              <td class="px-4 py-4 text-center"><span class="text-xs font-bold px-2.5 py-1 rounded-full bg-green-500/10 text-green-400">Active</span></td>
+              <td class="px-4 py-4"><div class="flex justify-end"><button class="w-8 h-8 flex items-center justify-center text-acl-t3 hover:text-white hover:bg-white/8 rounded-lg"><i data-lucide="more-horizontal" width="16" height="16"></i></button></div></td>
+            </tr>
+            <!-- Row 3 — Active -->
+            <tr class="border-b border-acl/50 hover:bg-white/[0.02] transition-colors">
+              <td class="px-5 py-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-orange-500/70 to-red-700/70 flex items-center justify-center text-xs font-bold text-white">LP</div>
+                  <div><a href="s-24-member-detail.html" class="text-sm font-semibold text-white hover:text-orange">Lê Phương Linh</a><div class="text-xs text-acl-t2">linh.le@vietravel.vn</div></div>
+                </div>
+              </td>
+              <td class="px-4 py-4 text-sm text-acl-t2">Du lịch</td>
+              <td class="px-4 py-4 text-sm text-acl-t2">05/12/2025</td>
+              <td class="px-4 py-4 text-center"><span class="text-xs font-bold px-2.5 py-1 rounded-full bg-green-500/10 text-green-400">Active</span></td>
+              <td class="px-4 py-4"><div class="flex justify-end"><button class="w-8 h-8 flex items-center justify-center text-acl-t3 hover:text-white hover:bg-white/8 rounded-lg"><i data-lucide="more-horizontal" width="16" height="16"></i></button></div></td>
+            </tr>
+            <!-- Row 4 — Active -->
+            <tr class="border-b border-acl/50 hover:bg-white/[0.02] transition-colors">
+              <td class="px-5 py-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-orange-500/70 to-red-700/70 flex items-center justify-center text-xs font-bold text-white">TQ</div>
+                  <div><a href="s-24-member-detail.html" class="text-sm font-semibold text-white hover:text-orange">Trần Quang Minh</a><div class="text-xs text-acl-t2">minh.tran@techviet.vn</div></div>
+                </div>
+              </td>
+              <td class="px-4 py-4 text-sm text-acl-t2">Công nghệ</td>
+              <td class="px-4 py-4 text-sm text-acl-t2">18/10/2025</td>
+              <td class="px-4 py-4 text-center"><span class="text-xs font-bold px-2.5 py-1 rounded-full bg-green-500/10 text-green-400">Active</span></td>
+              <td class="px-4 py-4"><div class="flex justify-end"><button class="w-8 h-8 flex items-center justify-center text-acl-t3 hover:text-white hover:bg-white/8 rounded-lg"><i data-lucide="more-horizontal" width="16" height="16"></i></button></div></td>
+            </tr>
+            <!-- Row 5 — Pending -->
+            <tr class="border-b border-acl/50 hover:bg-white/[0.02] transition-colors">
+              <td class="px-5 py-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-orange-500/70 to-red-700/70 flex items-center justify-center text-xs font-bold text-white">VK</div>
+                  <div><a href="s-24-member-detail.html" class="text-sm font-semibold text-white hover:text-orange">Vũ Đăng Khoa</a><div class="text-xs text-acl-t2">khoa.vu@dnabds.vn</div></div>
+                </div>
+              </td>
+              <td class="px-4 py-4 text-sm text-acl-t2">Bất động sản</td>
+              <td class="px-4 py-4 text-sm text-acl-t2">29/04/2026</td>
+              <td class="px-4 py-4 text-center"><span class="text-xs font-bold px-2.5 py-1 rounded-full bg-orange-dim text-orange border border-orange/30">Chờ duyệt</span></td>
+              <td class="px-4 py-4">
+                <div class="flex gap-1.5 justify-end">
+                  <button class="text-xs font-bold px-2.5 py-1.5 bg-green-500/15 text-green-400 rounded-lg" title="Kích hoạt">✓</button>
+                  <button class="text-xs font-bold px-2.5 py-1.5 bg-red-500/10 text-red-400 rounded-lg" title="Từ chối">✗</button>
+                </div>
+              </td>
+            </tr>
+            <!-- Row 6 — Active -->
+            <tr class="border-b border-acl/50 hover:bg-white/[0.02] transition-colors">
+              <td class="px-5 py-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-orange-500/70 to-red-700/70 flex items-center justify-center text-xs font-bold text-white">HT</div>
+                  <div><a href="s-24-member-detail.html" class="text-sm font-semibold text-white hover:text-orange">Hoàng Thị Trang</a><div class="text-xs text-acl-t2">trang.hoang@beautymax.vn</div></div>
+                </div>
+              </td>
+              <td class="px-4 py-4 text-sm text-acl-t2">Spa & Beauty</td>
+              <td class="px-4 py-4 text-sm text-acl-t2">22/02/2026</td>
+              <td class="px-4 py-4 text-center"><span class="text-xs font-bold px-2.5 py-1 rounded-full bg-green-500/10 text-green-400">Active</span></td>
+              <td class="px-4 py-4"><div class="flex justify-end"><button class="w-8 h-8 flex items-center justify-center text-acl-t3 hover:text-white hover:bg-white/8 rounded-lg"><i data-lucide="more-horizontal" width="16" height="16"></i></button></div></td>
+            </tr>
+            <!-- Row 7 — Active -->
+            <tr class="border-b border-acl/50 hover:bg-white/[0.02] transition-colors">
+              <td class="px-5 py-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-orange-500/70 to-red-700/70 flex items-center justify-center text-xs font-bold text-white">BS</div>
+                  <div><a href="s-24-member-detail.html" class="text-sm font-semibold text-white hover:text-orange">Bùi Thanh Sơn</a><div class="text-xs text-acl-t2">son.bui@vinasx.vn</div></div>
+                </div>
+              </td>
+              <td class="px-4 py-4 text-sm text-acl-t2">Sản xuất</td>
+              <td class="px-4 py-4 text-sm text-acl-t2">11/11/2025</td>
+              <td class="px-4 py-4 text-center"><span class="text-xs font-bold px-2.5 py-1 rounded-full bg-green-500/10 text-green-400">Active</span></td>
+              <td class="px-4 py-4"><div class="flex justify-end"><button class="w-8 h-8 flex items-center justify-center text-acl-t3 hover:text-white hover:bg-white/8 rounded-lg"><i data-lucide="more-horizontal" width="16" height="16"></i></button></div></td>
+            </tr>
+            <!-- Row 8 — Deactivated -->
+            <tr class="border-b border-acl/50 last:border-0 hover:bg-white/[0.02] transition-colors">
+              <td class="px-5 py-4">
+                <div class="flex items-center gap-3 opacity-60">
+                  <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-orange-500/70 to-red-700/70 flex items-center justify-center text-xs font-bold text-white">NQ</div>
+                  <div><a href="s-24-member-detail.html" class="text-sm font-semibold text-white hover:text-orange">Ngô Quốc Hưng</a><div class="text-xs text-acl-t2">hung.ngo@oldemail.vn</div></div>
+                </div>
+              </td>
+              <td class="px-4 py-4 text-sm text-acl-t2">—</td>
+              <td class="px-4 py-4 text-sm text-acl-t2">15/06/2025</td>
+              <td class="px-4 py-4 text-center"><span class="text-xs font-bold px-2.5 py-1 rounded-full bg-white/5 text-acl-t2">Deactivated</span></td>
+              <td class="px-4 py-4"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-xs text-acl-t3 mt-4">Hiển thị 8/247 thành viên · Click row để xem chi tiết</p>
+    </main>
+  </div>
+</div></div>
+
+<script src="_assets/nav.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

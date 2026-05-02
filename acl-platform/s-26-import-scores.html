@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>S-26 · Bulk Import điểm HỌC · ACL Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&family=Barlow+Condensed:wght@500;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="_assets/styles.css" />
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-acl-base">
+
+<div id="demo-topbar"
+     data-prev="s-25-scores.html"
+     data-next="s-27-review-list.html"
+     data-id="S-26"
+     data-name="Bulk Import điểm HỌC"
+     data-us="US-015"
+     data-role="Ops"></div>
+
+<div class="demo-desk-stage"><div class="desktop-frame">
+  <div class="flex min-h-[800px]">
+
+    <!-- Sidebar -->
+    <aside class="w-60 bg-acl-nav border-r border-acl flex flex-col flex-shrink-0">
+      <div class="px-5 py-5 border-b border-acl">
+        <div class="font-heading font-black text-xl tracking-tight"><span class="text-orange">ACL</span><span class="text-white"> Platform</span></div>
+        <div class="text-[10px] text-acl-t2 mt-0.5 tracking-widest uppercase font-heading font-bold">CMS / Ops</div>
+      </div>
+      <nav class="flex-1 overflow-y-auto p-3 space-y-5">
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Tổng quan</div>
+          <a href="s-22-ops-dashboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="layout-dashboard" width="16" height="16"></i><span>Dashboard</span></a>
+        </div>
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Thành viên</div>
+          <a href="s-23-members-list.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="users" width="16" height="16"></i><span>DS Thành viên</span></a>
+          <a href="s-25-scores.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium bg-orange-dim border border-orange text-white"><i data-lucide="star" width="16" height="16" class="text-orange"></i><span>Nhập điểm HỌC</span><i data-lucide="chevron-right" width="12" height="12" class="ml-auto text-orange"></i></a>
+          <a href="s-27-review-list.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="check-square" width="16" height="16"></i><span>Duyệt HÀNH</span></a>
+        </div>
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Sự kiện</div>
+          <a href="s-29-events-list.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="calendar-days" width="16" height="16"></i><span>Quản lý Event</span></a>
+          <a href="s-33-qa-host.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="message-square" width="16" height="16"></i><span>Q&A Realtime</span></a>
+        </div>
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Báo cáo</div>
+          <a href="s-34-exports.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="download" width="16" height="16"></i><span>Export dữ liệu</span></a>
+        </div>
+      </nav>
+      <div class="p-3 border-t border-acl">
+        <button class="flex items-center gap-3 px-3 py-2.5 w-full rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="log-out" width="16" height="16"></i> Đăng xuất</button>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="flex-1 overflow-y-auto p-8">
+      <!-- Back -->
+      <div class="flex items-center gap-3 mb-2">
+        <a href="s-25-scores.html" class="text-sm text-acl-t2 hover:text-white flex items-center gap-1"><i data-lucide="arrow-left" width="16" height="16"></i> Nhập điểm HỌC</a>
+      </div>
+      <div class="flex justify-between items-center mb-6">
+        <div>
+          <h1 class="font-heading font-black text-2xl text-white">Bulk Import điểm HỌC</h1>
+          <p class="text-acl-t2 text-sm mt-1">Chỉ import L1 và L2 — L3 tự động từ check-in data</p>
+        </div>
+        <button class="flex items-center gap-2 px-4 h-10 bg-acl-card border border-acl rounded-xl text-sm text-acl-t2 hover:text-white"><i data-lucide="download" width="15" height="15"></i> Tải template Excel</button>
+      </div>
+
+      <!-- Steps indicator -->
+      <div class="flex items-center gap-0 mb-7">
+        <div class="flex items-center flex-1">
+          <div class="flex items-center gap-2.5 px-4 py-2.5 rounded-xl flex-1 bg-green-500/8 border border-green-500/20">
+            <div class="w-6 h-6 rounded-full flex items-center justify-center bg-green-500 text-white"><i data-lucide="check" width="12" height="12"></i></div>
+            <span class="text-sm font-medium text-green-400">1. Upload file</span>
+          </div>
+          <i data-lucide="chevron-right" width="16" height="16" class="text-acl-t3 mx-1 flex-shrink-0"></i>
+        </div>
+        <div class="flex items-center flex-1">
+          <div class="flex items-center gap-2.5 px-4 py-2.5 rounded-xl flex-1 bg-orange-dim border border-orange">
+            <div class="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold bg-orange-500 text-white">2</div>
+            <span class="text-sm font-medium text-white">2. Xem trước & Validate</span>
+          </div>
+          <i data-lucide="chevron-right" width="16" height="16" class="text-acl-t3 mx-1 flex-shrink-0"></i>
+        </div>
+        <div class="flex items-center flex-1">
+          <div class="flex items-center gap-2.5 px-4 py-2.5 rounded-xl flex-1 bg-acl-card border border-acl">
+            <div class="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold bg-white/10 text-acl-t3">3</div>
+            <span class="text-sm font-medium text-acl-t3">3. Xác nhận import</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Preview state -->
+      <div class="flex items-center gap-3 mb-5 flex-wrap">
+        <div class="flex items-center gap-1.5 px-3 py-1.5 bg-acl-card border border-acl rounded-xl text-sm text-acl-t2">
+          <i data-lucide="file-spreadsheet" width="14" height="14"></i>
+          <span class="text-white font-medium">diem-hoc-thang-5-2026.xlsx</span>
+          <span class="text-acl-t3 ml-1">· T5/2026</span>
+        </div>
+        <div class="flex items-center gap-2 px-3 py-1.5 bg-green-500/10 border border-green-500/25 rounded-xl text-xs font-bold text-green-400">
+          <i data-lucide="check" width="12" height="12"></i> 32 hợp lệ
+        </div>
+        <div class="flex items-center gap-2 px-3 py-1.5 bg-yellow-400/10 border border-yellow-400/25 rounded-xl text-xs font-bold text-yellow-400">
+          <i data-lucide="alert-triangle" width="12" height="12"></i> 4 cảnh báo
+        </div>
+        <div class="flex items-center gap-2 px-3 py-1.5 bg-red-500/10 border border-red-500/25 rounded-xl text-xs font-bold text-red-400">
+          <i data-lucide="x" width="12" height="12"></i> 2 lỗi (sẽ bỏ qua)
+        </div>
+        <button class="ml-auto flex items-center gap-1.5 text-xs text-acl-t2 hover:text-white"><i data-lucide="rotate-ccw" width="12" height="12"></i> Đổi file</button>
+      </div>
+
+      <!-- Preview table -->
+      <div class="bg-acl-card border border-acl rounded-2xl overflow-hidden mb-5">
+        <table class="w-full">
+          <thead>
+            <tr class="border-b border-acl">
+              <th class="text-left text-[10px] font-heading font-bold tracking-widest text-acl-t3 uppercase px-4 py-3 w-10">#</th>
+              <th class="text-left text-[10px] font-heading font-bold tracking-widest text-acl-t3 uppercase px-4 py-3">Thành viên</th>
+              <th class="text-left text-[10px] font-heading font-bold tracking-widest text-acl-t3 uppercase px-4 py-3">Email</th>
+              <th class="text-center text-[10px] font-heading font-bold tracking-widest text-acl-t3 uppercase px-4 py-3">L1</th>
+              <th class="text-center text-[10px] font-heading font-bold tracking-widest text-acl-t3 uppercase px-4 py-3">L2</th>
+              <th class="text-center text-[10px] font-heading font-bold tracking-widest text-acl-t3 uppercase px-4 py-3">Tổng</th>
+              <th class="text-left text-[10px] font-heading font-bold tracking-widest text-acl-t3 uppercase px-4 py-3">Trạng thái</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-acl/40 hover:bg-white/3"><td class="px-4 py-3 text-xs text-acl-t3">1</td><td class="px-4 py-3 text-sm text-white font-medium">Nguyễn Minh Tuấn</td><td class="px-4 py-3 text-xs text-acl-t2">tuan.nguyen@acmecorp.vn</td><td class="px-4 py-3 text-center font-num text-base font-bold text-orange">20</td><td class="px-4 py-3 text-center font-num text-base font-bold text-orange">10</td><td class="px-4 py-3 text-center font-num text-lg font-bold text-white">30</td><td class="px-4 py-3"><span class="flex items-center gap-1.5 text-xs font-bold text-green-400"><i data-lucide="check" width="12" height="12"></i> OK</span></td></tr>
+            <tr class="border-b border-acl/40 hover:bg-white/3"><td class="px-4 py-3 text-xs text-acl-t3">2</td><td class="px-4 py-3 text-sm text-white font-medium">Lê Phương Linh</td><td class="px-4 py-3 text-xs text-acl-t2">linh.le@vietravel.vn</td><td class="px-4 py-3 text-center font-num text-base font-bold text-orange">20</td><td class="px-4 py-3 text-center font-num text-base font-bold text-orange">20</td><td class="px-4 py-3 text-center font-num text-lg font-bold text-white">40</td><td class="px-4 py-3"><span class="flex items-center gap-1.5 text-xs font-bold text-green-400"><i data-lucide="check" width="12" height="12"></i> OK</span></td></tr>
+            <tr class="border-b border-acl/40 hover:bg-white/3"><td class="px-4 py-3 text-xs text-acl-t3">3</td><td class="px-4 py-3 text-sm text-white font-medium">Hoàng Thị Trang</td><td class="px-4 py-3 text-xs text-acl-t2">trang.hoang@beautymax.vn</td><td class="px-4 py-3 text-center font-num text-base font-bold text-orange">20</td><td class="px-4 py-3 text-center font-num text-base font-bold text-orange">10</td><td class="px-4 py-3 text-center font-num text-lg font-bold text-white">30</td><td class="px-4 py-3"><span class="flex items-center gap-1.5 text-xs font-bold text-green-400"><i data-lucide="check" width="12" height="12"></i> OK</span></td></tr>
+            <tr class="border-b border-acl/40 bg-yellow-400/5"><td class="px-4 py-3 text-xs text-acl-t3">4</td><td class="px-4 py-3 text-sm text-white font-medium">Trần Quang Minh</td><td class="px-4 py-3 text-xs text-acl-t2">minh.tran@techviet.vn</td><td class="px-4 py-3 text-center font-num text-base font-bold text-orange">20</td><td class="px-4 py-3 text-center font-num text-base font-bold text-orange">20</td><td class="px-4 py-3 text-center font-num text-lg font-bold text-white">40</td><td class="px-4 py-3"><div><span class="flex items-center gap-1.5 text-xs font-bold text-yellow-400"><i data-lucide="alert-triangle" width="12" height="12"></i> Cảnh báo</span><div class="text-[10px] text-yellow-400/70 mt-0.5">Đã có điểm — sẽ ghi đè</div></div></td></tr>
+            <tr class="border-b border-acl/40 hover:bg-white/3"><td class="px-4 py-3 text-xs text-acl-t3">5</td><td class="px-4 py-3 text-sm text-white font-medium">Bùi Thanh Sơn</td><td class="px-4 py-3 text-xs text-acl-t2">son.bui@vinasx.vn</td><td class="px-4 py-3 text-center font-num text-base font-bold text-orange">0</td><td class="px-4 py-3 text-center font-num text-base font-bold text-orange">0</td><td class="px-4 py-3 text-center font-num text-lg font-bold text-white">0</td><td class="px-4 py-3"><span class="flex items-center gap-1.5 text-xs font-bold text-green-400"><i data-lucide="check" width="12" height="12"></i> OK</span></td></tr>
+            <tr class="border-b border-acl/40 bg-red-500/5"><td class="px-4 py-3 text-xs text-acl-t3">6</td><td class="px-4 py-3 text-sm text-acl-t3 italic">—</td><td class="px-4 py-3 text-xs text-acl-t2">unknown@noemail.vn</td><td class="px-4 py-3 text-center font-num text-base font-bold text-orange">20</td><td class="px-4 py-3 text-center font-num text-base font-bold text-orange">10</td><td class="px-4 py-3 text-center font-num text-lg font-bold text-white">30</td><td class="px-4 py-3"><div><span class="flex items-center gap-1.5 text-xs font-bold text-red-400"><i data-lucide="x" width="12" height="12"></i> Lỗi — bỏ qua</span><div class="text-[10px] text-red-400/70 mt-0.5">Email không tồn tại</div></div></td></tr>
+            <tr class="border-b border-acl/40 bg-red-500/5"><td class="px-4 py-3 text-xs text-acl-t3">7</td><td class="px-4 py-3 text-sm text-white font-medium">Mai Thị Lan</td><td class="px-4 py-3 text-xs text-acl-t2">lan.mai@dakhoa.vn</td><td class="px-4 py-3 text-center font-num text-base font-bold text-red-400">15</td><td class="px-4 py-3 text-center font-num text-base font-bold text-orange">10</td><td class="px-4 py-3 text-center font-num text-lg font-bold text-white">25</td><td class="px-4 py-3"><div><span class="flex items-center gap-1.5 text-xs font-bold text-red-400"><i data-lucide="x" width="12" height="12"></i> Lỗi — bỏ qua</span><div class="text-[10px] text-red-400/70 mt-0.5">L1 phải là 0 hoặc 20</div></div></td></tr>
+            <tr class="border-b border-acl/40 hover:bg-white/3"><td class="px-4 py-3 text-xs text-acl-t3">8</td><td class="px-4 py-3 text-sm text-white font-medium">Phạm Thị Hương</td><td class="px-4 py-3 text-xs text-acl-t2">huong.pham@bistro.vn</td><td class="px-4 py-3 text-center font-num text-base font-bold text-orange">20</td><td class="px-4 py-3 text-center font-num text-base font-bold text-orange">10</td><td class="px-4 py-3 text-center font-num text-lg font-bold text-white">30</td><td class="px-4 py-3"><span class="flex items-center gap-1.5 text-xs font-bold text-green-400"><i data-lucide="check" width="12" height="12"></i> OK</span></td></tr>
+            <tr class="border-b border-acl/40 bg-yellow-400/5"><td class="px-4 py-3 text-xs text-acl-t3">9</td><td class="px-4 py-3 text-sm text-white font-medium">Vũ Đăng Khoa</td><td class="px-4 py-3 text-xs text-acl-t2">khoa.vu@dnabds.vn</td><td class="px-4 py-3 text-center font-num text-base font-bold text-orange">20</td><td class="px-4 py-3 text-center font-num text-base font-bold text-orange">10</td><td class="px-4 py-3 text-center font-num text-lg font-bold text-white">30</td><td class="px-4 py-3"><div><span class="flex items-center gap-1.5 text-xs font-bold text-yellow-400"><i data-lucide="alert-triangle" width="12" height="12"></i> Cảnh báo</span><div class="text-[10px] text-yellow-400/70 mt-0.5">Member còn pending — sẽ áp dụng khi active</div></div></td></tr>
+            <tr class="border-b-0 hover:bg-white/3"><td class="px-4 py-3 text-xs text-acl-t3">10</td><td class="px-4 py-3 text-sm text-white font-medium">Đỗ Hoàng Hải</td><td class="px-4 py-3 text-xs text-acl-t2">hai.do@logivn.vn</td><td class="px-4 py-3 text-center font-num text-base font-bold text-orange">0</td><td class="px-4 py-3 text-center font-num text-base font-bold text-orange">0</td><td class="px-4 py-3 text-center font-num text-lg font-bold text-white">0</td><td class="px-4 py-3"><span class="flex items-center gap-1.5 text-xs font-bold text-green-400"><i data-lucide="check" width="12" height="12"></i> OK</span></td></tr>
+          </tbody>
+        </table>
+        <div class="text-center py-3 border-t border-acl text-xs text-acl-t3">… 28 dòng nữa</div>
+      </div>
+
+      <!-- Banner -->
+      <div class="flex items-start gap-3 bg-orange-dim border border-orange/25 rounded-xl p-4 mb-5">
+        <i data-lucide="alert-triangle" width="15" height="15" class="text-orange flex-shrink-0 mt-0.5"></i>
+        <div class="text-sm text-acl-t2">
+          <span class="text-white font-semibold">2 dòng lỗi</span> sẽ bị bỏ qua.
+          <span class="text-white font-semibold">36 dòng</span> sẽ được import.
+          Có thể rollback trong vòng <span class="text-orange font-semibold">24 giờ</span>.
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="flex gap-3">
+        <button class="px-6 h-12 rounded-xl border border-acl text-acl-t2 hover:text-white hover:border-white/20 text-sm">Hủy</button>
+        <button class="btn-primary flex-1 h-12 rounded-xl font-heading font-bold text-base text-white flex items-center justify-center gap-2">Xác nhận import 36 dòng</button>
+      </div>
+    </main>
+  </div>
+</div></div>
+
+<script src="_assets/nav.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

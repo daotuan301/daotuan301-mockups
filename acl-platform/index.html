@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ACL Platform — UI Mockup Demo (35 screens)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&family=Barlow+Condensed:wght@500;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="_assets/styles.css" />
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-acl-base">
+
+<!-- Hero -->
+<header class="relative overflow-hidden border-b border-white/5">
+  <div class="glow-orange-top"></div>
+  <div class="max-w-6xl mx-auto px-6 py-16 relative z-10">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="w-12 h-12 rounded-2xl flex items-center justify-center font-heading font-black text-white text-xl"
+           style="background: linear-gradient(135deg, #FF6B1A 0%, #c83800 100%); box-shadow: 0 0 36px rgba(255,107,26,0.4);">A</div>
+      <div>
+        <div class="text-xs uppercase tracking-widest text-cyan font-bold">ACL Platform</div>
+        <div class="text-acl-t2 text-sm">Action Leaders Member Management</div>
+      </div>
+    </div>
+
+    <h1 class="font-heading font-black text-4xl md:text-5xl text-white leading-tight">
+      <span class="text-orange">35 màn hình</span> UI Mockup<br />theo user journey
+    </h1>
+    <p class="text-acl-t2 text-base mt-4 max-w-2xl">
+      Demo dành cho khách hàng review UI/UX — phiên bản 2026-05-02. Click vào card bên dưới để xem chi tiết từng màn hình.
+      Trong mỗi screen, dùng phím <span class="text-white font-mono bg-white/10 px-1.5 py-0.5 rounded text-xs">←/→</span>
+      để chuyển nhanh.
+    </p>
+
+    <div class="flex flex-wrap gap-3 mt-6 text-sm">
+      <span class="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5">
+        <span class="w-2 h-2 rounded-full bg-orange-500"></span>
+        <span class="text-acl-t2">PRD v2.0 · TDD v1.1</span>
+      </span>
+      <span class="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5">
+        <span class="w-2 h-2 rounded-full bg-cyan"></span>
+        <span class="text-acl-t2">5 user journey · 4 roles</span>
+      </span>
+      <span class="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5">
+        <span class="w-2 h-2 rounded-full bg-gold"></span>
+        <span class="text-acl-t2">Mobile-first · Dark theme</span>
+      </span>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-6xl mx-auto px-6 py-12">
+
+  <!-- Journey 1: Public / Auth -->
+  <section class="journey-section">
+    <div class="journey-header">
+      <div class="badge-icon" style="background: rgba(255,107,26,0.15); border: 1px solid rgba(255,107,26,0.4);">🌐</div>
+      <div>
+        <div class="font-heading font-black text-xl text-white">Public / Auth</div>
+        <div class="text-acl-t2 text-sm">6 màn hình · Đăng ký, thanh toán, đăng nhập, quên mật khẩu</div>
+      </div>
+    </div>
+    <div class="journey-grid">
+      <a class="tile" href="s-01-register.html">
+        <i data-lucide="user-plus" class="icon" width="40" height="40"></i>
+        <div class="num">S-01</div>
+        <div class="name">Đăng ký Membership</div>
+        <div class="meta-row"><span class="us-pill">US-001</span><span class="role-pill">Guest</span></div>
+      </a>
+      <a class="tile" href="s-02-payment.html">
+        <i data-lucide="credit-card" class="icon" width="40" height="40"></i>
+        <div class="num">S-02</div>
+        <div class="name">Thanh toán Sepay</div>
+        <div class="meta-row"><span class="us-pill">US-001</span><span class="role-pill">Guest</span></div>
+      </a>
+      <a class="tile" href="s-03-pending.html">
+        <i data-lucide="clock" class="icon" width="40" height="40"></i>
+        <div class="num">S-03</div>
+        <div class="name">Pending — Chờ duyệt</div>
+        <div class="meta-row"><span class="us-pill">US-001</span><span class="role-pill">New</span></div>
+      </a>
+      <a class="tile" href="s-04-login.html">
+        <i data-lucide="log-in" class="icon" width="40" height="40"></i>
+        <div class="num">S-04</div>
+        <div class="name">Đăng nhập</div>
+        <div class="meta-row"><span class="us-pill">US-002</span><span class="role-pill">All</span></div>
+      </a>
+      <a class="tile" href="s-05-forgot-password.html">
+        <i data-lucide="key-round" class="icon" width="40" height="40"></i>
+        <div class="num">S-05</div>
+        <div class="name">Quên mật khẩu</div>
+        <div class="meta-row"><span class="us-pill">US-002</span><span class="role-pill">All</span></div>
+      </a>
+      <a class="tile" href="s-06-reset-password.html">
+        <i data-lucide="shield-check" class="icon" width="40" height="40"></i>
+        <div class="num">S-06</div>
+        <div class="name">Đặt lại mật khẩu</div>
+        <div class="meta-row"><span class="us-pill">US-002</span><span class="role-pill">All</span></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Journey 2: Member -->
+  <section class="journey-section">
+    <div class="journey-header">
+      <div class="badge-icon" style="background: rgba(34,197,94,0.15); border: 1px solid rgba(34,197,94,0.4);">🟢</div>
+      <div>
+        <div class="font-heading font-black text-xl text-white">Member</div>
+        <div class="text-acl-t2 text-sm">12 màn hình · Home, Profile, HHL Card, Monthly Review, Leaderboard, Events</div>
+      </div>
+    </div>
+    <div class="journey-grid">
+      <a class="tile" href="s-07-onboarding.html">
+        <i data-lucide="sparkles" class="icon" width="40" height="40"></i>
+        <div class="num">S-07</div>
+        <div class="name">Onboarding Welcome</div>
+        <div class="meta-row"><span class="us-pill">US-017</span><span class="role-pill">Member</span></div>
+      </a>
+      <a class="tile" href="s-08-home.html">
+        <i data-lucide="home" class="icon" width="40" height="40"></i>
+        <div class="num">S-08</div>
+        <div class="name">Member Home</div>
+        <div class="meta-row"><span class="us-pill">US-003 · 008</span><span class="role-pill">Member</span></div>
+      </a>
+      <a class="tile" href="s-09-profile.html">
+        <i data-lucide="user" class="icon" width="40" height="40"></i>
+        <div class="num">S-09</div>
+        <div class="name">Profile cá nhân</div>
+        <div class="meta-row"><span class="us-pill">US-003</span><span class="role-pill">Member</span></div>
+      </a>
+      <a class="tile" href="s-10-profile-edit.html">
+        <i data-lucide="user-cog" class="icon" width="40" height="40"></i>
+        <div class="num">S-10</div>
+        <div class="name">Chỉnh sửa Profile</div>
+        <div class="meta-row"><span class="us-pill">US-003</span><span class="role-pill">Member</span></div>
+      </a>
+      <a class="tile" href="s-11-hhl-card.html">
+        <i data-lucide="award" class="icon" width="40" height="40"></i>
+        <div class="num">S-11</div>
+        <div class="name">HHL Card chi tiết</div>
+        <div class="meta-row"><span class="us-pill">US-008</span><span class="role-pill">Member</span></div>
+      </a>
+      <a class="tile" href="s-12-monthly-review.html">
+        <i data-lucide="clipboard-list" class="icon" width="40" height="40"></i>
+        <div class="num">S-12</div>
+        <div class="name">Monthly Review Form</div>
+        <div class="meta-row"><span class="us-pill">US-006</span><span class="role-pill">Member</span></div>
+      </a>
+      <a class="tile" href="s-13-leaderboard.html">
+        <i data-lucide="trophy" class="icon" width="40" height="40"></i>
+        <div class="num">S-13</div>
+        <div class="name">Leaderboard</div>
+        <div class="meta-row"><span class="us-pill">US-011</span><span class="role-pill">Member</span></div>
+      </a>
+      <a class="tile" href="s-14-events.html">
+        <i data-lucide="calendar" class="icon" width="40" height="40"></i>
+        <div class="num">S-14</div>
+        <div class="name">Event Calendar</div>
+        <div class="meta-row"><span class="us-pill">US-013</span><span class="role-pill">Member</span></div>
+      </a>
+      <a class="tile" href="s-15-checkin-scanner.html">
+        <i data-lucide="qr-code" class="icon" width="40" height="40"></i>
+        <div class="num">S-15</div>
+        <div class="name">QR Scanner — Member</div>
+        <div class="meta-row"><span class="us-pill">US-010</span><span class="role-pill">Member</span></div>
+      </a>
+      <a class="tile" href="s-16-notifications.html">
+        <i data-lucide="bell" class="icon" width="40" height="40"></i>
+        <div class="num">S-16</div>
+        <div class="name">Notifications</div>
+        <div class="meta-row"><span class="us-pill">US-014</span><span class="role-pill">Member</span></div>
+      </a>
+      <a class="tile" href="s-17-invite.html">
+        <i data-lucide="ticket" class="icon" width="40" height="40"></i>
+        <div class="num">S-17</div>
+        <div class="name">Invitation Code</div>
+        <div class="meta-row"><span class="us-pill">US-023</span><span class="role-pill">Member</span></div>
+      </a>
+      <a class="tile" href="s-18-qa-submit.html">
+        <i data-lucide="message-circle-question" class="icon" width="40" height="40"></i>
+        <div class="num">S-18</div>
+        <div class="name">Q&amp;A Submit</div>
+        <div class="meta-row"><span class="us-pill">US-020</span><span class="role-pill">Member</span></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Journey 3: Guest / Public -->
+  <section class="journey-section">
+    <div class="journey-header">
+      <div class="badge-icon" style="background: rgba(0,229,201,0.15); border: 1px solid rgba(0,229,201,0.4);">👥</div>
+      <div>
+        <div class="font-heading font-black text-xl text-white">Guest / Public flow</div>
+        <div class="text-acl-t2 text-sm">3 màn hình · Event detail public, check-in landing, post-event survey</div>
+      </div>
+    </div>
+    <div class="journey-grid">
+      <a class="tile" href="s-19-event-detail.html">
+        <i data-lucide="calendar-check" class="icon" width="40" height="40"></i>
+        <div class="num">S-19</div>
+        <div class="name">Event Detail (public)</div>
+        <div class="meta-row"><span class="us-pill">US-013</span><span class="role-pill">All</span></div>
+      </a>
+      <a class="tile" href="s-20-checkin-landing.html">
+        <i data-lucide="scan-line" class="icon" width="40" height="40"></i>
+        <div class="num">S-20</div>
+        <div class="name">Check-in Landing</div>
+        <div class="meta-row"><span class="us-pill">US-010</span><span class="role-pill">Member · Guest</span></div>
+      </a>
+      <a class="tile" href="s-21-guest-survey.html">
+        <i data-lucide="message-square" class="icon" width="40" height="40"></i>
+        <div class="num">S-21</div>
+        <div class="name">Guest Survey</div>
+        <div class="meta-row"><span class="us-pill">US-019</span><span class="role-pill">Public</span></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Journey 4: Ops/Admin -->
+  <section class="journey-section">
+    <div class="journey-header">
+      <div class="badge-icon" style="background: rgba(255,215,0,0.15); border: 1px solid rgba(255,215,0,0.4);">🛠️</div>
+      <div>
+        <div class="font-heading font-black text-xl text-white">Ops / Admin</div>
+        <div class="text-acl-t2 text-sm">13 màn hình · CMS quản lý members, điểm số, events, exports</div>
+      </div>
+    </div>
+    <div class="journey-grid">
+      <a class="tile" href="s-22-dashboard.html">
+        <i data-lucide="layout-dashboard" class="icon" width="40" height="40"></i>
+        <div class="num">S-22</div>
+        <div class="name">Ops Dashboard</div>
+        <div class="meta-row"><span class="us-pill">US-022</span><span class="role-pill">Ops</span></div>
+      </a>
+      <a class="tile" href="s-23-members-list.html">
+        <i data-lucide="users" class="icon" width="40" height="40"></i>
+        <div class="num">S-23</div>
+        <div class="name">Members List</div>
+        <div class="meta-row"><span class="us-pill">US-004</span><span class="role-pill">Ops</span></div>
+      </a>
+      <a class="tile" href="s-24-member-detail.html">
+        <i data-lucide="user-search" class="icon" width="40" height="40"></i>
+        <div class="num">S-24</div>
+        <div class="name">Member Detail</div>
+        <div class="meta-row"><span class="us-pill">US-003 · 025</span><span class="role-pill">Ops · BCH</span></div>
+      </a>
+      <a class="tile" href="s-25-scores.html">
+        <i data-lucide="pen-line" class="icon" width="40" height="40"></i>
+        <div class="num">S-25</div>
+        <div class="name">Nhập điểm HỌC</div>
+        <div class="meta-row"><span class="us-pill">US-005</span><span class="role-pill">Ops</span></div>
+      </a>
+      <a class="tile" href="s-26-import-scores.html">
+        <i data-lucide="upload-cloud" class="icon" width="40" height="40"></i>
+        <div class="num">S-26</div>
+        <div class="name">Bulk Import Scores</div>
+        <div class="meta-row"><span class="us-pill">US-015</span><span class="role-pill">Ops</span></div>
+      </a>
+      <a class="tile" href="s-27-review-list.html">
+        <i data-lucide="list-checks" class="icon" width="40" height="40"></i>
+        <div class="num">S-27</div>
+        <div class="name">Duyệt HÀNH — List</div>
+        <div class="meta-row"><span class="us-pill">US-007</span><span class="role-pill">Ops</span></div>
+      </a>
+      <a class="tile" href="s-28-evidence-detail.html">
+        <i data-lucide="file-search" class="icon" width="40" height="40"></i>
+        <div class="num">S-28</div>
+        <div class="name">Evidence Detail &amp; Duyệt</div>
+        <div class="meta-row"><span class="us-pill">US-007</span><span class="role-pill">Ops</span></div>
+      </a>
+      <a class="tile" href="s-29-events-list.html">
+        <i data-lucide="calendar-days" class="icon" width="40" height="40"></i>
+        <div class="num">S-29</div>
+        <div class="name">Events Management</div>
+        <div class="meta-row"><span class="us-pill">US-009</span><span class="role-pill">Ops</span></div>
+      </a>
+      <a class="tile" href="s-30-event-create.html">
+        <i data-lucide="calendar-plus" class="icon" width="40" height="40"></i>
+        <div class="num">S-30</div>
+        <div class="name">Tạo / Sửa Event</div>
+        <div class="meta-row"><span class="us-pill">US-009</span><span class="role-pill">Ops</span></div>
+      </a>
+      <a class="tile" href="s-31-event-cms.html">
+        <i data-lucide="qr-code" class="icon" width="40" height="40"></i>
+        <div class="num">S-31</div>
+        <div class="name">Event Detail CMS</div>
+        <div class="meta-row"><span class="us-pill">US-009 · 010</span><span class="role-pill">Ops</span></div>
+      </a>
+      <a class="tile" href="s-32-event-survey-results.html">
+        <i data-lucide="bar-chart-3" class="icon" width="40" height="40"></i>
+        <div class="num">S-32</div>
+        <div class="name">Event Survey Results</div>
+        <div class="meta-row"><span class="us-pill">US-019</span><span class="role-pill">Ops</span></div>
+      </a>
+      <a class="tile" href="s-33-qa-host.html">
+        <i data-lucide="presentation" class="icon" width="40" height="40"></i>
+        <div class="num">S-33</div>
+        <div class="name">Q&amp;A Realtime — Host</div>
+        <div class="meta-row"><span class="us-pill">US-020</span><span class="role-pill">Ops</span></div>
+      </a>
+      <a class="tile" href="s-34-exports.html">
+        <i data-lucide="download" class="icon" width="40" height="40"></i>
+        <div class="num">S-34</div>
+        <div class="name">Export Data</div>
+        <div class="meta-row"><span class="us-pill">US-021</span><span class="role-pill">Ops</span></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Journey 5: BCH -->
+  <section class="journey-section">
+    <div class="journey-header">
+      <div class="badge-icon" style="background: rgba(168,85,247,0.15); border: 1px solid rgba(168,85,247,0.4);">👔</div>
+      <div>
+        <div class="font-heading font-black text-xl text-white">BCH</div>
+        <div class="text-acl-t2 text-sm">1 màn hình · Dashboard tổng quan cộng đồng</div>
+      </div>
+    </div>
+    <div class="journey-grid">
+      <a class="tile" href="s-35-bch-dashboard.html">
+        <i data-lucide="trending-up" class="icon" width="40" height="40"></i>
+        <div class="num">S-35</div>
+        <div class="name">BCH Dashboard</div>
+        <div class="meta-row"><span class="us-pill">US-022</span><span class="role-pill">BCH</span></div>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="border-t border-white/5 py-10 mt-12">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <p class="text-acl-t2 text-sm">
+      Demo cho khách hàng · <span class="text-white font-semibold">ACL Platform v2.3</span> · Click vào card để xem chi tiết
+    </p>
+    <p class="text-acl-t3 text-xs mt-2">
+      Phiên bản 2026-05-02 · 35 screens HTML standalone · Mobile-first dark theme
+    </p>
+  </div>
+</footer>
+
+<script>lucide.createIcons();</script>
+</body>
+</html>

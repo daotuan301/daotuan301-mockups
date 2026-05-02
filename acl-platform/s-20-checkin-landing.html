@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>S-20 · Check-in Landing 3 luồng A/B/C · ACL Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&family=Barlow+Condensed:wght@500;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="_assets/styles.css" />
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-acl-base">
+
+<div id="demo-topbar"
+     data-prev="s-19-event-detail.html"
+     data-next="s-21-guest-survey.html"
+     data-id="S-20"
+     data-name="Check-in Landing 3 luồng"
+     data-us="US-010"
+     data-role="Member · Guest"></div>
+
+<div class="demo-stage">
+  <div style="display: flex; gap: 28px; flex-wrap: wrap; justify-content: center; align-items: flex-start;">
+
+    <!-- ╔══════════════════════════════════════════════════════════════╗
+         ║ FRAME A — Member (đã login) → Check-in 1 click               ║
+         ╚══════════════════════════════════════════════════════════════╝ -->
+    <div>
+      <div class="text-center mb-3">
+        <span class="inline-flex items-center gap-2 bg-orange-dim border border-orange/30 rounded-full px-3 py-1 text-xs text-orange">
+          <i data-lucide="user-check" width="12" height="12"></i>
+          Luồng A · Member đã login
+        </span>
+      </div>
+
+      <div class="phone-frame">
+        <div class="phone-notch"></div>
+        <div class="phone-content">
+          <div class="min-h-full bg-acl-base">
+
+            <!-- Header -->
+            <div class="px-5 pt-6 pb-4 border-b border-acl">
+              <div class="text-[10px] font-heading font-bold tracking-[3px] text-orange uppercase mb-1">
+                ACL Event Check-in
+              </div>
+              <h1 class="font-heading font-extrabold text-lg text-white mb-3">ACL Monthly Meetup #28</h1>
+              <div class="flex flex-col gap-1 text-xs text-acl-t2">
+                <span class="flex items-center gap-1.5">
+                  <i data-lucide="calendar" width="12" height="12"></i> Thứ Sáu, 15/05/2026
+                </span>
+                <span class="flex items-center gap-1.5">
+                  <i data-lucide="clock" width="12" height="12"></i> 19:00 – 21:00
+                </span>
+                <span class="flex items-center gap-1.5">
+                  <i data-lucide="map-pin" width="12" height="12"></i> TT Hội nghị Mỹ Đình
+                </span>
+              </div>
+            </div>
+
+            <div class="px-5 py-6">
+
+              <!-- Member panel (gradient orange) -->
+              <div class="rounded-2xl p-5 mb-4 border border-orange/30"
+                   style="background: linear-gradient(135deg, rgba(255,107,26,0.18) 0%, rgba(255,107,26,0.02) 70%);">
+                <div class="text-xs font-heading font-bold tracking-widest text-orange uppercase mb-2">
+                  Member ACL
+                </div>
+                <p class="text-white text-base mb-1">
+                  Xin chào, <span class="font-bold">Nguyễn Minh Tuấn</span>
+                </p>
+                <p class="text-xs text-acl-t2 mb-4">
+                  Bạn chưa đăng ký event này — quét QR sẽ tự động đăng ký + check-in trong 1 bước.
+                </p>
+                <button class="w-full h-13 btn-primary rounded-xl font-heading font-bold text-white flex items-center justify-center gap-2">
+                  <i data-lucide="check" width="18" height="18"></i>
+                  Check-in ngay
+                </button>
+              </div>
+
+              <!-- Divider info -->
+              <div class="text-[10px] font-heading font-extrabold tracking-[2.5px] text-acl-t2 uppercase mb-3">
+                Hoặc bạn là khách?
+              </div>
+              <div class="space-y-3 opacity-50">
+                <div class="w-full bg-acl-card border border-acl rounded-2xl p-4 flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-xl bg-cyan/15 flex items-center justify-center flex-shrink-0">
+                    <i data-lucide="ticket" width="16" height="16" class="text-cyan"></i>
+                  </div>
+                  <div class="flex-1">
+                    <div class="text-sm font-bold text-white">Đã có Event Code</div>
+                    <div class="text-xs text-acl-t2">Đăng ký + thanh toán trước</div>
+                  </div>
+                  <i data-lucide="chevron-right" width="16" height="16" class="text-acl-t3"></i>
+                </div>
+                <div class="w-full bg-acl-card border border-acl rounded-2xl p-4 flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-xl bg-orange-dim flex items-center justify-center flex-shrink-0">
+                    <i data-lucide="user-plus" width="16" height="16" class="text-orange"></i>
+                  </div>
+                  <div class="flex-1">
+                    <div class="text-sm font-bold text-white">Đăng ký mới tại đây</div>
+                    <div class="text-xs text-acl-t2">Form + thanh toán 200.000đ</div>
+                  </div>
+                  <i data-lucide="chevron-right" width="16" height="16" class="text-acl-t3"></i>
+                </div>
+              </div>
+
+              <!-- Final state preview (success) -->
+              <div class="mt-6 pt-6 border-t border-acl">
+                <p class="text-[10px] uppercase tracking-widest text-acl-t3 text-center mb-3">
+                  Sau khi tap Check-in →
+                </p>
+                <div class="bg-acl-card-alt border border-green-500/30 rounded-2xl p-5 text-center"
+                     style="box-shadow: 0 0 30px rgba(34,197,94,0.08);">
+                  <div class="w-16 h-16 rounded-full bg-green-500/15 border-2 border-green-500/40 flex items-center justify-center mx-auto mb-3"
+                       style="box-shadow: 0 0 30px rgba(34,197,94,0.25);">
+                    <i data-lucide="check" width="28" height="28" class="text-green-400"></i>
+                  </div>
+                  <h2 class="font-heading font-black text-lg text-white mb-1">Check-in thành công!</h2>
+                  <p class="text-xs text-acl-t2 mb-1">ACL Monthly Meetup #28</p>
+                  <p class="text-[11px] text-acl-t3">Lúc 18:47 · L1 Presence sẽ được ghi nhận</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ╔══════════════════════════════════════════════════════════════╗
+         ║ FRAME B — Guest đã đăng ký (nhập Event Code)                 ║
+         ╚══════════════════════════════════════════════════════════════╝ -->
+    <div>
+      <div class="text-center mb-3">
+        <span class="inline-flex items-center gap-2 bg-cyan-dim border border-cyan/30 rounded-full px-3 py-1 text-xs text-cyan">
+          <i data-lucide="ticket" width="12" height="12"></i>
+          Luồng B · Guest có Event Code
+        </span>
+      </div>
+
+      <div class="phone-frame">
+        <div class="phone-notch"></div>
+        <div class="phone-content">
+          <div class="min-h-full bg-acl-base">
+
+            <!-- Header -->
+            <div class="px-5 pt-6 pb-4 border-b border-acl">
+              <div class="text-[10px] font-heading font-bold tracking-[3px] text-orange uppercase mb-1">
+                ACL Event Check-in
+              </div>
+              <h1 class="font-heading font-extrabold text-lg text-white mb-3">ACL Monthly Meetup #28</h1>
+              <div class="flex flex-col gap-1 text-xs text-acl-t2">
+                <span class="flex items-center gap-1.5">
+                  <i data-lucide="calendar" width="12" height="12"></i> Thứ Sáu, 15/05/2026
+                </span>
+                <span class="flex items-center gap-1.5">
+                  <i data-lucide="clock" width="12" height="12"></i> 19:00 – 21:00
+                </span>
+                <span class="flex items-center gap-1.5">
+                  <i data-lucide="map-pin" width="12" height="12"></i> TT Hội nghị Mỹ Đình
+                </span>
+              </div>
+            </div>
+
+            <div class="px-5 py-6">
+              <button class="text-sm text-acl-t2 hover:text-white mb-4 flex items-center gap-1">
+                <i data-lucide="arrow-left" width="14" height="14"></i> Quay lại
+              </button>
+
+              <!-- Header -->
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-11 h-11 rounded-xl bg-cyan/15 flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="ticket" width="18" height="18" class="text-cyan"></i>
+                </div>
+                <div>
+                  <h2 class="font-heading font-bold text-base text-white">Nhập Event Code</h2>
+                  <p class="text-xs text-acl-t2">Code đã được gửi qua email</p>
+                </div>
+              </div>
+
+              <p class="text-sm text-acl-t2 mb-4">
+                Code 6 ký tự được gửi qua email khi bạn đăng ký event.
+              </p>
+
+              <!-- Big code input -->
+              <input type="text" value="EVT-K3M9P" maxlength="9"
+                     class="w-full h-16 bg-acl-card border border-acl rounded-2xl px-5 text-center font-num text-3xl font-extrabold text-white mb-4"
+                     style="letter-spacing: 4px; text-transform: uppercase;" />
+
+              <button class="w-full h-13 btn-primary rounded-xl font-heading font-bold text-white flex items-center justify-center gap-2 mb-3">
+                <i data-lucide="check" width="18" height="18"></i>
+                Xác nhận check-in
+              </button>
+
+              <p class="text-xs text-acl-t3 text-center">
+                Không có code? Kiểm tra hộp thư + spam folder
+              </p>
+
+              <!-- Final state preview -->
+              <div class="mt-6 pt-6 border-t border-acl">
+                <p class="text-[10px] uppercase tracking-widest text-acl-t3 text-center mb-3">
+                  Sau khi xác nhận →
+                </p>
+                <div class="bg-acl-card-alt border border-green-500/30 rounded-2xl p-5 text-center"
+                     style="box-shadow: 0 0 30px rgba(34,197,94,0.08);">
+                  <div class="w-16 h-16 rounded-full bg-green-500/15 border-2 border-green-500/40 flex items-center justify-center mx-auto mb-3">
+                    <i data-lucide="ticket" width="28" height="28" class="text-green-400"></i>
+                  </div>
+                  <h2 class="font-heading font-black text-lg text-white mb-1">Check-in thành công!</h2>
+                  <p class="text-xs text-acl-t2 mb-1">Trần Thanh Hà · Guest</p>
+                  <p class="text-[11px] text-acl-t3">Lúc 18:52</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ╔══════════════════════════════════════════════════════════════╗
+         ║ FRAME C — Guest chưa đăng ký (form + thanh toán pending)     ║
+         ╚══════════════════════════════════════════════════════════════╝ -->
+    <div>
+      <div class="text-center mb-3">
+        <span class="inline-flex items-center gap-2 bg-gold-dim border border-gold/30 rounded-full px-3 py-1 text-xs text-gold">
+          <i data-lucide="user-plus" width="12" height="12"></i>
+          Luồng C · Guest mới tại reception
+        </span>
+      </div>
+
+      <div class="phone-frame">
+        <div class="phone-notch"></div>
+        <div class="phone-content">
+          <div class="min-h-full bg-acl-base">
+
+            <!-- Header -->
+            <div class="px-5 pt-6 pb-4 border-b border-acl">
+              <div class="text-[10px] font-heading font-bold tracking-[3px] text-orange uppercase mb-1">
+                ACL Event Check-in
+              </div>
+              <h1 class="font-heading font-extrabold text-lg text-white mb-3">ACL Monthly Meetup #28</h1>
+              <div class="flex flex-col gap-1 text-xs text-acl-t2">
+                <span class="flex items-center gap-1.5">
+                  <i data-lucide="calendar" width="12" height="12"></i> Thứ Sáu, 15/05/2026
+                </span>
+                <span class="flex items-center gap-1.5">
+                  <i data-lucide="clock" width="12" height="12"></i> 19:00 – 21:00
+                </span>
+                <span class="flex items-center gap-1.5">
+                  <i data-lucide="map-pin" width="12" height="12"></i> TT Hội nghị Mỹ Đình
+                </span>
+              </div>
+            </div>
+
+            <div class="px-5 py-6">
+              <button class="text-sm text-acl-t2 hover:text-white mb-4 flex items-center gap-1">
+                <i data-lucide="arrow-left" width="14" height="14"></i> Quay lại
+              </button>
+
+              <div class="flex items-center gap-3 mb-2">
+                <div class="w-11 h-11 rounded-xl bg-orange-dim flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="user-plus" width="18" height="18" class="text-orange"></i>
+                </div>
+                <div>
+                  <h2 class="font-heading font-bold text-base text-white">Đăng ký event</h2>
+                  <p class="text-xs text-acl-t2">Phí: 200.000đ qua Sepay</p>
+                </div>
+              </div>
+
+              <p class="text-sm text-acl-t2 mb-4">
+                Sau khi thanh toán xong, bạn sẽ nhận Event Code qua email để check-in.
+              </p>
+
+              <!-- Form -->
+              <div class="space-y-3 mb-5">
+                <div>
+                  <label class="acl-label">Họ và tên <span class="text-red-400">*</span></label>
+                  <input type="text" value="Trần Thanh Hà" class="acl-input" />
+                </div>
+                <div>
+                  <label class="acl-label">Email <span class="text-red-400">*</span></label>
+                  <input type="email" value="ha.tran@gmail.com" class="acl-input" />
+                </div>
+                <div>
+                  <label class="acl-label">Số điện thoại</label>
+                  <input type="tel" value="0909 123 456" class="acl-input" />
+                </div>
+                <div>
+                  <label class="acl-label">Mã mời (nếu có)</label>
+                  <input type="text" value="ACL-7K2H9" class="acl-input" style="text-transform: uppercase;" />
+                </div>
+              </div>
+
+              <button class="w-full h-13 btn-primary rounded-xl font-heading font-bold text-white flex items-center justify-center gap-2">
+                <i data-lucide="credit-card" width="18" height="18"></i>
+                Tiếp tục thanh toán 200.000đ
+              </button>
+
+              <!-- Final state preview: pending payment -->
+              <div class="mt-6 pt-6 border-t border-acl">
+                <p class="text-[10px] uppercase tracking-widest text-acl-t3 text-center mb-3">
+                  Sau khi submit form →
+                </p>
+                <div class="bg-acl-card-alt border border-orange/30 rounded-2xl p-5 text-center">
+                  <div class="w-16 h-16 rounded-full bg-orange-dim border-2 border-orange/40 flex items-center justify-center mx-auto mb-3">
+                    <i data-lucide="clock" width="28" height="28" class="text-orange"></i>
+                  </div>
+                  <h2 class="font-heading font-black text-base text-white mb-1">Vui lòng thanh toán</h2>
+                  <p class="text-xs text-acl-t2 mb-4">ACL Monthly Meetup #28</p>
+
+                  <div class="bg-acl-base/60 border border-acl rounded-xl p-3 text-left mb-3">
+                    <div class="flex justify-between mb-2">
+                      <span class="text-xs text-acl-t2">Số tiền</span>
+                      <span class="font-num text-sm font-bold text-white">200.000đ</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span class="text-xs text-acl-t2">Mã chuyển khoản</span>
+                      <span class="font-num text-xs font-bold text-orange">ACL-EV28-HA9</span>
+                    </div>
+                  </div>
+                  <p class="text-[11px] text-acl-t3">Sau thanh toán → nhận Event Code qua email</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="_assets/nav.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

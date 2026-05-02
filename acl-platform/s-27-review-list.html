@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>S-27 · Duyệt HÀNH List · ACL Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&family=Barlow+Condensed:wght@500;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="_assets/styles.css" />
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-acl-base">
+
+<div id="demo-topbar"
+     data-prev="s-26-import-scores.html"
+     data-next="s-28-evidence-detail.html"
+     data-id="S-27"
+     data-name="Duyệt HÀNH — Review List"
+     data-us="US-007"
+     data-role="Ops"></div>
+
+<div class="demo-desk-stage"><div class="desktop-frame">
+  <div class="flex min-h-[800px]">
+    <!-- Sidebar -->
+    <aside class="w-60 bg-acl-nav border-r border-acl flex flex-col flex-shrink-0">
+      <div class="px-5 py-5 border-b border-acl">
+        <div class="font-heading font-black text-xl tracking-tight"><span class="text-orange">ACL</span><span class="text-white"> Platform</span></div>
+        <div class="text-[10px] text-acl-t2 mt-0.5 tracking-widest uppercase font-heading font-bold">CMS / Ops</div>
+      </div>
+      <nav class="flex-1 overflow-y-auto p-3 space-y-5">
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Tổng quan</div>
+          <a href="s-22-ops-dashboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="layout-dashboard" width="16" height="16"></i><span>Dashboard</span></a>
+        </div>
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Thành viên</div>
+          <a href="s-23-members-list.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="users" width="16" height="16"></i><span>DS Thành viên</span></a>
+          <a href="s-25-scores.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="star" width="16" height="16"></i><span>Nhập điểm HỌC</span></a>
+          <a href="s-27-review-list.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium bg-orange-dim border border-orange text-white"><i data-lucide="check-square" width="16" height="16" class="text-orange"></i><span>Duyệt HÀNH</span><i data-lucide="chevron-right" width="12" height="12" class="ml-auto text-orange"></i></a>
+        </div>
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Sự kiện</div>
+          <a href="s-29-events-list.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="calendar-days" width="16" height="16"></i><span>Quản lý Event</span></a>
+          <a href="s-33-qa-host.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="message-square" width="16" height="16"></i><span>Q&A Realtime</span></a>
+        </div>
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Báo cáo</div>
+          <a href="s-34-exports.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="download" width="16" height="16"></i><span>Export dữ liệu</span></a>
+        </div>
+      </nav>
+      <div class="p-3 border-t border-acl">
+        <button class="flex items-center gap-3 px-3 py-2.5 w-full rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="log-out" width="16" height="16"></i> Đăng xuất</button>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="flex-1 overflow-y-auto p-8">
+      <div class="flex justify-between items-start mb-6">
+        <div>
+          <h1 class="font-heading font-black text-2xl text-white">Duyệt HÀNH</h1>
+          <p class="text-acl-t2 text-sm mt-1">Tháng 5/2026 · Deadline duyệt: ngày 29</p>
+        </div>
+        <div class="flex items-center gap-2 px-4 h-10 bg-orange-dim border border-orange rounded-xl">
+          <i data-lucide="clock" width="14" height="14" class="text-orange"></i>
+          <span class="text-sm font-bold text-orange">38 chờ duyệt</span>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-4 gap-4 mb-5">
+        <div class="bg-acl-card border border-acl rounded-xl p-4 flex items-center gap-3">
+          <i data-lucide="clock" width="20" height="20" class="text-orange"></i>
+          <div><div class="font-num text-2xl font-bold text-orange">38</div><div class="text-xs text-acl-t2">Chờ duyệt</div></div>
+        </div>
+        <div class="bg-acl-card border border-acl rounded-xl p-4 flex items-center gap-3">
+          <i data-lucide="check-circle" width="20" height="20" class="text-green-400"></i>
+          <div><div class="font-num text-2xl font-bold text-green-400">82</div><div class="text-xs text-acl-t2">Đã duyệt</div></div>
+        </div>
+        <div class="bg-acl-card border border-acl rounded-xl p-4 flex items-center gap-3">
+          <i data-lucide="alert-circle" width="20" height="20" class="text-cyan"></i>
+          <div><div class="font-num text-2xl font-bold text-cyan">12</div><div class="text-xs text-acl-t2">Đã điều chỉnh</div></div>
+        </div>
+        <div class="bg-acl-card border border-acl rounded-xl p-4 flex items-center gap-3">
+          <i data-lucide="x-circle" width="20" height="20" class="text-red-400"></i>
+          <div><div class="font-num text-2xl font-bold text-red-400">3</div><div class="text-xs text-acl-t2">Từ chối</div></div>
+        </div>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="flex items-center gap-2 mb-4 flex-wrap">
+        <button class="px-4 py-2 rounded-xl text-xs font-heading font-bold bg-orange-dim border border-orange text-white">Chờ duyệt <span class="ml-1.5 font-num text-orange">38</span></button>
+        <button class="px-4 py-2 rounded-xl text-xs font-heading font-bold bg-acl-card border border-acl text-acl-t2 hover:text-white">Đã duyệt <span class="ml-1.5 font-num text-acl-t3">82</span></button>
+        <button class="px-4 py-2 rounded-xl text-xs font-heading font-bold bg-acl-card border border-acl text-acl-t2 hover:text-white">Đã điều chỉnh <span class="ml-1.5 font-num text-acl-t3">12</span></button>
+        <button class="px-4 py-2 rounded-xl text-xs font-heading font-bold bg-acl-card border border-acl text-acl-t2 hover:text-white">Từ chối <span class="ml-1.5 font-num text-acl-t3">3</span></button>
+        <button class="px-4 py-2 rounded-xl text-xs font-heading font-bold bg-acl-card border border-acl text-acl-t2 hover:text-white">Tất cả</button>
+        <div class="flex-1"></div>
+        <div class="relative">
+          <i data-lucide="search" width="14" height="14" class="absolute left-3 top-1/2 -translate-y-1/2 text-acl-t3"></i>
+          <input type="text" placeholder="Tìm thành viên..." class="h-9 bg-acl-card border border-acl rounded-xl pl-8 pr-4 text-sm text-white placeholder-acl-t3 w-52" />
+        </div>
+      </div>
+
+      <!-- Table -->
+      <div class="bg-acl-card border border-acl rounded-2xl overflow-hidden">
+        <table class="w-full">
+          <thead>
+            <tr class="border-b border-acl">
+              <th class="text-left text-[10px] font-heading font-bold tracking-widest text-acl-t3 uppercase px-5 py-3">Thành viên</th>
+              <th class="text-left text-[10px] font-heading font-bold tracking-widest text-acl-t3 uppercase px-4 py-3">Nộp ngày</th>
+              <th class="text-center text-[10px] font-heading font-bold tracking-widest text-acl-t3 uppercase px-4 py-3">A1</th>
+              <th class="text-center text-[10px] font-heading font-bold tracking-widest text-acl-t3 uppercase px-4 py-3">A2</th>
+              <th class="text-center text-[10px] font-heading font-bold tracking-widest text-acl-t3 uppercase px-4 py-3">A3</th>
+              <th class="text-center text-[10px] font-heading font-bold tracking-widest text-acl-t3 uppercase px-4 py-3">Tổng</th>
+              <th class="text-center text-[10px] font-heading font-bold tracking-widest text-acl-t3 uppercase px-4 py-3">Files</th>
+              <th class="text-center text-[10px] font-heading font-bold tracking-widest text-acl-t3 uppercase px-4 py-3">Trạng thái</th>
+              <th class="text-right text-[10px] font-heading font-bold tracking-widest text-acl-t3 uppercase px-5 py-3"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-acl/50 hover:bg-white/3">
+              <td class="px-5 py-4"><div class="flex items-center gap-3"><div class="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500/60 to-red-700/60 flex items-center justify-center text-sm font-bold text-white">MT</div><div class="text-sm font-medium text-white">Nguyễn Minh Tuấn</div></div></td>
+              <td class="px-4 py-4 text-sm text-acl-t2 whitespace-nowrap">22/05/2026</td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-orange">10</td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-orange">10</td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-orange">10</td>
+              <td class="px-4 py-4 text-center font-num text-xl font-bold text-white">30</td>
+              <td class="px-4 py-4 text-center text-sm text-acl-t2">7 file</td>
+              <td class="px-4 py-4 text-center"><span class="text-xs font-bold px-2.5 py-1 rounded-full bg-orange-dim text-orange border border-orange/30">Chờ duyệt</span></td>
+              <td class="px-5 py-4 text-right"><div class="flex items-center justify-end gap-2"><button class="text-xs font-bold px-3 py-1.5 bg-green-500/15 text-green-400 rounded-lg hover:bg-green-500/25">Duyệt</button><a href="s-28-evidence-detail.html" class="text-xs font-bold px-3 py-1.5 bg-orange-dim text-orange rounded-lg hover:bg-orange/20">Xem</a></div></td>
+            </tr>
+            <tr class="border-b border-acl/50 hover:bg-white/3">
+              <td class="px-5 py-4"><div class="flex items-center gap-3"><div class="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500/60 to-red-700/60 flex items-center justify-center text-sm font-bold text-white">LP</div><div class="text-sm font-medium text-white">Lê Phương Linh</div></div></td>
+              <td class="px-4 py-4 text-sm text-acl-t2 whitespace-nowrap">21/05/2026</td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-orange">20</td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-orange">20</td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-orange">10</td>
+              <td class="px-4 py-4 text-center font-num text-xl font-bold text-white">50</td>
+              <td class="px-4 py-4 text-center text-sm text-acl-t2">5 file</td>
+              <td class="px-4 py-4 text-center"><span class="text-xs font-bold px-2.5 py-1 rounded-full bg-orange-dim text-orange border border-orange/30">Chờ duyệt</span></td>
+              <td class="px-5 py-4 text-right"><div class="flex items-center justify-end gap-2"><button class="text-xs font-bold px-3 py-1.5 bg-green-500/15 text-green-400 rounded-lg hover:bg-green-500/25">Duyệt</button><a href="s-28-evidence-detail.html" class="text-xs font-bold px-3 py-1.5 bg-orange-dim text-orange rounded-lg hover:bg-orange/20">Xem</a></div></td>
+            </tr>
+            <tr class="border-b border-acl/50 hover:bg-white/3">
+              <td class="px-5 py-4"><div class="flex items-center gap-3"><div class="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500/60 to-red-700/60 flex items-center justify-center text-sm font-bold text-white">TQ</div><div class="text-sm font-medium text-white">Trần Quang Minh</div></div></td>
+              <td class="px-4 py-4 text-sm text-acl-t2 whitespace-nowrap">20/05/2026</td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-orange">20</td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-orange">10</td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-orange">5</td>
+              <td class="px-4 py-4 text-center font-num text-xl font-bold text-white">35</td>
+              <td class="px-4 py-4 text-center text-sm text-acl-t2">4 file</td>
+              <td class="px-4 py-4 text-center"><span class="text-xs font-bold px-2.5 py-1 rounded-full bg-orange-dim text-orange border border-orange/30">Chờ duyệt</span></td>
+              <td class="px-5 py-4 text-right"><div class="flex items-center justify-end gap-2"><button class="text-xs font-bold px-3 py-1.5 bg-green-500/15 text-green-400 rounded-lg hover:bg-green-500/25">Duyệt</button><a href="s-28-evidence-detail.html" class="text-xs font-bold px-3 py-1.5 bg-orange-dim text-orange rounded-lg hover:bg-orange/20">Xem</a></div></td>
+            </tr>
+            <tr class="border-b border-acl/50 hover:bg-white/3">
+              <td class="px-5 py-4"><div class="flex items-center gap-3"><div class="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500/60 to-red-700/60 flex items-center justify-center text-sm font-bold text-white">HT</div><div class="text-sm font-medium text-white">Hoàng Thị Trang</div></div></td>
+              <td class="px-4 py-4 text-sm text-acl-t2 whitespace-nowrap">19/05/2026</td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-orange">10</td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-orange">20</td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-orange">10</td>
+              <td class="px-4 py-4 text-center font-num text-xl font-bold text-white">40</td>
+              <td class="px-4 py-4 text-center text-sm text-acl-t2">8 file</td>
+              <td class="px-4 py-4 text-center"><span class="text-xs font-bold px-2.5 py-1 rounded-full bg-orange-dim text-orange border border-orange/30">Chờ duyệt</span></td>
+              <td class="px-5 py-4 text-right"><div class="flex items-center justify-end gap-2"><button class="text-xs font-bold px-3 py-1.5 bg-green-500/15 text-green-400 rounded-lg hover:bg-green-500/25">Duyệt</button><a href="s-28-evidence-detail.html" class="text-xs font-bold px-3 py-1.5 bg-orange-dim text-orange rounded-lg hover:bg-orange/20">Xem</a></div></td>
+            </tr>
+            <tr class="border-b border-acl/50 hover:bg-white/3">
+              <td class="px-5 py-4"><div class="flex items-center gap-3"><div class="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500/60 to-red-700/60 flex items-center justify-center text-sm font-bold text-white">BS</div><div class="text-sm font-medium text-white">Bùi Thanh Sơn</div></div></td>
+              <td class="px-4 py-4 text-sm text-acl-t2 whitespace-nowrap">18/05/2026</td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-orange">0</td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-orange">10</td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-orange">5</td>
+              <td class="px-4 py-4 text-center font-num text-xl font-bold text-white">15</td>
+              <td class="px-4 py-4 text-center text-sm text-acl-t2">2 file</td>
+              <td class="px-4 py-4 text-center"><span class="text-xs font-bold px-2.5 py-1 rounded-full bg-orange-dim text-orange border border-orange/30">Chờ duyệt</span></td>
+              <td class="px-5 py-4 text-right"><div class="flex items-center justify-end gap-2"><button class="text-xs font-bold px-3 py-1.5 bg-green-500/15 text-green-400 rounded-lg hover:bg-green-500/25">Duyệt</button><a href="s-28-evidence-detail.html" class="text-xs font-bold px-3 py-1.5 bg-orange-dim text-orange rounded-lg hover:bg-orange/20">Xem</a></div></td>
+            </tr>
+            <tr class="border-b border-acl/50 hover:bg-white/3">
+              <td class="px-5 py-4"><div class="flex items-center gap-3"><div class="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500/60 to-red-700/60 flex items-center justify-center text-sm font-bold text-white">ML</div><div class="text-sm font-medium text-white">Mai Thị Lan</div></div></td>
+              <td class="px-4 py-4 text-sm text-acl-t2 whitespace-nowrap">17/05/2026</td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-orange">10</td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-orange">10</td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-orange">5</td>
+              <td class="px-4 py-4 text-center font-num text-xl font-bold text-white">25</td>
+              <td class="px-4 py-4 text-center text-sm text-acl-t2">3 file</td>
+              <td class="px-4 py-4 text-center"><span class="text-xs font-bold px-2.5 py-1 rounded-full bg-orange-dim text-orange border border-orange/30">Chờ duyệt</span></td>
+              <td class="px-5 py-4 text-right"><div class="flex items-center justify-end gap-2"><button class="text-xs font-bold px-3 py-1.5 bg-green-500/15 text-green-400 rounded-lg hover:bg-green-500/25">Duyệt</button><a href="s-28-evidence-detail.html" class="text-xs font-bold px-3 py-1.5 bg-orange-dim text-orange rounded-lg hover:bg-orange/20">Xem</a></div></td>
+            </tr>
+            <tr class="border-b border-acl/50 last:border-0 hover:bg-white/3">
+              <td class="px-5 py-4"><div class="flex items-center gap-3"><div class="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500/60 to-red-700/60 flex items-center justify-center text-sm font-bold text-white">PH</div><div class="text-sm font-medium text-white">Phạm Thị Hương</div></div></td>
+              <td class="px-4 py-4 text-sm text-acl-t2 whitespace-nowrap">15/05/2026</td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-orange">20</td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-orange">20</td>
+              <td class="px-4 py-4 text-center font-num text-base font-bold text-orange">10</td>
+              <td class="px-4 py-4 text-center font-num text-xl font-bold text-white">50</td>
+              <td class="px-4 py-4 text-center text-sm text-acl-t2">6 file</td>
+              <td class="px-4 py-4 text-center"><span class="text-xs font-bold px-2.5 py-1 rounded-full bg-orange-dim text-orange border border-orange/30">Chờ duyệt</span></td>
+              <td class="px-5 py-4 text-right"><div class="flex items-center justify-end gap-2"><button class="text-xs font-bold px-3 py-1.5 bg-green-500/15 text-green-400 rounded-lg hover:bg-green-500/25">Duyệt</button><a href="s-28-evidence-detail.html" class="text-xs font-bold px-3 py-1.5 bg-orange-dim text-orange rounded-lg hover:bg-orange/20">Xem</a></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-xs text-acl-t3 mt-4">Hiển thị 7/38 review chờ duyệt. Click "Xem" để xem evidence chi tiết và Approve / Adjust / Reject.</p>
+    </main>
+  </div>
+</div></div>
+
+<script src="_assets/nav.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

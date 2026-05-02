@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>S-33 · Q&A Realtime Host · ACL Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&family=Barlow+Condensed:wght@500;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="_assets/styles.css" />
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-acl-base">
+
+<div id="demo-topbar"
+     data-prev="s-32-event-survey-results.html"
+     data-next="s-34-exports.html"
+     data-id="S-33"
+     data-name="Q&A Realtime — Host Screen"
+     data-us="US-020"
+     data-role="Ops"></div>
+
+<div class="demo-desk-stage"><div class="desktop-frame">
+  <div class="flex min-h-[800px]">
+
+    <!-- Sidebar -->
+    <aside class="w-60 bg-acl-nav border-r border-acl flex flex-col flex-shrink-0">
+      <div class="px-5 py-5 border-b border-acl">
+        <div class="font-heading font-black text-xl tracking-tight"><span class="text-orange">ACL</span><span class="text-white"> Platform</span></div>
+        <div class="text-[10px] text-acl-t2 mt-0.5 tracking-widest uppercase font-heading font-bold">CMS / Ops</div>
+      </div>
+      <nav class="flex-1 overflow-y-auto p-3 space-y-5">
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Tổng quan</div>
+          <a href="s-22-ops-dashboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="layout-dashboard" width="16" height="16"></i><span>Dashboard</span></a>
+        </div>
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Thành viên</div>
+          <a href="s-23-members-list.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="users" width="16" height="16"></i><span>DS Thành viên</span></a>
+          <a href="s-25-scores.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="star" width="16" height="16"></i><span>Nhập điểm HỌC</span></a>
+          <a href="s-27-review-list.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="check-square" width="16" height="16"></i><span>Duyệt HÀNH</span></a>
+        </div>
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Sự kiện</div>
+          <a href="s-29-events-list.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="calendar-days" width="16" height="16"></i><span>Quản lý Event</span></a>
+          <a href="s-33-qa-host.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium bg-orange-dim border border-orange text-white"><i data-lucide="message-square" width="16" height="16" class="text-orange"></i><span>Q&A Realtime</span><i data-lucide="chevron-right" width="12" height="12" class="ml-auto text-orange"></i></a>
+        </div>
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Báo cáo</div>
+          <a href="s-34-exports.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="download" width="16" height="16"></i><span>Export dữ liệu</span></a>
+        </div>
+      </nav>
+      <div class="p-3 border-t border-acl">
+        <button class="flex items-center gap-3 px-3 py-2.5 w-full rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="log-out" width="16" height="16"></i> Đăng xuất</button>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="flex-1 overflow-y-auto p-8">
+      <!-- Back -->
+      <div class="flex items-center gap-3 mb-3">
+        <a href="s-31-event-cms.html" class="text-sm text-acl-t2 hover:text-white flex items-center gap-1"><i data-lucide="arrow-left" width="16" height="16"></i> ACL Monthly Meetup #28</a>
+      </div>
+      <div class="flex justify-between items-start mb-6 flex-wrap gap-3">
+        <div>
+          <h1 class="font-heading font-black text-2xl text-white">Q&A Realtime</h1>
+          <p class="text-acl-t2 text-sm mt-1">12 câu hỏi · 8 chưa trả lời · 4 đã chọn</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="flex items-center gap-1.5 px-3 h-10 bg-acl-card border border-green-500/30 text-green-400 rounded-xl text-sm">
+            <i data-lucide="wifi" width="14" height="14"></i> Live
+          </div>
+          <button class="flex items-center gap-2 h-10 px-4 bg-orange-dim border border-orange rounded-xl text-sm font-bold text-orange hover:bg-orange/15">
+            <i data-lucide="maximize-2" width="14" height="14"></i> Projector mode
+          </button>
+        </div>
+      </div>
+
+      <!-- Submit URL banner -->
+      <div class="bg-cyan/5 border border-cyan/20 rounded-xl p-4 mb-5 flex items-center gap-3 flex-wrap">
+        <i data-lucide="qr-code" width="18" height="18" class="text-cyan flex-shrink-0"></i>
+        <div class="flex-1 min-w-0">
+          <div class="text-xs text-acl-t2 mb-0.5">Attendees gửi câu hỏi tại:</div>
+          <div class="text-sm font-mono text-cyan">https://app.actionleaders.vn/qa/meetup-28</div>
+        </div>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="flex gap-1 mb-5">
+        <button class="px-4 py-2 rounded-xl text-xs font-heading font-bold bg-orange-dim border border-orange text-white">Tất cả <span class="ml-1.5 font-num text-orange">12</span></button>
+        <button class="px-4 py-2 rounded-xl text-xs font-heading font-bold bg-acl-card border border-acl text-acl-t2 hover:text-white">Đã chọn <span class="ml-1.5 font-num text-acl-t3">4</span></button>
+      </div>
+
+      <!-- Questions list (font lớn cho khách trong phòng đọc) -->
+      <div class="space-y-3">
+        <!-- Highlighted question 1 -->
+        <div class="flex items-start gap-3 rounded-xl p-5 border bg-yellow-400/8 border-yellow-400/30">
+          <button aria-label="Bỏ chọn" class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-yellow-400/20 text-yellow-400">
+            <i data-lucide="star" width="22" height="22" fill="currentColor"></i>
+          </button>
+          <div class="flex-1 min-w-0">
+            <div class="text-xl leading-relaxed text-white font-medium">Anh Đức ơi, với SME 30 nhân viên thì nên start áp dụng AI vào logistics ở khâu nào trước cho ROI nhanh nhất? Em đang phân vân giữa warehouse management và route optimization.</div>
+            <div class="text-sm text-acl-t2 mt-2">— Nguyễn Minh Tuấn · 2 phút</div>
+          </div>
+        </div>
+
+        <!-- Highlighted question 2 -->
+        <div class="flex items-start gap-3 rounded-xl p-5 border bg-yellow-400/8 border-yellow-400/30">
+          <button aria-label="Bỏ chọn" class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-yellow-400/20 text-yellow-400">
+            <i data-lucide="star" width="22" height="22" fill="currentColor"></i>
+          </button>
+          <div class="flex-1 min-w-0">
+            <div class="text-xl leading-relaxed text-white font-medium">Khi triển khai AI mà team không buy-in, anh xử lý kiểu gì? Em từng push 2 dự án bị fail vì team kháng cự.</div>
+            <div class="text-sm text-acl-t2 mt-2">— Hoàng Thị Trang · 4 phút</div>
+          </div>
+        </div>
+
+        <!-- Normal question 1 -->
+        <div class="flex items-start gap-3 rounded-xl p-5 border bg-acl-card border-acl hover:bg-white/3">
+          <button aria-label="Chọn" class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-white/5 text-acl-t3 hover:bg-yellow-400/10 hover:text-yellow-400">
+            <i data-lucide="star" width="22" height="22"></i>
+          </button>
+          <div class="flex-1 min-w-0">
+            <div class="text-xl leading-relaxed text-white">Budget AI tools tầm bao nhiêu/tháng là hợp lý cho SME mảng F&B doanh thu 500-800 triệu/tháng?</div>
+            <div class="text-sm text-acl-t2 mt-2">— Lê Phương Linh · 5 phút</div>
+          </div>
+        </div>
+
+        <!-- Anonymous question -->
+        <div class="flex items-start gap-3 rounded-xl p-5 border bg-acl-card border-acl hover:bg-white/3">
+          <button aria-label="Chọn" class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-white/5 text-acl-t3 hover:bg-yellow-400/10 hover:text-yellow-400">
+            <i data-lucide="star" width="22" height="22"></i>
+          </button>
+          <div class="flex-1 min-w-0">
+            <div class="text-xl leading-relaxed text-white">Anh có bị tình trạng khách hàng phản ứng tiêu cực khi biết AI chatbot trả lời họ không? Mình giấu hay công khai về việc dùng AI?</div>
+            <div class="text-sm text-acl-t2 mt-2">— <em class="text-acl-t3">Ẩn danh</em> · 6 phút</div>
+          </div>
+        </div>
+
+        <!-- Highlighted question 3 -->
+        <div class="flex items-start gap-3 rounded-xl p-5 border bg-yellow-400/8 border-yellow-400/30">
+          <button aria-label="Bỏ chọn" class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-yellow-400/20 text-yellow-400">
+            <i data-lucide="star" width="22" height="22" fill="currentColor"></i>
+          </button>
+          <div class="flex-1 min-w-0">
+            <div class="text-xl leading-relaxed text-white font-medium">Anh đánh giá thế nào về việc dùng ChatGPT Plus vs custom GPT vs build agent riêng? Chi phí và độ phức tạp cho SME?</div>
+            <div class="text-sm text-acl-t2 mt-2">— Trần Quang Minh · 8 phút</div>
+          </div>
+        </div>
+
+        <!-- Normal question 2 -->
+        <div class="flex items-start gap-3 rounded-xl p-5 border bg-acl-card border-acl hover:bg-white/3">
+          <button aria-label="Chọn" class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-white/5 text-acl-t3 hover:bg-yellow-400/10 hover:text-yellow-400">
+            <i data-lucide="star" width="22" height="22"></i>
+          </button>
+          <div class="flex-1 min-w-0">
+            <div class="text-xl leading-relaxed text-white">Có case study cụ thể nào trong ngành bán lẻ ở VN đã áp dụng thành công không anh?</div>
+            <div class="text-sm text-acl-t2 mt-2">— Bùi Thanh Sơn · 10 phút</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div></div>
+
+<script src="_assets/nav.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

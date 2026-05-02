@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>S-32 · Event Survey Results · ACL Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&family=Barlow+Condensed:wght@500;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="_assets/styles.css" />
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-acl-base">
+
+<div id="demo-topbar"
+     data-prev="s-31-event-cms.html"
+     data-next="s-33-qa-host.html"
+     data-id="S-32"
+     data-name="Event Survey Results"
+     data-us="US-019"
+     data-role="Ops"></div>
+
+<div class="demo-desk-stage"><div class="desktop-frame">
+  <div class="flex min-h-[800px]">
+
+    <!-- Sidebar — same as S-29, no special "Survey kết quả" item exists in real OpsShell, mark Quản lý Event active because this is nested under event detail -->
+    <aside class="w-60 bg-acl-nav border-r border-acl flex flex-col flex-shrink-0">
+      <div class="px-5 py-5 border-b border-acl">
+        <div class="font-heading font-black text-xl tracking-tight"><span class="text-orange">ACL</span><span class="text-white"> Platform</span></div>
+        <div class="text-[10px] text-acl-t2 mt-0.5 tracking-widest uppercase font-heading font-bold">CMS / Ops</div>
+      </div>
+      <nav class="flex-1 overflow-y-auto p-3 space-y-5">
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Tổng quan</div>
+          <a href="s-22-ops-dashboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="layout-dashboard" width="16" height="16"></i><span>Dashboard</span></a>
+        </div>
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Thành viên</div>
+          <a href="s-23-members-list.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="users" width="16" height="16"></i><span>DS Thành viên</span></a>
+          <a href="s-25-scores.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="star" width="16" height="16"></i><span>Nhập điểm HỌC</span></a>
+          <a href="s-27-review-list.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="check-square" width="16" height="16"></i><span>Duyệt HÀNH</span></a>
+        </div>
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Sự kiện</div>
+          <a href="s-29-events-list.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium bg-orange-dim border border-orange text-white"><i data-lucide="calendar-days" width="16" height="16" class="text-orange"></i><span>Quản lý Event</span><i data-lucide="chevron-right" width="12" height="12" class="ml-auto text-orange"></i></a>
+          <a href="s-33-qa-host.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="message-square" width="16" height="16"></i><span>Q&A Realtime</span></a>
+        </div>
+        <div>
+          <div class="text-[9px] font-heading font-bold tracking-[3px] text-acl-t3 uppercase px-3 mb-1.5">Báo cáo</div>
+          <a href="s-34-exports.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="download" width="16" height="16"></i><span>Export dữ liệu</span></a>
+        </div>
+      </nav>
+      <div class="p-3 border-t border-acl">
+        <button class="flex items-center gap-3 px-3 py-2.5 w-full rounded-xl text-sm font-medium text-acl-t2 hover:text-white hover:bg-white/5"><i data-lucide="log-out" width="16" height="16"></i> Đăng xuất</button>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="flex-1 overflow-y-auto p-8">
+      <!-- Back -->
+      <div class="flex items-center gap-3 mb-3">
+        <a href="s-31-event-cms.html" class="text-sm text-acl-t2 hover:text-white flex items-center gap-1"><i data-lucide="arrow-left" width="16" height="16"></i> ACL Monthly Meetup #27</a>
+      </div>
+      <div class="flex justify-between items-start mb-6">
+        <div>
+          <h1 class="font-heading font-black text-2xl text-white">Survey kết quả</h1>
+          <p class="text-acl-t2 text-sm mt-1">17/04/2026</p>
+        </div>
+      </div>
+
+      <!-- Summary stats -->
+      <div class="grid grid-cols-3 gap-4 mb-6">
+        <div class="bg-acl-card border border-acl rounded-2xl p-4 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-orange-dim flex items-center justify-center"><i data-lucide="send" width="18" height="18" class="text-orange"></i></div>
+          <div><div class="font-num text-2xl font-bold text-white">92</div><div class="text-xs text-acl-t2">Đã gửi</div></div>
+        </div>
+        <div class="bg-acl-card border border-acl rounded-2xl p-4 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-cyan/15 flex items-center justify-center"><i data-lucide="inbox" width="18" height="18" class="text-cyan"></i></div>
+          <div><div class="font-num text-2xl font-bold text-white">68</div><div class="text-xs text-acl-t2">Đã trả lời</div></div>
+        </div>
+        <div class="bg-acl-card border border-acl rounded-2xl p-4 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-green-500/10 flex items-center justify-center"><i data-lucide="trending-up" width="18" height="18" class="text-green-400"></i></div>
+          <div><div class="font-num text-2xl font-bold text-white">74%</div><div class="text-xs text-acl-t2">Response rate</div></div>
+        </div>
+      </div>
+
+      <!-- Rating averages -->
+      <div class="text-xs font-heading font-bold tracking-widest text-acl-t2 uppercase mb-3">Điểm trung bình (1–5)</div>
+      <div class="grid grid-cols-4 gap-3 mb-6">
+        <div class="bg-acl-card border border-acl rounded-2xl p-4 text-center">
+          <div class="flex items-center justify-center gap-1 mb-1"><i data-lucide="star" width="14" height="14" class="text-yellow-400" fill="currentColor"></i><span class="font-num text-2xl font-bold text-white">4.6</span></div>
+          <div class="text-[10px] text-acl-t2 uppercase tracking-wider">Tổng thể</div>
+        </div>
+        <div class="bg-acl-card border border-acl rounded-2xl p-4 text-center">
+          <div class="flex items-center justify-center gap-1 mb-1"><i data-lucide="star" width="14" height="14" class="text-yellow-400" fill="currentColor"></i><span class="font-num text-2xl font-bold text-white">4.7</span></div>
+          <div class="text-[10px] text-acl-t2 uppercase tracking-wider">Nội dung</div>
+        </div>
+        <div class="bg-acl-card border border-acl rounded-2xl p-4 text-center">
+          <div class="flex items-center justify-center gap-1 mb-1"><i data-lucide="star" width="14" height="14" class="text-yellow-400" fill="currentColor"></i><span class="font-num text-2xl font-bold text-white">4.8</span></div>
+          <div class="text-[10px] text-acl-t2 uppercase tracking-wider">Diễn giả</div>
+        </div>
+        <div class="bg-acl-card border border-acl rounded-2xl p-4 text-center">
+          <div class="flex items-center justify-center gap-1 mb-1"><i data-lucide="star" width="14" height="14" class="text-yellow-400" fill="currentColor"></i><span class="font-num text-2xl font-bold text-white">4.2</span></div>
+          <div class="text-[10px] text-acl-t2 uppercase tracking-wider">Logistics</div>
+        </div>
+      </div>
+
+      <!-- NPS -->
+      <div class="text-xs font-heading font-bold tracking-widest text-acl-t2 uppercase mb-3">Net Promoter Score</div>
+      <div class="bg-acl-card border border-acl rounded-2xl p-5 mb-6">
+        <div class="flex items-baseline gap-3 mb-3">
+          <span class="font-num text-4xl font-extrabold text-green-400">62</span>
+          <span class="text-xs text-acl-t2">NPS</span>
+        </div>
+        <div class="grid grid-cols-3 gap-2 text-center text-xs">
+          <div class="bg-acl-base border border-acl rounded-lg p-2"><div class="font-num font-bold text-green-400">48</div><div class="text-acl-t3 text-[10px]">Promoters (9-10)</div></div>
+          <div class="bg-acl-base border border-acl rounded-lg p-2"><div class="font-num font-bold text-yellow-400">14</div><div class="text-acl-t3 text-[10px]">Passives (7-8)</div></div>
+          <div class="bg-acl-base border border-acl rounded-lg p-2"><div class="font-num font-bold text-red-400">6</div><div class="text-acl-t3 text-[10px]">Detractors (0-6)</div></div>
+        </div>
+      </div>
+
+      <!-- Highlights -->
+      <div class="text-xs font-heading font-bold tracking-widest text-acl-t2 uppercase mb-3 flex items-center gap-2"><i data-lucide="message-square" width="12" height="12"></i> Điểm tâm đắc (12)</div>
+      <div class="space-y-2 mb-6">
+        <div class="bg-acl-card border border-acl rounded-xl px-4 py-3 text-sm text-white">"Speaker chia sẻ rất thực tế, áp dụng được ngay vào business của em."</div>
+        <div class="bg-acl-card border border-acl rounded-xl px-4 py-3 text-sm text-white">"Phần case study OKR rất chi tiết. Đã copy framework về dùng cho team mình."</div>
+        <div class="bg-acl-card border border-acl rounded-xl px-4 py-3 text-sm text-white">"Networking sau buổi học chất lượng — kết nối được 3 anh chị cùng ngành."</div>
+        <div class="bg-acl-card border border-acl rounded-xl px-4 py-3 text-sm text-white">"Không khí thân thiện, không ép gì cả, BCH support nhiệt tình."</div>
+      </div>
+
+      <!-- Improvements -->
+      <div class="text-xs font-heading font-bold tracking-widest text-acl-t2 uppercase mb-3 flex items-center gap-2"><i data-lucide="message-square" width="12" height="12"></i> Cần cải thiện (8)</div>
+      <div class="space-y-2">
+        <div class="bg-orange-dim border border-orange/20 rounded-xl px-4 py-3 text-sm text-white">"Phòng hơi nóng, cần thêm điều hòa khu vực bàn cuối."</div>
+        <div class="bg-orange-dim border border-orange/20 rounded-xl px-4 py-3 text-sm text-white">"Coffee break bị thiếu — chỉ đủ cho 60% attendees."</div>
+        <div class="bg-orange-dim border border-orange/20 rounded-xl px-4 py-3 text-sm text-white">"Thời gian Q&A hơi ngắn, chỉ trả lời được 5 câu hỏi trên 25 câu gửi vào."</div>
+        <div class="bg-orange-dim border border-orange/20 rounded-xl px-4 py-3 text-sm text-white">"Slide chữ nhỏ, ngồi cuối phòng đọc khá khó."</div>
+      </div>
+    </main>
+  </div>
+</div></div>
+
+<script src="_assets/nav.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

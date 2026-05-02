@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>S-15 · QR Scanner · ACL Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&family=Barlow+Condensed:wght@500;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="_assets/styles.css" />
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-acl-base">
+
+<div id="demo-topbar"
+     data-prev="s-14-events.html"
+     data-next="s-16-notifications.html"
+     data-id="S-15"
+     data-name="QR Scanner"
+     data-us="US-010"
+     data-role="Member"></div>
+
+<div class="demo-stage">
+  <div style="display: flex; gap: 32px; flex-wrap: wrap; justify-content: center;">
+
+    <!-- State 1: Scanning (camera active) -->
+    <div>
+      <div class="text-center mb-3">
+        <span class="inline-block bg-white/5 border border-white/10 rounded-full px-3 py-1 text-xs text-acl-t2">Trạng thái 1 — Đang quét</span>
+      </div>
+      <div class="phone-frame">
+        <div class="phone-notch"></div>
+        <div class="phone-content">
+          <div class="min-h-full bg-acl-base flex flex-col">
+            <!-- Header -->
+            <div class="flex items-center justify-between px-5 py-3 border-b border-acl">
+              <a href="s-08-home.html" class="flex items-center gap-1.5 text-sm font-semibold text-acl-t2 hover:text-white">
+                <i data-lucide="arrow-left" width="16" height="16"></i> Quay lại
+              </a>
+              <span class="text-sm font-heading font-bold text-white">QR Check-in</span>
+              <div class="w-16"></div>
+            </div>
+
+            <!-- Scanner area -->
+            <div class="flex-1 flex flex-col items-center justify-center px-5 py-6 w-full">
+              <div class="relative w-full aspect-square max-w-sm rounded-3xl overflow-hidden border border-white/10"
+                   style="background: linear-gradient(135deg,#0a0d1f, #1a1c33 50%, #0a0d1f); ">
+                <!-- Fake camera scene (gradient + dots) -->
+                <div class="absolute inset-0" style="background:
+                  radial-gradient(circle at 30% 40%, rgba(255,255,255,0.04) 0%, transparent 30%),
+                  radial-gradient(circle at 70% 60%, rgba(255,255,255,0.03) 0%, transparent 35%);"></div>
+
+                <!-- Faux QR code center -->
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <div class="w-40 h-40 grid grid-cols-12 gap-px p-1 rounded-md bg-white/5">
+                    <!-- Just decorative blocks to suggest a QR -->
+                    <div class="col-span-3 row-span-3 bg-white/40 rounded-sm"></div>
+                    <div class="col-span-6 bg-transparent"></div>
+                    <div class="col-span-3 row-span-3 bg-white/40 rounded-sm"></div>
+                    <div class="col-span-6 bg-white/15"></div>
+                    <div class="col-span-12 bg-white/10"></div>
+                    <div class="col-span-3 row-span-3 bg-white/40 rounded-sm"></div>
+                    <div class="col-span-9 bg-white/15"></div>
+                  </div>
+                </div>
+
+                <!-- Overlay corners -->
+                <div class="absolute w-10 h-10 border-orange-500 pointer-events-none top-4 left-4 border-t-2 border-l-2 rounded-tl-lg" style="border-color:#FF6B1A;"></div>
+                <div class="absolute w-10 h-10 border-orange-500 pointer-events-none top-4 right-4 border-t-2 border-r-2 rounded-tr-lg" style="border-color:#FF6B1A;"></div>
+                <div class="absolute w-10 h-10 border-orange-500 pointer-events-none bottom-4 left-4 border-b-2 border-l-2 rounded-bl-lg" style="border-color:#FF6B1A;"></div>
+                <div class="absolute w-10 h-10 border-orange-500 pointer-events-none bottom-4 right-4 border-b-2 border-r-2 rounded-br-lg" style="border-color:#FF6B1A;"></div>
+
+                <!-- Scan line animation (static for mockup) -->
+                <div class="absolute left-4 right-4 top-1/2 h-0.5 rounded-full" style="background: linear-gradient(90deg, transparent, #00E5C9, transparent); box-shadow: 0 0 8px #00E5C9;"></div>
+              </div>
+
+              <p class="text-center text-xs text-acl-t2 mt-5">
+                Hướng camera vào QR code dán tại reception. Hệ thống sẽ tự check-in.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- State 2: Detected — redirecting -->
+    <div>
+      <div class="text-center mb-3">
+        <span class="inline-block bg-white/5 border border-white/10 rounded-full px-3 py-1 text-xs text-acl-t2">Trạng thái 2 — Đã quét, đang check-in</span>
+      </div>
+      <div class="phone-frame">
+        <div class="phone-notch"></div>
+        <div class="phone-content">
+          <div class="min-h-full bg-acl-base flex flex-col">
+            <div class="flex items-center justify-between px-5 py-3 border-b border-acl">
+              <a href="#" class="flex items-center gap-1.5 text-sm font-semibold text-acl-t2">
+                <i data-lucide="arrow-left" width="16" height="16"></i> Quay lại
+              </a>
+              <span class="text-sm font-heading font-bold text-white">QR Check-in</span>
+              <div class="w-16"></div>
+            </div>
+
+            <div class="flex-1 flex flex-col items-center justify-center px-5 py-6 w-full">
+              <div class="relative w-full aspect-square max-w-sm rounded-3xl overflow-hidden border border-white/10 bg-black">
+                <!-- Dim camera background -->
+                <div class="absolute inset-0" style="background: linear-gradient(135deg,#0a0d1f, #1a1c33 50%, #0a0d1f);"></div>
+
+                <!-- Loading overlay -->
+                <div class="absolute inset-0 flex items-center justify-center" style="background: rgba(0,0,0,0.6);">
+                  <div class="text-center">
+                    <i data-lucide="loader-2" width="36" height="36" class="text-orange-400 mx-auto mb-3" style="animation: spin 1s linear infinite;"></i>
+                    <p class="text-sm text-white font-medium">Đã quét — đang mở event...</p>
+                    <p class="text-xs text-acl-t3 mt-2">Buổi học tháng 5: Lãnh đạo trong khủng hoảng</p>
+                  </div>
+                </div>
+              </div>
+
+              <p class="text-center text-xs text-acl-t2 mt-5">
+                Đang chuyển tới trang check-in của event.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <style>@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }</style>
+    </div>
+
+    <!-- State 3: Permission denied / Error -->
+    <div>
+      <div class="text-center mb-3">
+        <span class="inline-block bg-white/5 border border-white/10 rounded-full px-3 py-1 text-xs text-acl-t2">Trạng thái 3 — Lỗi camera</span>
+      </div>
+      <div class="phone-frame">
+        <div class="phone-notch"></div>
+        <div class="phone-content">
+          <div class="min-h-full bg-acl-base flex flex-col">
+            <div class="flex items-center justify-between px-5 py-3 border-b border-acl">
+              <a href="#" class="flex items-center gap-1.5 text-sm font-semibold text-acl-t2">
+                <i data-lucide="arrow-left" width="16" height="16"></i> Quay lại
+              </a>
+              <span class="text-sm font-heading font-bold text-white">QR Check-in</span>
+              <div class="w-16"></div>
+            </div>
+
+            <div class="flex-1 flex flex-col items-center justify-center px-5 py-6 w-full">
+              <div class="w-full max-w-sm bg-red-500/10 border border-red-500/30 rounded-2xl p-5 text-center">
+                <i data-lucide="alert-circle" width="32" height="32" class="text-red-400 mx-auto mb-3"></i>
+                <h2 class="font-heading font-bold text-white text-base mb-1">Không thể quét QR</h2>
+                <p class="text-sm text-acl-t2 mb-4">Bạn cần cho phép truy cập camera để quét QR.</p>
+                <button class="w-full h-11 btn-primary rounded-xl font-bold text-white">Thử lại</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="_assets/nav.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>
