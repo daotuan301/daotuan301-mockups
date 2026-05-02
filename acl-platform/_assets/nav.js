@@ -42,6 +42,16 @@
   `;
   el.classList.add('demo-topbar');
 
+  // Auto-inject CMS mobile banner above desktop-frame screens
+  // (CSS media query handles visibility — banner stays hidden ≥1024px)
+  const desktopFrame = document.querySelector('.desktop-frame');
+  if (desktopFrame && !document.querySelector('.cms-mobile-banner')) {
+    const banner = document.createElement('div');
+    banner.className = 'cms-mobile-banner';
+    banner.innerHTML = '<div><strong>Tối ưu cho desktop</strong> — Màn này dành cho Ops/BCH dùng trên màn rộng ≥1024px. Trên mobile bạn có thể vuốt ngang để xem đầy đủ, nhưng trải nghiệm sẽ tốt hơn nếu mở trên máy tính.</div>';
+    desktopFrame.parentNode.insertBefore(banner, desktopFrame);
+  }
+
   // Keyboard navigation: ←/→
   document.addEventListener('keydown', e => {
     if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) return;

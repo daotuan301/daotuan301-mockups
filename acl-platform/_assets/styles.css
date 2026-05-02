@@ -13,6 +13,11 @@
   --acl-orange-d: #c83800;
   --acl-cyan: #00E5C9;
   --acl-gold: #FFD700;
+  --acl-silver: #C0C0C0;
+  --acl-bronze: #CD7F32;
+  --acl-green: #27AE60;
+  --acl-red: #ff5555;
+  --acl-warning: #FFC107;
   --acl-t1: #FFFFFF;
   --acl-t2: #A0A8C0;
   --acl-t3: rgba(255,255,255,0.35);
@@ -42,6 +47,11 @@ html, body {
 .text-orange { color: #FF6B1A; }
 .text-cyan   { color: #00E5C9; }
 .text-gold   { color: #FFD700; }
+.text-silver { color: #C0C0C0; }
+.text-bronze { color: #CD7F32; }
+.text-warning{ color: #FFC107; }
+.text-green  { color: #27AE60; }
+.text-red    { color: #ff5555; }
 
 /* ----- Border colors ----- */
 .border-acl    { border-color: rgba(255,255,255,0.08); }
@@ -53,6 +63,17 @@ html, body {
 .bg-orange-dim { background-color: rgba(255,107,26,0.12); }
 .bg-cyan-dim   { background-color: rgba(0,229,201,0.10); }
 .bg-gold-dim   { background-color: rgba(255,215,0,0.10); }
+.bg-silver-dim { background-color: rgba(192,192,192,0.10); }
+.bg-bronze-dim { background-color: rgba(205,127,50,0.12); }
+.bg-warning-dim{ background-color: rgba(255,193,7,0.10); }
+.bg-green-dim  { background-color: rgba(39,174,96,0.10); }
+.bg-red-dim    { background-color: rgba(255,85,85,0.10); }
+
+.border-silver { border-color: rgba(192,192,192,0.30); }
+.border-bronze { border-color: rgba(205,127,50,0.30); }
+.border-warning{ border-color: rgba(255,193,7,0.30); }
+.border-green  { border-color: rgba(39,174,96,0.30); }
+.border-red    { border-color: rgba(255,85,85,0.30); }
 
 /* ----- Primary button ----- */
 .btn-primary {
@@ -69,10 +90,10 @@ html, body {
 }
 .btn-primary:active { transform: translateY(0); }
 
-/* ----- HHL light dots ----- */
-.dot-green  { background-color: #22c55e; box-shadow: 0 0 8px #22c55e; }
+/* ----- HHL light dots (match screens.html palette) ----- */
+.dot-green  { background-color: #27AE60; box-shadow: 0 0 8px #27AE60; }
 .dot-yellow { background-color: #FFD700; box-shadow: 0 0 8px #FFD700; }
-.dot-red    { background-color: #ef4444; box-shadow: 0 0 8px #ef4444; }
+.dot-red    { background-color: #ff5555; box-shadow: 0 0 8px #ff5555; }
 .dot-gray   { background-color: #6b7280; }
 
 .h-13 { height: 3.25rem; }
@@ -203,6 +224,82 @@ html, body {
   overflow: hidden;
   border: 1px solid rgba(255,255,255,0.06);
   min-height: calc(100vh - 100px);
+}
+
+/* ════════════════════════════════════════════
+   Responsive preview wrapper (Option A)
+   - Mobile screens trên màn hình lớn: giữ phone-frame ở giữa với gradient backdrop
+   - Mobile screens trên màn hình nhỏ: bỏ frame, tràn 100vw cho UX sát thật
+   - CMS screens trên mobile: banner cảnh báo + horizontal scroll fallback
+   ════════════════════════════════════════════ */
+
+/* Mobile preview — phone tràn full khi viewport ≤480px (sát device thật) */
+@media (max-width: 480px) {
+  .demo-stage {
+    padding: 0;
+    background: #0A0B1E;
+  }
+  .phone-frame {
+    width: 100%;
+    max-width: 100vw;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .phone-notch { display: none; }
+  .phone-content {
+    height: calc(100vh - 50px);
+  }
+}
+
+/* Mobile preview — large desktop: enhance backdrop + glow */
+@media (min-width: 1024px) {
+  .demo-stage {
+    padding: 56px 16px 80px;
+    background:
+      radial-gradient(ellipse 800px 600px at 30% 20%, rgba(255,107,26,0.14), transparent 60%),
+      radial-gradient(ellipse 700px 500px at 80% 80%, rgba(0,229,201,0.08), transparent 60%),
+      #050610;
+  }
+  .phone-frame {
+    box-shadow:
+      0 0 0 8px #1a1c30,
+      0 0 0 9px #2a2c45,
+      0 50px 100px -20px rgba(0,0,0,0.85),
+      0 0 120px rgba(255,107,26,0.12);
+  }
+}
+
+/* CMS desktop screens — banner cảnh báo + scroll-fit khi viewport <1024px */
+.cms-mobile-banner {
+  display: none;
+}
+@media (max-width: 1023px) {
+  .cms-mobile-banner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255,193,7,0.10);
+    border: 1px solid rgba(255,193,7,0.30);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin: 16px;
+    color: #FFC107;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+  .cms-mobile-banner::before {
+    content: "🖥️";
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+  .demo-desk-stage {
+    overflow-x: auto;
+  }
+  .desktop-frame {
+    margin: 0 16px 16px;
+    min-width: 1024px;  /* Force horizontal scroll instead of squashing layout */
+  }
 }
 
 /* ----- Inputs ----- */
