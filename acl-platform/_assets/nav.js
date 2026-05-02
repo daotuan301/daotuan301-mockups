@@ -52,6 +52,44 @@
     desktopFrame.parentNode.insertBefore(banner, desktopFrame);
   }
 
+  // Auto-inject Member sidebar on phone-frame screens (visible ≥1024px via CSS)
+  const demoStage = document.querySelector('.demo-stage');
+  if (demoStage && !document.querySelector('.member-sidebar')) {
+    // Determine active nav based on current screen ID
+    const screenId = (id || '').toUpperCase();
+    const links = [
+      { href: 's-08-home.html',         icon: 'home',           label: 'Trang chủ',     match: ['S-08'] },
+      { href: 's-13-leaderboard.html',  icon: 'trophy',         label: 'Bảng xếp hạng', match: ['S-13'] },
+      { href: 's-14-events.html',       icon: 'calendar',       label: 'Sự kiện',       match: ['S-14','S-15','S-18','S-19','S-20'] },
+      { href: 's-16-notifications.html',icon: 'bell',           label: 'Thông báo',     match: ['S-16'] },
+      { href: 's-09-profile.html',      icon: 'user',           label: 'Hồ sơ',         match: ['S-09','S-10','S-11','S-17'] },
+    ];
+    const utilLinks = [
+      { href: 's-12-monthly-review.html', icon: 'edit-3',       label: 'Monthly Review', match: ['S-12'] },
+      { href: 's-15-checkin-scanner.html',icon: 'qr-code',      label: 'Quét QR',        match: ['S-15'] },
+    ];
+
+    function lucide(name) {
+      // Inline minimal SVG fallback so sidebar renders even before lucide.createIcons()
+      return `<i data-lucide="${name}" width="18" height="18"></i>`;
+    }
+    function renderLink(l) {
+      const active = l.match.includes(screenId) ? ' active' : '';
+      return `<a class="ms-link${active}" href="${l.href}">${lucide(l.icon)}<span>${l.label}</span></a>`;
+    }
+
+    const sidebar = document.createElement('aside');
+    sidebar.className = 'member-sidebar';
+    sidebar.innerHTML = `
+      <div class="ms-logo"><span class="lo">ACL</span> Platform</div>
+      <div class="ms-section">Chính</div>
+      ${links.map(renderLink).join('')}
+      <div class="ms-section">Hành động</div>
+      ${utilLinks.map(renderLink).join('')}
+    `;
+    demoStage.insertBefore(sidebar, demoStage.firstChild);
+  }
+
   // Keyboard navigation: ←/→
   document.addEventListener('keydown', e => {
     if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) return;

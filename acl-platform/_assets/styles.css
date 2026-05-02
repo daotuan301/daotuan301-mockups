@@ -251,22 +251,98 @@ html, body {
   }
 }
 
-/* Mobile preview — large desktop: enhance backdrop + glow */
+/* ════════════════════════════════════════════
+   DESKTOP (≥1024px) — drop phone-frame, render as web-app shell
+   - Sidebar nav on left (auto-injected by nav.js)
+   - Main content area centered, max-width 760px (comfortable reading column)
+   - Mobile-first inner content opts into desktop layout via Tailwind md:/lg: classes
+   ════════════════════════════════════════════ */
 @media (min-width: 1024px) {
   .demo-stage {
-    padding: 56px 16px 80px;
+    align-items: stretch;
+    padding: 0;
     background:
-      radial-gradient(ellipse 800px 600px at 30% 20%, rgba(255,107,26,0.14), transparent 60%),
-      radial-gradient(ellipse 700px 500px at 80% 80%, rgba(0,229,201,0.08), transparent 60%),
+      radial-gradient(ellipse 800px 600px at 0% 0%, rgba(255,107,26,0.06), transparent 60%),
+      radial-gradient(ellipse 700px 500px at 100% 100%, rgba(0,229,201,0.04), transparent 60%),
       #050610;
   }
+  /* Drop phone-frame styling — becomes a transparent container */
   .phone-frame {
-    box-shadow:
-      0 0 0 8px #1a1c30,
-      0 0 0 9px #2a2c45,
-      0 50px 100px -20px rgba(0,0,0,0.85),
-      0 0 120px rgba(255,107,26,0.12);
+    width: 100%;
+    max-width: none;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    flex: 1;
   }
+  .phone-notch { display: none; }
+  .phone-content {
+    height: auto;
+    min-height: calc(100vh - 50px);
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  /* Hide bottom-nav on desktop (sidebar replaces it) */
+  .desktop-hide-bottom-nav .phone-content > div > [class*="bottom-0"] {
+    display: none !important;
+  }
+
+  /* Auto-injected member sidebar (see nav.js) */
+  .member-sidebar {
+    width: 240px;
+    flex-shrink: 0;
+    background: #10122A;
+    border-right: 1px solid rgba(255,255,255,0.06);
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .member-sidebar .ms-logo {
+    padding: 8px 12px 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+  }
+  .member-sidebar .ms-logo .lo { color: #FF6B1A; }
+  .member-sidebar .ms-section {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.35);
+    text-transform: uppercase;
+    padding: 16px 12px 8px;
+  }
+  .member-sidebar .ms-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    color: #A0A8C0;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 150ms, color 150ms;
+    text-decoration: none;
+  }
+  .member-sidebar .ms-link:hover {
+    background: rgba(255,255,255,0.04);
+    color: white;
+  }
+  .member-sidebar .ms-link.active {
+    background: rgba(255,107,26,0.12);
+    color: #FF6B1A;
+  }
+
+  .demo-stage {
+    flex-direction: row;
+  }
+}
+@media (max-width: 1023px) {
+  .member-sidebar { display: none; }
 }
 
 /* CMS desktop screens — banner cảnh báo + scroll-fit khi viewport <1024px */
